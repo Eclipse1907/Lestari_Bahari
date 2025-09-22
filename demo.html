@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo Website - Lestari Akuatik</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-100">
+    <!-- Header -->
+    <header class="bg-blue-600 text-white p-4">
+        <div class="container mx-auto flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <div class="w-10 h-10 bg-blue-700 rounded-lg flex items-center justify-center">
+                    <span class="text-white font-bold">LA</span>
+                </div>
+                <div>
+                    <h1 class="text-lg font-bold">Lestari Akuatik</h1>
+                    <p class="text-xs text-blue-200">BKHIT Sulawesi Utara</p>
+                </div>
+            </div>
+            <nav class="hidden md:flex space-x-6">
+                <a href="index.html" class="hover:text-blue-300">Beranda</a>
+                <a href="dashboard.html" class="hover:text-blue-300">Satwa Dilindungi</a>
+                <a href="contact.html" class="hover:text-blue-300">Kontak</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto p-6 mt-8">
+        <div class="text-center mb-8">
+            <h2 class="text-3xl font-bold text-blue-800 mb-4">
+                Demo Sistem Navigasi Satwa Dilindungi
+            </h2>
+            <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+                Website ini menggunakan sistem navigasi 3-tahap: Dashboard → Daftar Satwa → Detail Satwa
+            </p>
+        </div>
+
+        <!-- Navigation Steps -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+            <div class="bg-white rounded-xl shadow-lg p-6 text-center">
+                <div class="text-4xl mb-4">🏠</div>
+                <h3 class="text-xl font-bold text-gray-800 mb-2">1. Dashboard</h3>
+                <p class="text-gray-600 mb-4">Tampilkan 7 kotak filum yang dapat diklik</p>
+                <a href="dashboard.html" class="inline-block bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors">
+                    Lihat Dashboard
+                </a>
+            </div>
+
+            <div class="bg-white rounded-xl shadow-lg p-6 text-center">
+                <div class="text-4xl mb-4">📋</div>
+                <h3 class="text-xl font-bold text-gray-800 mb-2">2. Daftar Satwa</h3>
+                <p class="text-gray-600 mb-4">Tampilkan kartu satwa per filum</p>
+                <a href="satwa-list.html?phylum=Chondrichthyes" class="inline-block bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition-colors">
+                    Lihat Daftar Hiu
+                </a>
+            </div>
+
+            <div class="bg-white rounded-xl shadow-lg p-6 text-center">
+                <div class="text-4xl mb-4">🔍</div>
+                <h3 class="text-xl font-bold text-gray-800 mb-2">3. Detail Satwa</h3>
+                <p class="text-gray-600 mb-4">Informasi lengkap dengan taksonomi & morfologi</p>
+                <button onclick="showDetailDemo()" class="bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700 transition-colors">
+                    Lihat Demo Detail
+                </button>
+            </div>
+        </div>
+
+        <!-- Features -->
+        <div class="bg-white rounded-xl shadow-lg p-6">
+            <h3 class="text-2xl font-bold text-gray-800 mb-6">✨ Fitur yang Tersedia</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                    <h4 class="text-lg font-semibold text-gray-800 mb-3">🎨 Desain & UI/UX</h4>
+                    <ul class="space-y-2 text-gray-600">
+                        <li>• Layout responsif untuk semua perangkat</li>
+                        <li>• Animasi hover dan transisi smooth</li>
+                        <li>• Color coding untuk status konservasi</li>
+                        <li>• Typography yang mudah dibaca</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold text-gray-800 mb-3">📊 Informasi Lengkap</h4>
+                    <ul class="space-y-2 text-gray-600">
+                        <li>• Klasifikasi taksonomi lengkap</li>
+                        <li>• Deskripsi morfologi & anatomi</li>
+                        <li>• Status konservasi & regulasi</li>
+                        <li>• Dasar hukum berdasarkan UU Indonesia</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="mt-8 text-center">
+            <h3 class="text-xl font-bold text-gray-800 mb-4">🚀 Quick Links</h3>
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="dashboard.html" class="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors">
+                    🏠 Dashboard Utama
+                </a>
+                <a href="satwa-list.html?phylum=Actinopterygii" class="bg-orange-600 text-white px-6 py-3 rounded-lg hover:bg-orange-700 transition-colors">
+                    🐟 Ikan Napoleon
+                </a>
+                <a href="satwa-list.html?phylum=Reptilia" class="bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-700 transition-colors">
+                    🐢 Penyu Hijau
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        function showDetailDemo() {
+            // Simulate animal data
+            const demoAnimal = {
+                id: 'hiu-koboi',
+                name: 'Hiu Koboi',
+                latin: 'Carcharhinus longimanus',
+                status: 'Terancam Punah',
+                regulation: 'CITES Appendix II',
+                yearProtected: '2013',
+                location: 'Perairan Sulawesi Utara',
+                image: 'https://https://image.idntimes.com/post/20240528/oceanic-whitetip-shark-at-elphinstone-reef-726107e6cb24f94eb96bf875ffbf43f3-c90c2834059a7e235c0fbb90a43d0d3c.jpg?tr=w-1200,f-webp,q-75&width=1200&format=webp&quality=75
+                details: {
+                    taxonomy: {
+                        kingdom: 'Animalia',
+                        phylum: 'Chordata',
+                        class: 'Chondrichthyes',
+                        order: 'Carcharhiniformes',
+                        family: 'Carcharhinidae',
+                        genus: 'Carcharhinus',
+                        species: 'C. longimanus'
+                    },
+                    morphology: {
+                        description: 'Tubuh ramping dengan sirip dorsal pertama yang besar dan membulat.',
+                        characteristics: ['Panjang maksimal 4 meter', 'Berat hingga 170 kg', 'Sirip dorsal besar'],
+                        habitat: 'Laut tropis dan subtropis, perairan lepas pantai'
+                    },
+                    legalBases: [
+                        {
+                            title: 'Peraturan Menteri Kelautan dan Perikanan No. 12 Tahun 2012',
+                            source: 'Kementerian Kelautan dan Perikanan RI'
+                        }
+                    ]
+                }
+            };
+            
+            // Store in localStorage and redirect
+            localStorage.setItem('selectedAnimal', JSON.stringify(demoAnimal));
+            localStorage.setItem('selectedPhylum', 'Chondrichthyes');
+            window.location.href = 'animal-detail-page.html';
+        }
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+

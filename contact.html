@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hubungi Kami - Lestari Bahari</title>
+    <meta name="description" content="Hubungi BKHIT Sulawesi Utara untuk pelaporan pelanggaran atau informasi lebih lanjut.">
+    <meta name="keywords" content="kontak, hubungi kami, pelaporan, BKHIT, Sulawesi Utara">
+    <meta name="author" content="Badan Karantina Indonesia">
+    
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Lucide Icons via CDN -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Custom JavaScript -->
+    <script src="script.js" defer></script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body class="bg-gray-100 antialiased min-h-screen">
+
+    <!-- Header Navigation -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-blue-900/95 backdrop-blur-lg">
+        <nav class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <a href="index.html" class="flex items-center space-x-3">
+                    <div class="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center">
+                        <svg xmlns="http://www.w.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-white">
+                            <path d="M2 6c.6.2 1.4.5 2.5 1.4C6.5 9 8.6 10.5 10 10.5c1.4 0 2.5-.5 4-1.5 1.5-.9 3.2-1.5 5.5-1.5s4.2 1.5 5.5 2.5"/>
+                            <path d="M2 12c.6.2 1.4.5 2.5 1.4C6.5 15 8.6 16.5 10 16.5c1.4 0 2.5-.5 4-1.5 1.5-.9 3.2-1.5 5.5-1.5s4.2 1.5 5.5 2.5"/>
+                            <path d="M2 18c.6.2 1.4.5 2.5 1.4C6.5 21 8.6 22.5 10 22.5c1.4 0 2.5-.5 4-1.5 1.5-.9 3.2-1.5 5.5-1.5s4.2 1.5 5.5 2.5"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <h1 class="text-lg font-bold text-white">Lestari Bahari</h1>
+                        <p class="text-xs text-blue-200">BKHIT Sulawesi Utara</p>
+                    </div>
+                </a>
+                
+                <div class="hidden md:flex items-center space-x-6">
+                    <a href="index.html" class="nav-link text-white hover:text-blue-300 transition-colors">Beranda</a>
+                    <a href="dashboard.html" class="nav-link text-white hover:text-blue-300 transition-colors">Satwa Dilindungi</a>
+                    <a href="sanctions.html" class="nav-link text-white hover:text-blue-300 transition-colors">Undang-undang</a>
+                    <a href="contact.html" class="nav-link text-white hover:text-blue-300 transition-colors">Kontak</a>
+                </div>
+                
+                <!-- Mobile menu button -->
+                <button id="mobile-menu-btn" class="md:hidden text-white p-2">
+                    <svg xmlns="http://www.w.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <line x1="3" y1="12" x2="21" y2="12"></line>
+                        <line x1="3" y1="18" x2="21" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+            
+            <!-- Mobile menu -->
+            <div id="mobile-menu" class="md:hidden hidden mt-4 pb-4">
+                <div class="flex flex-col space-y-3">
+                    <a href="index.html" class="nav-link text-white hover:text-blue-300 transition-colors text-left">Beranda</a>
+                    <a href="dashboard.html" class="nav-link text-white hover:text-blue-300 transition-colors text-left">Satwa Dilindungi</a>
+                    <a href="sanctions.html" class="nav-link text-white hover:text-blue-300 transition-colors text-left">Undang-undang</a>
+                    <a href="contact.html" class="nav-link text-white hover:text-blue-300 transition-colors text-left">Kontak</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Halaman Hubungi Kami -->
+    <main id="contact-page" class="pt-24 pb-8 relative overflow-hidden min-h-screen">
+        <!-- Background Pattern -->
+        <div class="absolute inset-0 bg-gradient-to-br from-green-50 via-white to-green-50"></div>
+        <div class="absolute inset-0 opacity-10">
+            <div class="absolute top-0 left-0 w-full h-full" style="background-image: url('data:image/svg+xml,%3Csvg width=%2260%22 height=%2260%22 viewBox=%220 0 60 60%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cg fill=%22none%22 fill-rule=%22evenodd%22%3E%3Cg fill=%22%23000000%22 fill-opacity=%220.1%22%3E%3Ccircle cx=%2230%22 cy=%2230%22 r=%222%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');"></div>
+        </div>
+        <div class="absolute inset-0 bg-gradient-to-t from-green-100/30 via-transparent to-transparent"></div>
+        
+        <!-- Floating Elements -->
+        <div class="absolute top-20 left-10 w-16 h-16 bg-green-200 rounded-full opacity-20 animate-pulse"></div>
+        <div class="absolute top-40 right-20 w-12 h-12 bg-green-300 rounded-full opacity-15 animate-pulse" style="animation-delay: 1s;"></div>
+        <div class="absolute bottom-40 left-20 w-10 h-10 bg-green-400 rounded-full opacity-20 animate-pulse" style="animation-delay: 2s;"></div>
+        <div class="absolute bottom-20 right-10 w-18 h-18 bg-green-200 rounded-full opacity-15 animate-pulse" style="animation-delay: 3s;"></div>
+        
+        <!-- Content -->
+        <div class="relative z-10">
+            <div class="container mx-auto px-6">
+                <div class="max-w-4xl mx-auto">
+                    <div class="text-center mb-8" data-aos="fade-up">
+                        <h2 class="text-3xl md:text-4xl font-bold text-blue-800 font-inter mb-4">
+                            Hubungi Kami
+                        </h2>
+                        <p class="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
+                            Jika Anda menemukan pelanggaran terkait satwa akuatik yang dilindungi, jangan ragu untuk menghubungi kami.
+                            Tim BKHIT Sulawesi Utara siap membantu Anda.
+                        </p>
+                    </div>
+                
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <!-- Informasi Kontak -->
+                        <div class="space-y-4" data-aos="fade-up" data-aos-delay="200">
+                            <div class="bg-white rounded-xl shadow-lg p-6 hover-scale">
+                                <div class="flex items-center space-x-4">
+                                    <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-blue-600">
+                                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2.18l-1.562-.176a2 2 0 0 1-1.875-2.095l.186-3.877a2 2 0 0 1 2-1.745c2.47-.533 3.513-.91 4-1.25"/>
+                                            <path d="M14.92 22a22 22 0 0 1-10-10L14.92 22"/>
+                                            <path d="M22 6c-3.1-2.9-7-4.2-11-4.2"/>
+                                            <path d="M22 10c-1.8-.8-3.9-1.3-6.1-1.3"/>
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <h3 class="text-lg font-semibold text-gray-800 mb-1">Nomor Telepon</h3>
+                                        <p class="text-blue-600 font-medium">082190899090</p>
+                                        <p class="text-sm text-gray-500">Layanan 24/7</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="bg-white rounded-xl shadow-lg p-6 hover-scale">
+                                <div class="flex items-start space-x-4">
+                                    <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-green-600">
+                                            <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/>
+                                            <circle cx="12" cy="10" r="3"/>
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <h3 class="text-lg font-semibold text-gray-800 mb-1">Alamat Kantor</h3>
+                                        <p class="text-gray-700">
+                                            <strong>BKHIT Sulawesi Utara</strong><br/>
+                                            Jln. A.A. Maramis No.283, Lapangan,<br/>
+                                            Kec. Mapanget, Kota Manado,<br/>
+                                            Sulawesi Utara
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="bg-white rounded-xl shadow-lg p-6 hover-scale">
+                                <div class="flex items-start space-x-4">
+                                    <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-purple-600">
+                                            <path d="M15 2h5a2 2 0 0 1 2 2v5"/>
+                                            <path d="M22 17v5a2 2 0 0 1-2 2h-5"/>
+                                            <path d="M7 2H4a2 2 0 0 0-2 2v5"/>
+                                            <path d="M2 17v5a2 2 0 0 0 2 2h5"/>
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <h3 class="text-lg font-semibold text-gray-800 mb-3">Media Sosial</h3>
+                                        <div class="space-y-3">
+                                            <a href="https://www.instagram.com/karantinasulawesiutara/" target="_blank" rel="noopener noreferrer" 
+                                               class="flex items-center space-x-3 text-purple-600 hover:text-purple-700 transition-colors">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                                                </svg>
+                                                <span>@karantinasulawesiutara</span>
+                                            </a>
+                                            <a href="https://www.facebook.com/humas.bkpmanado/" target="_blank" rel="noopener noreferrer" 
+                                               class="flex items-center space-x-3 text-blue-600 hover:text-blue-700 transition-colors">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                                    <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                                                </svg>
+                                                <span>humas.bkpmanado</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Form Kontak -->
+                        <div class="bg-white rounded-xl shadow-lg p-6" data-aos="fade-up" data-aos-delay="400">
+                            <h3 class="text-xl font-bold text-gray-800 mb-4">Kirim Pesan</h3>
+                            <form class="space-y-4">
+                                <div>
+                                    <label for="name" class="block text-sm font-medium text-gray-700 mb-2">Nama Lengkap</label>
+                                    <input type="text" id="name" name="name" required 
+                                           class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                                </div>
+                                <div>
+                                    <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Email</label>
+                                    <input type="email" id="email" name="email" required 
+                                           class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                                </div>
+                                <div>
+                                    <label for="subject" class="block text-sm font-medium text-gray-700 mb-2">Subjek</label>
+                                    <select id="subject" name="subject" required 
+                                            class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                                        <option value="">Pilih subjek</option>
+                                        <option value="pelanggaran">Pelaporan Pelanggaran</option>
+                                        <option value="informasi">Permintaan Informasi</option>
+                                        <option value="kerjasama">Kerjasama</option>
+                                        <option value="lainnya">Lainnya</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label for="message" class="block text-sm font-medium text-gray-700 mb-2">Pesan</label>
+                                    <textarea id="message" name="message" rows="4" required 
+                                              class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-none"
+                                              placeholder="Tulis pesan Anda di sini..."></textarea>
+                                </div>
+                                <button type="submit" 
+                                        class="w-full bg-blue-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-blue-700 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
+                                    Kirim Pesan
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer will be inserted here -->
+    <footer class="bg-gray-900 text-white py-8">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-6">
+                <div class="md:col-span-2">
+                    <div class="flex items-center space-x-3 mb-4">
+                        <div class="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-white">
+                                <path d="M2 6c.6.2 1.4.5 2.5 1.4C6.5 9 8.6 10.5 10 10.5c1.4 0 2.5-.5 4-1.5 1.5-.9 3.2-1.5 5.5-1.5s4.2 1.5 5.5 2.5"/>
+                                <path d="M2 12c.6.2 1.4.5 2.5 1.4C6.5 15 8.6 16.5 10 16.5c1.4 0 2.5-.5 4-1.5 1.5-.9 3.2-1.5 5.5-1.5s4.2 1.5 5.5 2.5"/>
+                                <path d="M2 18c.6.2 1.4.5 2.5 1.4C6.5 21 8.6 22.5 10 22.5c1.4 0 2.5-.5 4-1.5 1.5-.9 3.2-1.5 5.5-1.5s4.2 1.5 5.5 2.5"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold">Lestari Bahari</h3>
+                            <p class="text-sm text-gray-400">BKHIT Sulawesi Utara</p>
+                        </div>
+                    </div>
+                    <div class="space-y-3">
+                        <p class="text-gray-300 leading-relaxed">
+                            🌊 <strong>Portal Informasi Satwa Akuatik Dilindungi</strong>
+                        </p>
+                        <p class="text-gray-300 leading-relaxed text-sm">
+                            Menyajikan informasi lengkap tentang satwa laut yang dilindungi di wilayah kerja BKHIT Sulawesi Utara<br>
+                            Dari hiu paus hingga teripang, kenali dan lindungi kekayaan laut kita
+                        </p>
+                        <p class="text-blue-300 text-sm font-medium mb-10">
+                            🛡️ Bersama menjaga kelestarian ekosistem laut Indonesia
+                        </p>
+                    </div>
+                    <div class="flex space-x-4 mt-4">
+                        <a href="https://www.instagram.com/karantinasulawesiutara/" target="_blank" rel="noopener noreferrer" 
+                           class="text-gray-400 hover:text-white transition-colors">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                            </svg>
+                        </a>
+                        <a href="https://www.facebook.com/humas.bkpmanado/" target="_blank" rel="noopener noreferrer" 
+                           class="text-gray-400 hover:text-white transition-colors">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Tautan Cepat</h4>
+                    <ul class="space-y-2">
+                        <li><a href="dashboard.html" class="text-gray-300 hover:text-white transition-colors">Satwa Dilindungi</a></li>
+                        <li><a href="sanctions.html" class="text-gray-300 hover:text-white transition-colors">Sanksi Hukum</a></li>
+                        <li><a href="contact.html" class="text-gray-300 hover:text-white transition-colors">Hubungi Kami</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Kontak</h4>
+                    <div class="space-y-2 text-gray-300">
+                        <p>📞 082190899090</p>
+                        <p>📍 Manado, Sulawesi Utara</p>
+                        <p>🕒 Layanan 24/7</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center">
+                <p class="text-gray-400">
+                    © 2024 Lestari Bahari. All rights reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

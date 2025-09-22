@@ -1,0 +1,1152 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detail Satwa - Lestari Bahari</title>
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        inter: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        .detail-header {
+            background: linear-gradient(135deg, rgba(30, 64, 175, 0.95), rgba(59, 130, 246, 0.9), rgba(147, 197, 253, 0.8)), url('https://images.unsplash.com/photo-1437482078695-a213c443a544?w=1200&h=800&fit=crop') no-repeat center center/cover;
+            border-radius: 0 0 30px 30px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .detail-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, rgba(255,255,255,0.1) 0%, transparent 50%, rgba(255,255,255,0.05) 100%);
+            pointer-events: none;
+        }
+
+        .detail-card {
+            background: linear-gradient(145deg, #ffffff 0%, #f8fafc 100%);
+            border-radius: 24px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08), 0 8px 16px rgba(0, 0, 0, 0.04);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 1px solid rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(10px);
+        }
+
+        .detail-card:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 32px 64px rgba(0, 0, 0, 0.12), 0 16px 32px rgba(0, 0, 0, 0.08);
+        }
+
+        .detail-icon {
+            background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 16px;
+            box-shadow: 0 8px 16px rgba(59, 130, 246, 0.3);
+        }
+
+        .taxonomy-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .taxonomy-item {
+            background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
+            border-left: 5px solid #3b82f6;
+            padding: 1.5rem;
+            border-radius: 12px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .taxonomy-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.05) 0%, transparent 100%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .taxonomy-item:hover::before {
+            opacity: 1;
+        }
+
+        .taxonomy-item:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 16px rgba(59, 130, 246, 0.15);
+        }
+
+        .taxonomy-item strong {
+            color: #1e40af;
+            font-weight: 600;
+        }
+
+        .references-card {
+            cursor: pointer;
+            border: 2px dashed #cbd5e1;
+            transition: all 0.3s ease;
+            background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+        }
+
+        .references-card:hover {
+            border-color: #3b82f6;
+            background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+            transform: translateY(-2px);
+        }
+
+        .references-list {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .references-list.expanded {
+            max-height: 600px;
+        }
+
+        .references-list a {
+            color: #2563eb;
+            word-break: break-all;
+            transition: all 0.2s ease;
+            display: inline-block;
+            padding: 0.25rem 0.5rem;
+            border-radius: 6px;
+            margin: 0.25rem 0;
+        }
+
+        .references-list a:hover {
+            background-color: #dbeafe;
+            transform: translateX(4px);
+        }
+
+        .morphology-text {
+            line-height: 1.8;
+            font-size: 1.1rem;
+        }
+
+        .morphology-word {
+            cursor: pointer;
+            padding: 0.2rem 0.4rem;
+            border-radius: 6px;
+            transition: all 0.2s ease;
+            position: relative;
+            display: inline-block;
+        }
+
+        .morphology-word:hover {
+            background-color: #dbeafe;
+            color: #1e40af;
+            transform: translateY(-1px);
+        }
+
+        .morphology-word.active {
+            background-color: #3b82f6;
+            color: white;
+        }
+
+        .reference-tooltip {
+            position: absolute;
+            background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+            color: white;
+            padding: 0.75rem 1rem;
+            border-radius: 8px;
+            font-size: 0.875rem;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+            max-width: 300px;
+            opacity: 0;
+            transform: translateY(10px);
+            transition: all 0.3s ease;
+            pointer-events: none;
+        }
+
+        .reference-tooltip.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .reference-tooltip::after {
+            content: '';
+            position: absolute;
+            top: -6px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 0;
+            border-left: 6px solid transparent;
+            border-right: 6px solid transparent;
+            border-bottom: 6px solid #1e40af;
+        }
+
+        .floating-elements {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            pointer-events: none;
+        }
+
+        .floating-element {
+            position: absolute;
+            opacity: 0.1;
+            animation: float 20s infinite linear;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(100vh) rotate(0deg); }
+            100% { transform: translateY(-100px) rotate(360deg); }
+        }
+
+        .status-badge {
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            font-weight: 600;
+            box-shadow: 0 4px 8px rgba(16, 185, 129, 0.3);
+        }
+
+         .regulation-badge {
+             background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+             color: white;
+             padding: 0.5rem 1rem;
+             border-radius: 50px;
+             font-weight: 600;
+             box-shadow: 0 4px 8px rgba(245, 158, 11, 0.3);
+         }
+
+         .morphology-modal {
+             position: fixed;
+             top: 0;
+             left: 0;
+             width: 100%;
+             height: 100%;
+             background: rgba(0, 0, 0, 0.5);
+             backdrop-filter: blur(8px);
+             z-index: 9999;
+             display: flex;
+             align-items: center;
+             justify-content: center;
+             opacity: 0;
+             visibility: hidden;
+             transition: all 0.3s ease;
+         }
+
+         .morphology-modal.show {
+             opacity: 1;
+             visibility: visible;
+         }
+
+         .morphology-modal-content {
+             background: linear-gradient(145deg, #ffffff 0%, #f8fafc 100%);
+             border-radius: 24px;
+             box-shadow: 0 32px 64px rgba(0, 0, 0, 0.2);
+             max-width: 800px;
+             width: 90%;
+             max-height: 80vh;
+             overflow-y: auto;
+             transform: scale(0.9) translateY(20px);
+             transition: all 0.3s ease;
+         }
+
+         .morphology-modal.show .morphology-modal-content {
+             transform: scale(1) translateY(0);
+         }
+
+         .morphology-modal-header {
+             background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+             color: white;
+             padding: 2rem;
+             border-radius: 24px 24px 0 0;
+             position: relative;
+         }
+
+         .morphology-modal-close {
+             position: absolute;
+             top: 1.5rem;
+             right: 2rem;
+             background: rgba(255, 255, 255, 0.2);
+             border: none;
+             color: white;
+             width: 40px;
+             height: 40px;
+             border-radius: 50%;
+             cursor: pointer;
+             display: flex;
+             align-items: center;
+             justify-content: center;
+             transition: all 0.3s ease;
+         }
+
+         .morphology-modal-close:hover {
+             background: rgba(255, 255, 255, 0.3);
+             transform: scale(1.1);
+         }
+
+         .morphology-modal-body {
+             padding: 2rem;
+         }
+
+         .morphology-reference-item {
+             background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
+             border-left: 4px solid #3b82f6;
+             padding: 1.5rem;
+             margin-bottom: 1rem;
+             border-radius: 12px;
+             transition: all 0.3s ease;
+         }
+
+         .morphology-reference-item:hover {
+             transform: translateX(8px);
+             box-shadow: 0 8px 16px rgba(59, 130, 246, 0.15);
+         }
+
+         .morphology-reference-item a {
+             color: #2563eb;
+             text-decoration: none;
+             font-weight: 500;
+             transition: all 0.2s ease;
+         }
+
+         .morphology-reference-item a:hover {
+             color: #1d4ed8;
+             text-decoration: underline;
+         }
+
+         .morphology-reference-source {
+             color: #64748b;
+             font-size: 0.875rem;
+             margin-top: 0.5rem;
+         }
+
+         .appendix-modal {
+             position: fixed;
+             top: 0;
+             left: 0;
+             width: 100%;
+             height: 100%;
+             background: rgba(0, 0, 0, 0.5);
+             backdrop-filter: blur(8px);
+             z-index: 9999;
+             display: flex;
+             align-items: center;
+             justify-content: center;
+             opacity: 0;
+             visibility: hidden;
+             transition: all 0.3s ease;
+         }
+
+         .appendix-modal.show {
+             opacity: 1;
+             visibility: visible;
+         }
+
+         .appendix-modal-content {
+             background: linear-gradient(145deg, #ffffff 0%, #f8fafc 100%);
+             border-radius: 24px;
+             box-shadow: 0 32px 64px rgba(0, 0, 0, 0.2);
+             max-width: 800px;
+             width: 90%;
+             max-height: 80vh;
+             overflow-y: auto;
+             transform: scale(0.9) translateY(20px);
+             transition: all 0.3s ease;
+         }
+
+         .appendix-modal.show .appendix-modal-content {
+             transform: scale(1) translateY(0);
+         }
+
+         .appendix-modal-header {
+             background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+             color: white;
+             padding: 2rem;
+             border-radius: 24px 24px 0 0;
+             position: relative;
+         }
+
+         .appendix-modal-close {
+             position: absolute;
+             top: 1.5rem;
+             right: 2rem;
+             background: rgba(255, 255, 255, 0.2);
+             border: none;
+             color: white;
+             width: 40px;
+             height: 40px;
+             border-radius: 50%;
+             cursor: pointer;
+             display: flex;
+             align-items: center;
+             justify-content: center;
+             transition: all 0.3s ease;
+         }
+
+         .appendix-modal-close:hover {
+             background: rgba(255, 255, 255, 0.3);
+             transform: scale(1.1);
+         }
+
+         .appendix-modal-body {
+             padding: 2rem;
+         }
+
+         .appendix-reference-item {
+             background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+             border-left: 4px solid #10b981;
+             padding: 1.5rem;
+             margin-bottom: 1rem;
+             border-radius: 12px;
+             transition: all 0.3s ease;
+         }
+
+         .appendix-reference-item:hover {
+             transform: translateX(8px);
+             box-shadow: 0 8px 16px rgba(16, 185, 129, 0.15);
+         }
+
+         .appendix-reference-item a {
+             color: #059669;
+             text-decoration: none;
+             font-weight: 500;
+             transition: all 0.2s ease;
+         }
+
+         .appendix-reference-item a:hover {
+             color: #047857;
+             text-decoration: underline;
+         }
+
+         .appendix-reference-source {
+             color: #6b7280;
+             font-size: 0.875rem;
+             margin-top: 0.5rem;
+         }
+
+         .appendix-level-badge {
+             display: inline-block;
+             padding: 0.25rem 0.75rem;
+             border-radius: 20px;
+             font-size: 0.75rem;
+             font-weight: 600;
+             margin-bottom: 0.5rem;
+         }
+
+         .appendix-level-1 {
+             background: #fef3c7;
+             color: #92400e;
+         }
+
+         .appendix-level-2 {
+             background: #fde68a;
+             color: #b45309;
+         }
+
+         .appendix-level-3 {
+             background: #fed7aa;
+             color: #c2410c;
+         }
+
+         .conservation-modal {
+             position: fixed;
+             top: 0;
+             left: 0;
+             width: 100%;
+             height: 100%;
+             background: rgba(0, 0, 0, 0.5);
+             backdrop-filter: blur(8px);
+             z-index: 9999;
+             display: flex;
+             align-items: center;
+             justify-content: center;
+             opacity: 0;
+             visibility: hidden;
+             transition: all 0.3s ease;
+         }
+
+         .conservation-modal.show {
+             opacity: 1;
+             visibility: visible;
+         }
+
+         .conservation-modal-content {
+             background: linear-gradient(145deg, #ffffff 0%, #f8fafc 100%);
+             border-radius: 24px;
+             box-shadow: 0 32px 64px rgba(0, 0, 0, 0.2);
+             max-width: 900px;
+             width: 90%;
+             max-height: 80vh;
+             overflow-y: auto;
+             transform: scale(0.9) translateY(20px);
+             transition: all 0.3s ease;
+         }
+
+         .conservation-modal.show .conservation-modal-content {
+             transform: scale(1) translateY(0);
+         }
+
+         .conservation-modal-header {
+             background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
+             color: white;
+             padding: 2rem;
+             border-radius: 24px 24px 0 0;
+             position: relative;
+         }
+
+         .conservation-modal-close {
+             position: absolute;
+             top: 1.5rem;
+             right: 2rem;
+             background: rgba(255, 255, 255, 0.2);
+             border: none;
+             color: white;
+             width: 40px;
+             height: 40px;
+             border-radius: 50%;
+             cursor: pointer;
+             display: flex;
+             align-items: center;
+             justify-content: center;
+             transition: all 0.3s ease;
+         }
+
+         .conservation-modal-close:hover {
+             background: rgba(255, 255, 255, 0.3);
+             transform: scale(1.1);
+         }
+
+         .conservation-modal-body {
+             padding: 2rem;
+         }
+
+         .conservation-scale {
+             display: flex;
+             justify-content: center;
+             align-items: center;
+             margin: 2rem 0;
+             flex-wrap: wrap;
+             gap: 0.5rem;
+         }
+
+         .conservation-category {
+             display: flex;
+             flex-direction: column;
+             align-items: center;
+             margin: 0 1rem;
+         }
+
+         .conservation-category-title {
+             font-size: 0.875rem;
+             font-weight: 600;
+             color: #6b7280;
+             margin-bottom: 0.5rem;
+             text-align: center;
+         }
+
+         .conservation-badges {
+             display: flex;
+             gap: 0.25rem;
+         }
+
+         .conservation-badge {
+             width: 50px;
+             height: 50px;
+             border-radius: 50%;
+             display: flex;
+             align-items: center;
+             justify-content: center;
+             font-weight: 700;
+             font-size: 0.75rem;
+             transition: all 0.3s ease;
+             cursor: pointer;
+             position: relative;
+         }
+
+         .conservation-badge:hover {
+             transform: scale(1.1);
+             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+         }
+
+         .conservation-badge.extinct {
+             background: #6b7280;
+             color: white;
+         }
+
+         .conservation-badge.critically-endangered {
+             background: #dc2626;
+             color: white;
+         }
+
+         .conservation-badge.endangered {
+             background: #ea580c;
+             color: white;
+         }
+
+         .conservation-badge.vulnerable {
+             background: #d97706;
+             color: white;
+         }
+
+         .conservation-badge.near-threatened {
+             background: #eab308;
+             color: white;
+         }
+
+         .conservation-badge.least-concern {
+             background: #16a34a;
+             color: white;
+         }
+
+         .conservation-badge.extinct-wild {
+             background: #7c2d12;
+             color: white;
+         }
+
+         .conservation-info {
+             background: linear-gradient(135deg, #f3e8ff 0%, #e9d5ff 100%);
+             border: 2px solid #8b5cf6;
+             border-radius: 16px;
+             padding: 1.5rem;
+             margin: 1.5rem 0;
+         }
+
+         .conservation-info h3 {
+             color: #7c3aed;
+             font-size: 1.125rem;
+             font-weight: 700;
+             margin-bottom: 1rem;
+         }
+
+         .conservation-info p {
+             color: #6b7280;
+             line-height: 1.6;
+             margin-bottom: 0.5rem;
+         }
+
+         .conservation-reference-item {
+             background: linear-gradient(135deg, #f0f4ff 0%, #e0e7ff 100%);
+             border-left: 4px solid #8b5cf6;
+             padding: 1.5rem;
+             margin-bottom: 1rem;
+             border-radius: 12px;
+             transition: all 0.3s ease;
+         }
+
+         .conservation-reference-item:hover {
+             transform: translateX(8px);
+             box-shadow: 0 8px 16px rgba(139, 92, 246, 0.15);
+         }
+
+         .conservation-reference-item a {
+             color: #7c3aed;
+             text-decoration: none;
+             font-weight: 500;
+             transition: all 0.2s ease;
+         }
+
+         .conservation-reference-item a:hover {
+             color: #5b21b6;
+             text-decoration: underline;
+         }
+
+         .conservation-reference-source {
+             color: #6b7280;
+             font-size: 0.875rem;
+             margin-top: 0.5rem;
+         }
+
+         .status-explanation {
+             background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+             border: 2px solid #f59e0b;
+             border-radius: 12px;
+             padding: 1rem;
+             margin: 1rem 0;
+         }
+
+         .status-explanation h4 {
+             color: #92400e;
+             font-weight: 600;
+             margin-bottom: 0.5rem;
+         }
+
+           .status-explanation p {
+               color: #78350f;
+               font-size: 0.875rem;
+               line-height: 1.5;
+           }
+
+           /* Morphology Grid Styling */
+           .morphology-grid {
+               display: grid;
+               grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+               gap: 1rem;
+               margin: 1.5rem 0;
+               padding: 1.5rem;
+               background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+               border: 2px solid #0ea5e9;
+               border-radius: 16px;
+           }
+
+           .morphology-item {
+               background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+               border: 1px solid #e2e8f0;
+               border-radius: 12px;
+               padding: 1rem;
+               transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+               position: relative;
+               overflow: hidden;
+           }
+
+           .morphology-item:hover {
+               transform: translateY(-4px) scale(1.02);
+               box-shadow: 0 12px 24px rgba(14, 165, 233, 0.15);
+               border-color: #0ea5e9;
+               background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+           }
+
+           .morphology-item::before {
+               content: '';
+               position: absolute;
+               top: 0;
+               left: 0;
+               right: 0;
+               height: 3px;
+               background: linear-gradient(90deg, #0ea5e9, #0284c7, #0369a1);
+               transform: scaleX(0);
+               transition: transform 0.3s ease;
+           }
+
+           .morphology-item:hover::before {
+               transform: scaleX(1);
+           }
+
+           .morphology-item span {
+               display: block;
+               font-size: 0.75rem;
+               font-weight: 500;
+               color: #64748b;
+               text-transform: uppercase;
+               letter-spacing: 0.05em;
+               margin-bottom: 0.5rem;
+           }
+
+           .morphology-item strong {
+               font-size: 0.875rem;
+               font-weight: 600;
+               color: #1e293b;
+               line-height: 1.4;
+               display: block;
+           }
+
+           /* Enhanced morphology info styling */
+           .morphology-info {
+               background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+               border: 2px solid #3b82f6;
+               border-radius: 12px;
+               padding: 1.5rem;
+               margin-bottom: 1.5rem;
+           }
+
+           .morphology-info h3 {
+               color: #1e40af;
+               font-size: 1.25rem;
+               font-weight: 700;
+               margin-bottom: 0.5rem;
+               display: flex;
+               align-items: center;
+               gap: 0.5rem;
+           }
+
+           .morphology-info p {
+               color: #374151;
+               line-height: 1.6;
+               margin: 0;
+           }
+
+           /* Morphology Preview Grid for Detail Page */
+           .morphology-preview-grid {
+               display: grid;
+               grid-template-columns: repeat(3, 1fr);
+               gap: 1px;
+               margin: 1rem 0;
+               background: #e5e7eb;
+               border-radius: 12px;
+               overflow: hidden;
+               box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+           }
+
+           .morphology-preview-item {
+               background: #ffffff;
+               padding: 1rem 0.75rem;
+               transition: all 0.3s ease;
+               position: relative;
+               min-height: 70px;
+               display: flex;
+               flex-direction: column;
+               justify-content: center;
+               text-align: center;
+           }
+
+           .morphology-preview-item:hover {
+               background: #f8fafc;
+               transform: scale(1.02);
+               z-index: 10;
+               box-shadow: 0 8px 25px -5px rgba(0, 0, 0, 0.1);
+           }
+
+           .morphology-preview-label {
+               display: block;
+               font-size: 0.7rem;
+               font-weight: 600;
+               color: #6b7280;
+               text-transform: uppercase;
+               letter-spacing: 0.05em;
+               margin-bottom: 0.4rem;
+               line-height: 1.2;
+           }
+
+           .morphology-preview-value {
+               font-size: 0.85rem;
+               font-weight: 700;
+               color: #1f2937;
+               line-height: 1.3;
+               display: block;
+           }
+
+           /* Responsive adjustments for preview */
+           @media (max-width: 768px) {
+               .morphology-preview-grid {
+                   grid-template-columns: repeat(2, 1fr);
+               }
+
+               .morphology-preview-item {
+                   padding: 0.75rem 0.5rem;
+                   min-height: 60px;
+               }
+
+               .morphology-preview-label {
+                   font-size: 0.65rem;
+                   margin-bottom: 0.3rem;
+               }
+
+               .morphology-preview-value {
+                   font-size: 0.8rem;
+               }
+           }
+
+           @media (max-width: 480px) {
+               .morphology-preview-grid {
+                   grid-template-columns: repeat(2, 1fr);
+               }
+
+               .morphology-preview-item {
+                   padding: 0.6rem 0.4rem;
+                   min-height: 55px;
+               }
+
+               .morphology-preview-label {
+                   font-size: 0.6rem;
+               }
+
+               .morphology-preview-value {
+                   font-size: 0.75rem;
+               }
+           }
+
+           /* Modal Morphology Grid Styling */
+           .morphology-grid {
+               display: grid;
+               grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+               gap: 1rem;
+               margin: 1.5rem 0;
+               padding: 1.5rem;
+               background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+               border: 2px solid #0ea5e9;
+               border-radius: 16px;
+           }
+
+           .morphology-item {
+               background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+               border: 1px solid #e2e8f0;
+               border-radius: 12px;
+               padding: 1rem;
+               transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+               position: relative;
+               overflow: hidden;
+           }
+
+           .morphology-item:hover {
+               transform: translateY(-4px) scale(1.02);
+               box-shadow: 0 12px 24px rgba(14, 165, 233, 0.15);
+               border-color: #0ea5e9;
+               background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+           }
+
+           .morphology-item::before {
+               content: '';
+               position: absolute;
+               top: 0;
+               left: 0;
+               right: 0;
+               height: 3px;
+               background: linear-gradient(90deg, #0ea5e9, #0284c7, #0369a1);
+               transform: scaleX(0);
+               transition: transform 0.3s ease;
+           }
+
+           .morphology-item:hover::before {
+               transform: scaleX(1);
+           }
+
+           .morphology-item span {
+               display: block;
+               font-size: 0.75rem;
+               font-weight: 500;
+               color: #64748b;
+               text-transform: uppercase;
+               letter-spacing: 0.05em;
+               margin-bottom: 0.5rem;
+           }
+
+           .morphology-item strong {
+               font-size: 0.875rem;
+               font-weight: 600;
+               color: #1e293b;
+               line-height: 1.4;
+               display: block;
+           }
+
+           /* Responsive adjustments for modal */
+           @media (max-width: 768px) {
+               .morphology-grid {
+                   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+                   gap: 0.75rem;
+                   padding: 1rem;
+               }
+
+               .morphology-item {
+                   padding: 0.75rem;
+               }
+
+               .morphology-item span {
+                   font-size: 0.7rem;
+               }
+
+               .morphology-item strong {
+                   font-size: 0.8rem;
+               }
+           }
+       </style>
+</head>
+<body class="bg-slate-50 font-inter">
+    <!-- Header -->
+    <header id="main-header" class="bg-blue-900/95 backdrop-blur-lg fixed top-0 left-0 right-0 z-50 transition-all duration-300 shadow-sm">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <a href="index.html" class="flex items-center space-x-3">
+                    <div class="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-white">
+                            <path d="M2 6c.6.2 1.4.5 2.5 1.4C6.5 9 8.6 10.5 10 10.5c1.4 0 2.5-.5 4-1.5 1.5-.9 3.2-1.5 5.5-1.5s4.2 1.5 5.5 2.5"/>
+                            <path d="M2 12c.6.2 1.4.5 2.5 1.4C6.5 15 8.6 16.5 10 16.5c1.4 0 2.5-.5 4-1.5 1.5-.9 3.2-1.5 5.5-1.5s4.2 1.5 5.5 2.5"/>
+                            <path d="M2 18c.6.2 1.4.5 2.5 1.4C6.5 21 8.6 22.5 10 22.5c1.4 0 2.5-.5 4-1.5 1.5-.9 3.2-1.5 5.5-1.5s4.2 1.5 5.5 2.5"/>
+                        </svg>
+                    </div>
+                    <span class="text-xl font-bold text-white">Lestari Bahari</span>
+                </a>
+                <nav class="hidden md:flex items-center space-x-8">
+                    <a href="index.html#home" class="text-white hover:text-blue-300 transition">Beranda</a>
+                    <a href="dashboard.html" class="text-white hover:text-blue-300 transition">Satwa Dilindungi</a>
+                    <a href="index.html#about" class="text-white hover:text-blue-300 transition">Undang-undang</a>
+                    <a href="index.html#contact" class="text-white hover:text-blue-300 transition">Kontak</a>
+                </nav>
+                <button id="mobile-menu-btn" class="md:hidden text-white">
+                    <i data-lucide="menu" class="w-6 h-6"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-blue-900/95 py-4">
+            <a href="index.html#home" class="block text-center py-2 px-4 text-white hover:bg-blue-500/20">Beranda</a>
+            <a href="dashboard.html" class="block text-center py-2 px-4 text-white hover:bg-blue-500/20">Satwa Dilindungi</a>
+            <a href="index.html#about" class="block text-center py-2 px-4 text-white hover:bg-blue-500/20">Undang-undang</a>
+            <a href="index.html#contact" class="block text-center py-2 px-4 text-white hover:bg-blue-500/20">Kontak</a>
+        </div>
+    </header>
+
+    <main class="pt-32 pb-16" style="background: linear-gradient(180deg, #f0f9ff 0%, #e0f2fe 100%);">
+        <div class="container mx-auto px-6">
+            <div id="animal-detail-content">
+                <!-- Konten detail akan diisi oleh JavaScript -->
+                <div class="text-center py-24">
+                    <p class="text-slate-600 text-lg">Memuat detail satwa...</p>
+                </div>
+            </div>
+             <div class="mt-12 text-center">
+                <a href="dashboard.html" id="back-button" class="inline-flex items-center gap-2 px-6 py-3 bg-white border border-slate-200 rounded-full text-slate-700 hover:bg-slate-100 transition-colors shadow-sm">
+                    <i data-lucide="arrow-left" class="w-5 h-5"></i>
+                    Kembali ke Daftar Satwa
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Morphology References Modal -->
+    <div id="morphology-modal" class="morphology-modal">
+        <div class="morphology-modal-content">
+            <div class="morphology-modal-header">
+                <h2 class="text-2xl font-bold">Daftar Pustaka Morfologi</h2>
+                <p class="text-blue-100 mt-2">Referensi ilmiah untuk informasi morfologi</p>
+                <button id="morphology-modal-close" class="morphology-modal-close">
+                    <i data-lucide="x" class="w-5 h-5"></i>
+                </button>
+            </div>
+            <div class="morphology-modal-body" id="morphology-modal-body">
+                <!-- Content will be populated by JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Appendix References Modal -->
+    <div id="appendix-modal" class="appendix-modal">
+        <div class="appendix-modal-content">
+            <div class="appendix-modal-header">
+                <h2 class="text-2xl font-bold">Daftar Pustaka Appendix CITES</h2>
+                <p class="text-green-100 mt-2">Referensi resmi untuk status Appendix CITES</p>
+                <button id="appendix-modal-close" class="appendix-modal-close">
+                    <i data-lucide="x" class="w-5 h-5"></i>
+                </button>
+            </div>
+            <div class="appendix-modal-body" id="appendix-modal-body">
+                <!-- Content will be populated by JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Conservation Status Modal -->
+    <div id="conservation-modal" class="conservation-modal">
+        <div class="conservation-modal-content">
+            <div class="conservation-modal-header">
+                <h2 class="text-2xl font-bold">Status Konservasi IUCN</h2>
+                <p class="text-purple-100 mt-2">Informasi lengkap tentang status konservasi dan daftar pustaka</p>
+                <button id="conservation-modal-close" class="conservation-modal-close">
+                    <i data-lucide="x" class="w-5 h-5"></i>
+                </button>
+            </div>
+            <div class="conservation-modal-body" id="conservation-modal-body">
+                <!-- Content will be populated by JavaScript -->
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="script.js"></script>
+    <script src="morphology-references.js"></script>
+    <script>
+        // Ensure data is available before loading detail.js
+        document.addEventListener('DOMContentLoaded', function() {
+            if (typeof window.protectedAnimals === 'undefined') {
+                console.log('Data not available, reloading script...');
+                // Reload the page after a short delay
+                setTimeout(() => {
+                    window.location.reload();
+                }, 500);
+            }
+        });
+    </script>
+    <script src="detail.js"></script>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-8">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-6">
+                <div class="md:col-span-2">
+                    <div class="flex items-center space-x-3 mb-4">
+                        <div class="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-white">
+                                <path d="M2 6c.6.2 1.4.5 2.5 1.4C6.5 9 8.6 10.5 10 10.5c1.4 0 2.5-.5 4-1.5 1.5-.9 3.2-1.5 5.5-1.5s4.2 1.5 5.5 2.5"/>
+                                <path d="M2 12c.6.2 1.4.5 2.5 1.4C6.5 15 8.6 16.5 10 16.5c1.4 0 2.5-.5 4-1.5 1.5-.9 3.2-1.5 5.5-1.5s4.2 1.5 5.5 2.5"/>
+                                <path d="M2 18c.6.2 1.4.5 2.5 1.4C6.5 21 8.6 22.5 10 22.5c1.4 0 2.5-.5 4-1.5 1.5-.9 3.2-1.5 5.5-1.5s4.2 1.5 5.5 2.5"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold">Lestari Bahari</h3>
+                            <p class="text-sm text-gray-400">BKHIT Sulawesi Utara</p>
+                        </div>
+                    </div>
+                    <div class="space-y-3">
+                        <p class="text-gray-300 leading-relaxed">
+                            🌊 <strong>Portal Informasi Satwa Akuatik Dilindungi</strong>
+                        </p>
+                        <p class="text-gray-300 leading-relaxed text-sm">
+                            Menyajikan informasi lengkap tentang satwa laut yang dilindungi di wilayah kerja BKHIT Sulawesi Utara<br>
+                            Dari hiu paus hingga teripang, kenali dan lindungi kekayaan laut kita
+                        </p>
+                        <p class="text-blue-300 text-sm font-medium mb-10">
+                            🛡️ Bersama menjaga kelestarian ekosistem laut Indonesia
+                        </p>
+                    </div>
+                    <div class="flex space-x-4 mt-4">
+                        <a href="https://www.instagram.com/karantinasulawesiutara/" target="_blank" rel="noopener noreferrer" 
+                           class="text-gray-400 hover:text-white transition-colors">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                            </svg>
+                        </a>
+                        <a href="https://www.facebook.com/humas.bkpmanado/" target="_blank" rel="noopener noreferrer" 
+                           class="text-gray-400 hover:text-white transition-colors">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Tautan Cepat</h4>
+                    <ul class="space-y-2">
+                        <li><a href="dashboard.html" class="text-gray-300 hover:text-white transition-colors">Satwa Dilindungi</a></li>
+                        <li><a href="sanctions.html" class="text-gray-300 hover:text-white transition-colors">Sanksi Hukum</a></li>
+                        <li><a href="contact.html" class="text-gray-300 hover:text-white transition-colors">Hubungi Kami</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Kontak</h4>
+                    <div class="space-y-2 text-gray-300">
+                        <p>📞 082190899090</p>
+                        <p>📍 Manado, Sulawesi Utara</p>
+                        <p>🕒 Layanan 24/7</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center">
+                <p class="text-gray-400">
+                    © 2024 Lestari Bahari. All rights reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

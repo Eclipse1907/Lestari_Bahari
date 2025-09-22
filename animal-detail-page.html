@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detail Satwa - Lestari Akuatik</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-100">
+    <!-- Header -->
+    <header class="fixed top-0 left-0 right-0 z-50 glass-effect">
+        <nav class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <a href="index.html" class="flex items-center space-x-3">
+                    <div class="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center">
+                        <span class="text-white font-bold">LA</span>
+                    </div>
+                    <div>
+                        <h1 class="text-lg font-bold text-white">Lestari Akuatik</h1>
+                        <p class="text-xs text-blue-200">BKHIT Sulawesi Utara</p>
+                    </div>
+                </a>
+                
+                <div class="hidden md:flex items-center space-x-6">
+                    <a href="index.html" class="text-white hover:text-blue-300 transition-colors">Beranda</a>
+                    <a href="dashboard.html" class="text-white hover:text-blue-300 transition-colors">Satwa Dilindungi</a>
+                    <a href="contact.html" class="text-white hover:text-blue-300 transition-colors">Kontak</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="pt-24 pb-32">
+        <!-- Breadcrumb -->
+        <div class="container mx-auto px-6 mb-6">
+            <nav class="flex items-center space-x-2 text-sm text-gray-600">
+                <a href="dashboard.html" class="hover:text-blue-600">Satwa Dilindungi</a>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="m9 18 6-6-6-6"/>
+                </svg>
+                <span id="phylum-breadcrumb" class="text-gray-500">Filum</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="m9 18 6-6-6-6"/>
+                </svg>
+                <span id="animal-breadcrumb" class="text-blue-600 font-semibold">Detail Satwa</span>
+            </nav>
+        </div>
+
+        <!-- Animal Detail Content -->
+        <div id="animal-detail-content" class="container mx-auto px-6">
+            <!-- Loading state -->
+            <div class="text-center py-12">
+                <div class="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto mb-4"></div>
+                <p class="text-gray-600">Memuat detail satwa...</p>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        // Load animal detail from localStorage
+        function loadAnimalDetail() {
+            const animalData = localStorage.getItem('selectedAnimal');
+            const phylumName = localStorage.getItem('selectedPhylum');
+            
+            if (!animalData || !phylumName) {
+                document.getElementById('animal-detail-content').innerHTML = `
+                    <div class="text-center py-12">
+                        <div class="text-red-500 text-xl mb-4">❌</div>
+                        <h2 class="text-2xl font-bold text-gray-800 mb-2">Data Tidak Ditemukan</h2>
+                        <p class="text-gray-600 mb-6">Data hewan tidak ditemukan.</p>
+                        <a href="dashboard.html" class="inline-flex items-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2">
+                                <path d="m15 18-6-6 6-6"/>
+                            </svg>
+                            Kembali ke Dashboard
+                        </a>
+                    </div>
+                `;
+                return;
+            }
+
+            const animal = JSON.parse(animalData);
+            
+            // Update breadcrumbs
+            document.getElementById('phylum-breadcrumb').textContent = phylumName;
+            document.getElementById('animal-breadcrumb').textContent = animal.name;
+
+            // Determine status color
+            const statusColor = animal.status === 'Terancam Punah' ? 'bg-red-500' : 'bg-orange-500';
+            const appendixColor = animal.regulation.includes('Appendix I') ? 'bg-red-600' : 'bg-orange-600';
+
+            const html = `
+                <!-- Header Info -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden mb-8">
+                    <div class="md:flex">
+                        <div class="md:w-1/2">
+                            <img src="${animal.image}" alt="${animal.name}" class="w-full h-64 md:h-full object-contain bg-gray-50">
+                        </div>
+                        <div class="md:w-1/2 p-8">
+                            <div class="flex items-center mb-4">
+                                <span class="text-4xl mr-3">🦈</span>
+                                <div>
+                                    <h1 class="text-3xl font-bold text-gray-800">${animal.name}</h1>
+                                    <p class="text-xl text-gray-600 italic">${animal.latin}</p>
+                                </div>
+                            </div>
+                            
+                            <div class="space-y-4">
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="${statusColor} text-white px-3 py-1 rounded-full text-sm font-semibold">
+                                        ${animal.status}
+                                    </span>
+                                    <span class="${appendixColor} text-white px-3 py-1 rounded-full text-sm font-semibold">
+                                        ${animal.regulation}
+                                    </span>
+                                </div>
+                                
+                                <div class="bg-gray-50 p-4 rounded-lg">
+                                    <h3 class="font-semibold text-gray-800 mb-2">📅 Tahun Ditetapkan</h3>
+                                    <p class="text-gray-600">${animal.yearProtected}</p>
+                                </div>
+                                
+                                <div class="bg-gray-50 p-4 rounded-lg">
+                                    <h3 class="font-semibold text-gray-800 mb-2">📍 Lokasi</h3>
+                                    <p class="text-gray-600">${animal.location}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Taxonomy -->
+                <div class="bg-white rounded-2xl shadow-lg p-6 mb-8">
+                    <h2 class="text-2xl font-bold text-gray-800 mb-6 flex items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-3">
+                            <path d="M3 6h18"/>
+                            <path d="M3 12h18"/>
+                            <path d="M3 18h18"/>
+                        </svg>
+                        Klasifikasi Taksonomi
+                    </h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                        <div class="bg-blue-50 p-4 rounded-lg">
+                            <h3 class="font-semibold text-blue-800 mb-1">Kingdom</h3>
+                            <p class="text-blue-600">${animal.details.taxonomy.kingdom}</p>
+                        </div>
+                        <div class="bg-green-50 p-4 rounded-lg">
+                            <h3 class="font-semibold text-green-800 mb-1">Phylum</h3>
+                            <p class="text-green-600">${animal.details.taxonomy.phylum}</p>
+                        </div>
+                        <div class="bg-orange-50 p-4 rounded-lg">
+                            <h3 class="font-semibold text-orange-800 mb-1">Class</h3>
+                            <p class="text-orange-600">${animal.details.taxonomy.class}</p>
+                        </div>
+                        <div class="bg-purple-50 p-4 rounded-lg">
+                            <h3 class="font-semibold text-purple-800 mb-1">Order</h3>
+                            <p class="text-purple-600">${animal.details.taxonomy.order}</p>
+                        </div>
+                        <div class="bg-pink-50 p-4 rounded-lg">
+                            <h3 class="font-semibold text-pink-800 mb-1">Family</h3>
+                            <p class="text-pink-600">${animal.details.taxonomy.family}</p>
+                        </div>
+                        <div class="bg-teal-50 p-4 rounded-lg">
+                            <h3 class="font-semibold text-teal-800 mb-1">Genus</h3>
+                            <p class="text-teal-600">${animal.details.taxonomy.genus}</p>
+                        </div>
+                    </div>
+                    <div class="mt-4 bg-gray-50 p-4 rounded-lg">
+                        <h3 class="font-semibold text-gray-800 mb-1">Species</h3>
+                        <p class="text-gray-600 font-mono">${animal.details.taxonomy.species}</p>
+                    </div>
+                </div>
+
+                <!-- Morphology -->
+                <div class="bg-white rounded-2xl shadow-lg p-6 mb-8">
+                    <h2 class="text-2xl font-bold text-gray-800 mb-6 flex items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-3">
+                            <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                            <path d="M2 17l10 5 10-5"/>
+                            <path d="M2 12l10 5 10-5"/>
+                        </svg>
+                        Morfologi & Anatomi
+                    </h2>
+                    
+                    <div class="mb-6">
+                        <h3 class="text-lg font-semibold text-gray-800 mb-3">Deskripsi Fisik</h3>
+                        <p class="text-gray-600 leading-relaxed">${animal.details.morphology.description}</p>
+                    </div>
+
+                    <div class="mb-6">
+                        <h3 class="text-lg font-semibold text-gray-800 mb-3">Karakteristik Utama</h3>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+                            ${animal.details.morphology.characteristics.map(char => `
+                                <div class="flex items-center bg-gray-50 p-3 rounded-lg">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2 text-green-500">
+                                        <polyline points="20,6 9,17 4,12"/>
+                                    </svg>
+                                    <span class="text-gray-700">${char}</span>
+                                </div>
+                            `).join('')}
+                        </div>
+                    </div>
+
+                    <div class="bg-blue-50 p-4 rounded-lg">
+                        <h3 class="text-lg font-semibold text-blue-800 mb-2">Habitat</h3>
+                        <p class="text-blue-600">${animal.details.morphology.habitat}</p>
+                    </div>
+                </div>
+
+                <!-- Legal Bases -->
+                <div class="bg-white rounded-2xl shadow-lg p-6 mb-8">
+                    <h2 class="text-2xl font-bold text-gray-800 mb-6 flex items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-3">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                            <polyline points="14,2 14,8 20,8"/>
+                            <line x1="16" y1="13" x2="8" y2="13"/>
+                            <line x1="16" y1="17" x2="8" y2="17"/>
+                            <polyline points="10,9 9,9 8,9"/>
+                        </svg>
+                        Dasar Hukum & Regulasi
+                    </h2>
+                    <div class="space-y-4">
+                        ${animal.details.legalBases.map(legal => `
+                            <div class="border border-gray-200 rounded-lg p-4 hover:shadow-md transition-shadow">
+                                <h3 class="font-semibold text-gray-800 mb-2">${legal.title}</h3>
+                                <p class="text-gray-600">📋 ${legal.source}</p>
+                            </div>
+                        `).join('')}
+                    </div>
+                </div>
+
+                <!-- Back Button -->
+                <div class="text-center">
+                    <a href="satwa-list.html?phylum=${phylumName}" class="inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2">
+                            <path d="m15 18-6-6 6-6"/>
+                        </svg>
+                        Kembali ke Daftar ${phylumName}
+                    </a>
+                </div>
+            `;
+
+            document.getElementById('animal-detail-content').innerHTML = html;
+        }
+
+        // Load detail when page loads
+        document.addEventListener('DOMContentLoaded', loadAnimalDetail);
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+

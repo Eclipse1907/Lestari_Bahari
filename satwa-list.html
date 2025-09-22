@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daftar Satwa - Lestari Akuatik</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-100">
+    <!-- Header -->
+    <header class="fixed top-0 left-0 right-0 z-50 glass-effect">
+        <nav class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <a href="index.html" class="flex items-center space-x-3">
+                    <div class="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center">
+                        <span class="text-white font-bold">LA</span>
+                    </div>
+                    <div>
+                        <h1 class="text-lg font-bold text-white">Lestari Akuatik</h1>
+                        <p class="text-xs text-blue-200">BKHIT Sulawesi Utara</p>
+                    </div>
+                </a>
+                
+                <div class="hidden md:flex items-center space-x-6">
+                    <a href="index.html" class="text-white hover:text-blue-300 transition-colors">Beranda</a>
+                    <a href="dashboard.html" class="text-white hover:text-blue-300 transition-colors">Satwa Dilindungi</a>
+                    <a href="contact.html" class="text-white hover:text-blue-300 transition-colors">Kontak</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="pt-24 pb-32">
+        <div class="container mx-auto px-6">
+            <!-- Back Button -->
+            <div class="mb-6">
+                <a href="dashboard.html" class="inline-flex items-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2">
+                        <path d="m15 18-6-6 6-6"/>
+                    </svg>
+                    Kembali ke Daftar Filum
+                </a>
+            </div>
+
+            <!-- Phylum Info -->
+            <div class="bg-white rounded-2xl shadow-lg p-6 mb-6">
+                <div class="flex items-center justify-center mb-4">
+                    <span id="phylum-icon" class="text-4xl mr-4">🦈</span>
+                    <div class="text-center">
+                        <h2 id="phylum-name" class="text-2xl font-bold text-gray-800">Chondrichthyes</h2>
+                        <p id="phylum-description" class="text-gray-600">Hiu & Pari</p>
+                        <p id="phylum-count" class="text-sm text-gray-500 mt-1">2 spesies dilindungi</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Animals Grid -->
+            <div id="animals-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Animals will be loaded here -->
+            </div>
+        </div>
+    </main>
+
+    <script>
+        // Data satwa lengkap
+        const animalsData = {
+            'Chondrichthyes': {
+                name: 'Chondrichthyes',
+                description: 'Hiu & Pari',
+                icon: '🦈',
+                animals: [
+                    {
+                        id: 'hiu-koboi',
+                        name: 'Hiu Koboi',
+                        latin: 'Carcharhinus longimanus',
+                        status: 'Terancam Punah',
+                        regulation: 'CITES Appendix II',
+                        yearProtected: '2013',
+                        location: 'Perairan Sulawesi Utara',
+                        image: 'https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=400&h=300&fit=crop',
+                        details: {
+                            taxonomy: {
+                                kingdom: 'Animalia',
+                                phylum: 'Chordata',
+                                class: 'Chondrichthyes',
+                                order: 'Carcharhiniformes',
+                                family: 'Carcharhinidae',
+                                genus: 'Carcharhinus',
+                                species: 'C. longimanus'
+                            },
+                            morphology: {
+                                description: 'Tubuh ramping dengan sirip dorsal pertama yang besar dan membulat. Warna abu-abu kebiruan di bagian atas dan putih di bagian bawah.',
+                                characteristics: ['Panjang maksimal 4 meter', 'Berat hingga 170 kg', 'Sirip dorsal besar dan membulat', 'Ujung sirip berwarna putih'],
+                                habitat: 'Laut tropis dan subtropis, perairan lepas pantai'
+                            },
+                            legalBases: [
+                                {
+                                    title: 'Peraturan Menteri Kelautan dan Perikanan No. 12 Tahun 2012',
+                                    source: 'Kementerian Kelautan dan Perikanan RI'
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        id: 'hiu-mako',
+                        name: 'Hiu Mako',
+                        latin: 'Isurus oxyrinchus',
+                        status: 'Terancam Punah',
+                        regulation: 'CITES Appendix II',
+                        yearProtected: '2013',
+                        location: 'Perairan Sulawesi Utara',
+                        image: 'https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=400&h=300&fit=crop',
+                        details: {
+                            taxonomy: {
+                                kingdom: 'Animalia',
+                                phylum: 'Chordata',
+                                class: 'Chondrichthyes',
+                                order: 'Lamniformes',
+                                family: 'Lamnidae',
+                                genus: 'Isurus',
+                                species: 'I. oxyrinchus'
+                            },
+                            morphology: {
+                                description: 'Tubuh ramping dan aerodinamis dengan moncong runcing. Warna biru metalik di bagian atas dan putih di bagian bawah.',
+                                characteristics: ['Panjang maksimal 4.5 meter', 'Berat hingga 500 kg', 'Moncong runcing dan aerodinamis', 'Warna biru metalik'],
+                                habitat: 'Laut tropis dan subtropis, perairan pelagis'
+                            },
+                            legalBases: [
+                                {
+                                    title: 'Peraturan Menteri Kelautan dan Perikanan No. 12 Tahun 2012',
+                                    source: 'Kementerian Kelautan dan Perikanan RI'
+                                }
+                            ]
+                        }
+                    }
+                ]
+            },
+            'Actinopterygii': {
+                name: 'Actinopterygii',
+                description: 'Ikan Bertulang Keras',
+                icon: '🐟',
+                animals: [
+                    {
+                        id: 'napoleon',
+                        name: 'Ikan Napoleon',
+                        latin: 'Cheilinus undulatus',
+                        status: 'Terancam Punah',
+                        regulation: 'CITES Appendix II',
+                        yearProtected: '2004',
+                        location: 'Perairan Sulawesi Utara, Taman Nasional Bunaken',
+                        image: 'https://images.unsplash.com/photo-1520637836862-4d197d17c43a?w=400&h=300&fit=crop',
+                        details: {
+                            taxonomy: {
+                                kingdom: 'Animalia',
+                                phylum: 'Chordata',
+                                class: 'Actinopterygii',
+                                order: 'Labriformes',
+                                family: 'Labridae',
+                                genus: 'Cheilinus',
+                                species: 'C. undulatus'
+                            },
+                            morphology: {
+                                description: 'Ikan besar dengan kepala besar dan bibir tebal. Warna hijau kebiruan dengan pola garis vertikal.',
+                                characteristics: ['Panjang maksimal 2 meter', 'Berat hingga 190 kg', 'Kepala besar dengan bibir tebal', 'Tonjolan kepala pada jantan'],
+                                habitat: 'Terumbu karang, perairan dangkal hingga 100 meter'
+                            },
+                            legalBases: [
+                                {
+                                    title: 'Peraturan Menteri Kelautan dan Perikanan No. 37 Tahun 2013',
+                                    source: 'Kementerian Kelautan dan Perikanan RI'
+                                }
+                            ]
+                        }
+                    }
+                ]
+            },
+            'Reptilia': {
+                name: 'Reptilia',
+                description: 'Penyu',
+                icon: '🐢',
+                animals: [
+                    {
+                        id: 'penyu-hijau',
+                        name: 'Penyu Hijau',
+                        latin: 'Chelonia mydas',
+                        status: 'Terancam Punah',
+                        regulation: 'CITES Appendix I',
+                        yearProtected: '1999',
+                        location: 'Pantai Sulawesi Utara, Pulau Mantehage',
+                        image: 'https://images.unsplash.com/photo-1583212292454-1fe6229603b7?w=400&h=300&fit=crop',
+                        details: {
+                            taxonomy: {
+                                kingdom: 'Animalia',
+                                phylum: 'Chordata',
+                                class: 'Reptilia',
+                                order: 'Testudines',
+                                family: 'Cheloniidae',
+                                genus: 'Chelonia',
+                                species: 'C. mydas'
+                            },
+                            morphology: {
+                                description: 'Karapas berbentuk oval dengan warna hijau keabu-abuan. Plastron berwarna kuning pucat.',
+                                characteristics: ['Panjang karapas 80-120 cm', 'Berat 68-190 kg', 'Karapas oval berwarna hijau', 'Plastron kuning pucat'],
+                                habitat: 'Laut tropis dan subtropis, pantai berpasir untuk bertelur'
+                            },
+                            legalBases: [
+                                {
+                                    title: 'Peraturan Pemerintah No. 7 Tahun 1999',
+                                    source: 'Pemerintah Republik Indonesia'
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        };
+
+        // Get URL parameters
+        function getQueryParam(param) {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(param);
+        }
+
+        // Load animals for selected phylum
+        function loadAnimals() {
+            const phylumName = getQueryParam('phylum');
+            if (!phylumName || !animalsData[phylumName]) {
+                document.getElementById('animals-grid').innerHTML = '<p class="text-center text-gray-600 col-span-full">Filum tidak ditemukan.</p>';
+                return;
+            }
+
+            const phylum = animalsData[phylumName];
+            
+            // Update phylum info
+            document.getElementById('phylum-icon').textContent = phylum.icon;
+            document.getElementById('phylum-name').textContent = phylum.name;
+            document.getElementById('phylum-description').textContent = phylum.description;
+            document.getElementById('phylum-count').textContent = `${phylum.animals.length} spesies dilindungi`;
+
+            // Render animals
+            const grid = document.getElementById('animals-grid');
+            grid.innerHTML = phylum.animals.map(animal => {
+                const statusColor = animal.status === 'Terancam Punah' ? 'bg-red-500' : 'bg-orange-500';
+                
+                return `
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-105 cursor-pointer" onclick="showAnimalDetail('${animal.id}', '${phylumName}')">
+                        <div class="relative">
+                            <img src="${animal.image}" alt="${animal.name}" class="w-full h-48 object-contain bg-gray-50">
+                            <div class="absolute top-2 right-2 ${statusColor} text-white px-2 py-1 rounded-full text-xs font-semibold">
+                                ${animal.status}
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">${animal.name}</h3>
+                            <p class="text-gray-600 italic mb-3">${animal.latin}</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="bg-blue-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                                    ${animal.regulation}
+                                </span>
+                            </div>
+                            <div class="text-sm text-gray-600">
+                                <p><strong>Tahun Ditetapkan:</strong> ${animal.yearProtected}</p>
+                                <p><strong>Lokasi:</strong> ${animal.location}</p>
+                            </div>
+                            <div class="mt-4 text-center">
+                                <span class="text-blue-600 font-semibold">Klik untuk detail lengkap →</span>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+        }
+
+        // Show animal detail
+        function showAnimalDetail(animalId, phylumName) {
+            // Store data in localStorage for detail page
+            const animal = animalsData[phylumName].animals.find(a => a.id === animalId);
+            if (animal) {
+                localStorage.setItem('selectedAnimal', JSON.stringify(animal));
+                localStorage.setItem('selectedPhylum', phylumName);
+                window.location.href = 'animal-detail-page.html';
+            }
+        }
+
+        // Load animals when page loads
+        document.addEventListener('DOMContentLoaded', loadAnimals);
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Satwa Dilindungi - Lestari Akuatik Sulawesi</title>
+    
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-100 antialiased min-h-screen">
+
+    <!-- Header Navigation -->
+    <header class="fixed top-0 left-0 right-0 z-50 header-solid">
+        <nav class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <a href="index.html" class="flex items-center space-x-3">
+                    <div class="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-white">
+                            <path d="M2 6c.6.2 1.4.5 2.5 1.4C6.5 9 8.6 10.5 10 10.5c1.4 0 2.5-.5 4-1.5 1.5-.9 3.2-1.5 5.5-1.5s4.2 1.5 5.5 2.5"/>
+                            <path d="M2 12c.6.2 1.4.5 2.5 1.4C6.5 15 8.6 16.5 10 16.5c1.4 0 2.5-.5 4-1.5 1.5-.9 3.2-1.5 5.5-1.5s4.2 1.5 5.5 2.5"/>
+                            <path d="M2 18c.6.2 1.4.5 2.5 1.4C6.5 21 8.6 22.5 10 22.5c1.4 0 2.5-.5 4-1.5 1.5-.9 3.2-1.5 5.5-1.5s4.2 1.5 5.5 2.5"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <h1 class="text-lg font-bold text-white">Lestari Akuatik</h1>
+                        <p class="text-xs text-blue-200">BKHIT Sulawesi Utara</p>
+                    </div>
+                </a>
+                
+                <div class="hidden md:flex items-center space-x-6">
+                    <a href="index.html" class="nav-link text-white hover:text-blue-300 transition-colors">Beranda</a>
+                    <a href="dashboard.html" class="nav-link text-white hover:text-blue-300 transition-colors font-semibold">Satwa Dilindungi</a>
+                    <a href="sanctions.html" class="nav-link text-white hover:text-blue-300 transition-colors">Sanksi Hukum</a>
+                    <a href="contact.html" class="nav-link text-white hover:text-blue-300 transition-colors">Kontak</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="pt-20 pb-8 min-h-screen">
+        <!-- Background Pattern -->
+        <div class="absolute inset-0 bg-gradient-to-br from-blue-50 via-white to-blue-50"></div>
+        
+        <!-- Content -->
+        <div class="relative z-10">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-8">
+                    <h2 class="text-3xl md:text-4xl font-bold text-blue-800 font-inter mb-4">
+                        Satwa Akuatik Dilindungi
+                    </h2>
+                    <p class="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
+                        Berikut adalah daftar satwa akuatik yang dilindungi di wilayah kerja BKHIT Sulawesi Utara, 
+                        dikelompokkan berdasarkan filumnya. Mari kita kenali dan lindungi bersama.
+                    </p>
+                </div>
+
+                <!-- Filum Grid -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 mb-8">
+                    
+                    <!-- Chondrichthyes -->
+                    <div class="phylum-card bg-gradient-to-br from-blue-50 to-cyan-50 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-4 text-center border border-white/20 backdrop-blur-sm" style="cursor: pointer; min-height: 140px; position: relative; overflow: hidden;">
+                        <div class="absolute inset-0 bg-gradient-to-br from-blue-600 to-cyan-500 opacity-5 rounded-2xl"></div>
+                        <div class="relative z-10">
+                            <div class="icon-container mx-auto mb-3 w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center shadow-md transition-transform duration-300">
+                                <span class="text-2xl" role="img" aria-label="Hiu dan Pari">🦈</span>
+                            </div>
+                            <h3 class="text-base font-bold text-gray-800 mb-2 leading-tight">Chondrichthyes</h3>
+                            <p class="text-sm text-gray-600 mb-3">(Hiu & Pari)</p>
+                            <div class="count-badge inline-flex items-center px-2 py-1 rounded-full bg-gradient-to-r from-blue-600 to-cyan-500 text-white text-xs font-semibold shadow-sm transition-transform duration-300">
+                                <span class="mr-1">🔢</span>
+                                5 spesies
+                            </div>
+                        </div>
+                        <div class="absolute top-2 right-2 w-8 h-8 bg-white/10 rounded-full"></div>
+                        <div class="absolute bottom-2 left-2 w-6 h-6 bg-white/5 rounded-full"></div>
+                    </div>
+
+                    <!-- Actinopterygii -->
+                    <div class="phylum-card bg-gradient-to-br from-orange-50 to-yellow-50 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 p-6 text-center border border-white/20 backdrop-blur-sm" style="cursor: pointer; min-height: 180px; position: relative; overflow: hidden;">
+                        <div class="absolute inset-0 bg-gradient-to-br from-orange-500 to-yellow-500 opacity-5 rounded-2xl"></div>
+                        <div class="relative z-10">
+                            <div class="icon-container mx-auto mb-4 w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center shadow-md transition-transform duration-300">
+                                <span class="text-3xl" role="img" aria-label="Ikan">🐟</span>
+                            </div>
+                            <h3 class="text-lg font-bold text-gray-800 mb-2 leading-tight">Actinopterygii</h3>
+                            <p class="text-sm text-gray-600 mb-3">(Ikan Bertulang Keras)</p>
+                            <div class="count-badge inline-flex items-center px-3 py-1 rounded-full bg-gradient-to-r from-orange-500 to-yellow-500 text-white text-sm font-semibold shadow-sm transition-transform duration-300">
+                                <span class="mr-1">🔢</span>
+                                5 spesies
+                            </div>
+                        </div>
+                        <div class="absolute top-2 right-2 w-8 h-8 bg-white/10 rounded-full"></div>
+                        <div class="absolute bottom-2 left-2 w-6 h-6 bg-white/5 rounded-full"></div>
+                    </div>
+
+                    <!-- Reptilia -->
+                    <div class="phylum-card bg-gradient-to-br from-green-50 to-emerald-50 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 p-6 text-center border border-white/20 backdrop-blur-sm" style="cursor: pointer; min-height: 180px; position: relative; overflow: hidden;">
+                        <div class="absolute inset-0 bg-gradient-to-br from-green-600 to-emerald-500 opacity-5 rounded-2xl"></div>
+                        <div class="relative z-10">
+                            <div class="icon-container mx-auto mb-4 w-16 h-16 bg-green-100 rounded-full flex items-center justify-center shadow-md transition-transform duration-300">
+                                <span class="text-3xl" role="img" aria-label="Penyu">🐢</span>
+                            </div>
+                            <h3 class="text-lg font-bold text-gray-800 mb-2 leading-tight">Reptilia</h3>
+                            <p class="text-sm text-gray-600 mb-3">(Penyu)</p>
+                            <div class="count-badge inline-flex items-center px-3 py-1 rounded-full bg-gradient-to-r from-green-600 to-emerald-500 text-white text-sm font-semibold shadow-sm transition-transform duration-300">
+                                <span class="mr-1">🔢</span>
+                                4 spesies
+                            </div>
+                        </div>
+                        <div class="absolute top-2 right-2 w-8 h-8 bg-white/10 rounded-full"></div>
+                        <div class="absolute bottom-2 left-2 w-6 h-6 bg-white/5 rounded-full"></div>
+                    </div>
+
+                    <!-- Anthozoa -->
+                    <div class="phylum-card bg-gradient-to-br from-pink-50 to-rose-50 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 p-6 text-center border border-white/20 backdrop-blur-sm" style="cursor: pointer; min-height: 180px; position: relative; overflow: hidden;">
+                        <div class="absolute inset-0 bg-gradient-to-br from-pink-500 to-rose-500 opacity-5 rounded-2xl"></div>
+                        <div class="relative z-10">
+                            <div class="icon-container mx-auto mb-4 w-16 h-16 bg-pink-100 rounded-full flex items-center justify-center shadow-md transition-transform duration-300">
+                                <span class="text-3xl" role="img" aria-label="Karang">🪸</span>
+                            </div>
+                            <h3 class="text-lg font-bold text-gray-800 mb-2 leading-tight">Anthozoa</h3>
+                            <p class="text-sm text-gray-600 mb-3">(Karang)</p>
+                            <div class="count-badge inline-flex items-center px-3 py-1 rounded-full bg-gradient-to-r from-pink-500 to-rose-500 text-white text-sm font-semibold shadow-sm transition-transform duration-300">
+                                <span class="mr-1">🔢</span>
+                                2 spesies
+                            </div>
+                        </div>
+                        <div class="absolute top-2 right-2 w-8 h-8 bg-white/10 rounded-full"></div>
+                        <div class="absolute bottom-2 left-2 w-6 h-6 bg-white/5 rounded-full"></div>
+                    </div>
+
+                    <!-- Bivalvia -->
+                    <div class="phylum-card bg-gradient-to-br from-purple-50 to-indigo-50 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 p-6 text-center border border-white/20 backdrop-blur-sm" style="cursor: pointer; min-height: 180px; position: relative; overflow: hidden;">
+                        <div class="absolute inset-0 bg-gradient-to-br from-purple-500 to-indigo-500 opacity-5 rounded-2xl"></div>
+                        <div class="relative z-10">
+                            <div class="icon-container mx-auto mb-4 w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center shadow-md transition-transform duration-300">
+                                <span class="text-3xl" role="img" aria-label="Kerang">🐚</span>
+                            </div>
+                            <h3 class="text-lg font-bold text-gray-800 mb-2 leading-tight">Bivalvia</h3>
+                            <p class="text-sm text-gray-600 mb-3">(Kerang)</p>
+                            <div class="count-badge inline-flex items-center px-3 py-1 rounded-full bg-gradient-to-r from-purple-500 to-indigo-500 text-white text-sm font-semibold shadow-sm transition-transform duration-300">
+                                <span class="mr-1">🔢</span>
+                                2 spesies
+                            </div>
+                        </div>
+                        <div class="absolute top-2 right-2 w-8 h-8 bg-white/10 rounded-full"></div>
+                        <div class="absolute bottom-2 left-2 w-6 h-6 bg-white/5 rounded-full"></div>
+                    </div>
+
+                    <!-- Cephalopoda -->
+                    <div class="phylum-card bg-gradient-to-br from-red-50 to-pink-50 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 p-6 text-center border border-white/20 backdrop-blur-sm" style="cursor: pointer; min-height: 180px; position: relative; overflow: hidden;">
+                        <div class="absolute inset-0 bg-gradient-to-br from-red-500 to-pink-500 opacity-5 rounded-2xl"></div>
+                        <div class="relative z-10">
+                            <div class="icon-container mx-auto mb-4 w-16 h-16 bg-red-100 rounded-full flex items-center justify-center shadow-md transition-transform duration-300">
+                                <span class="text-3xl" role="img" aria-label="Gurita">🐙</span>
+                            </div>
+                            <h3 class="text-lg font-bold text-gray-800 mb-2 leading-tight">Cephalopoda</h3>
+                            <p class="text-sm text-gray-600 mb-3">(Gurita & Cumi)</p>
+                            <div class="count-badge inline-flex items-center px-3 py-1 rounded-full bg-gradient-to-r from-red-500 to-pink-500 text-white text-sm font-semibold shadow-sm transition-transform duration-300">
+                                <span class="mr-1">🔢</span>
+                                1 spesies
+                            </div>
+                        </div>
+                        <div class="absolute top-2 right-2 w-8 h-8 bg-white/10 rounded-full"></div>
+                        <div class="absolute bottom-2 left-2 w-6 h-6 bg-white/5 rounded-full"></div>
+                    </div>
+
+                    <!-- Holothuroidea -->
+                    <div class="phylum-card bg-gradient-to-br from-teal-50 to-cyan-50 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 p-6 text-center border border-white/20 backdrop-blur-sm" style="cursor: pointer; min-height: 180px; position: relative; overflow: hidden;">
+                        <div class="absolute inset-0 bg-gradient-to-br from-teal-500 to-cyan-500 opacity-5 rounded-2xl"></div>
+                        <div class="relative z-10">
+                            <div class="icon-container mx-auto mb-4 w-16 h-16 bg-teal-100 rounded-full flex items-center justify-center shadow-md transition-transform duration-300">
+                                <span class="text-3xl" role="img" aria-label="Teripang">🌊</span>
+                            </div>
+                            <h3 class="text-lg font-bold text-gray-800 mb-2 leading-tight">Holothuroidea</h3>
+                            <p class="text-sm text-gray-600 mb-3">(Teripang)</p>
+                            <div class="count-badge inline-flex items-center px-3 py-1 rounded-full bg-gradient-to-r from-teal-500 to-cyan-500 text-white text-sm font-semibold shadow-sm transition-transform duration-300">
+                                <span class="mr-1">🔢</span>
+                                2 spesies
+                            </div>
+                        </div>
+                        <div class="absolute top-2 right-2 w-8 h-8 bg-white/10 rounded-full"></div>
+                        <div class="absolute bottom-2 left-2 w-6 h-6 bg-white/5 rounded-full"></div>
+                    </div>
+
+                    <!-- Future Expansion -->
+                    <div class="phylum-card bg-gradient-to-br from-gray-50 to-gray-100 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 p-6 text-center border border-white/20 backdrop-blur-sm" style="cursor: pointer; min-height: 180px; position: relative; overflow: hidden;">
+                        <div class="absolute inset-0 bg-gradient-to-br from-gray-500 to-gray-600 opacity-5 rounded-2xl"></div>
+                        <div class="relative z-10">
+                            <div class="icon-container mx-auto mb-4 w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center shadow-md transition-transform duration-300">
+                                <span class="text-3xl" role="img" aria-label="Penelitian">🔬</span>
+                            </div>
+                            <h3 class="text-lg font-bold text-gray-800 mb-2 leading-tight">Penelitian</h3>
+                            <p class="text-sm text-gray-600 mb-3">(Coming Soon)</p>
+                            <div class="count-badge inline-flex items-center px-3 py-1 rounded-full bg-gradient-to-r from-gray-500 to-gray-600 text-white text-sm font-semibold shadow-sm transition-transform duration-300">
+                                <span class="mr-1">🔬</span>
+                                Research
+                            </div>
+                        </div>
+                        <div class="absolute top-2 right-2 w-8 h-8 bg-white/10 rounded-full"></div>
+                        <div class="absolute bottom-2 left-2 w-6 h-6 bg-white/5 rounded-full"></div>
+                    </div>
+
+                </div>
+
+                <!-- Total Info -->
+                <div class="text-center mb-8">
+                    <div class="bg-white rounded-xl shadow-lg p-8 max-w-2xl mx-auto">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-4">📊 Statistik Data</h3>
+                        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                            <div class="text-center">
+                                <div class="text-3xl font-bold text-blue-600">21+</div>
+                                <div class="text-sm text-gray-600">Total Spesies</div>
+                            </div>
+                            <div class="text-center">
+                                <div class="text-3xl font-bold text-green-600">8</div>
+                                <div class="text-sm text-gray-600">Filum</div>
+                            </div>
+                            <div class="text-center">
+                                <div class="text-3xl font-bold text-orange-600">2023</div>
+                                <div class="text-sm text-gray-600">Data KKP</div>
+                            </div>
+                            <div class="text-center">
+                                <div class="text-3xl font-bold text-purple-600">100%</div>
+                                <div class="text-sm text-gray-600">Dilindungi</div>
+                            </div>
+                        </div>
+                        <p class="text-gray-500 text-sm mt-4">
+                            Data berdasarkan Poster KKP 2023: "Jenis-jenis Ikan yang Dilindungi dan Masuk dalam Appendiks CITES"
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Action Buttons -->
+                <div class="text-center">
+                    <a href="index.html" class="inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors mr-4 mb-4">
+                        🏠 Kembali ke Beranda
+                    </a>
+                    <a href="contact.html" class="inline-flex items-center px-6 py-3 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors mb-4">
+                        📞 Laporkan Pelanggaran
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="text-center">
+                <div class="flex items-center justify-center space-x-3 mb-4">
+                    <div class="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-white">
+                            <path d="M2 6c.6.2 1.4.5 2.5 1.4C6.5 9 8.6 10.5 10 10.5c1.4 0 2.5-.5 4-1.5 1.5-.9 3.2-1.5 5.5-1.5s4.2 1.5 5.5 2.5"/>
+                            <path d="M2 12c.6.2 1.4.5 2.5 1.4C6.5 15 8.6 16.5 10 16.5c1.4 0 2.5-.5 4-1.5 1.5-.9 3.2-1.5 5.5-1.5s4.2 1.5 5.5 2.5"/>
+                            <path d="M2 18c.6.2 1.4.5 2.5 1.4C6.5 21 8.6 22.5 10 22.5c1.4 0 2.5-.5 4-1.5 1.5-.9 3.2-1.5 5.5-1.5s4.2 1.5 5.5 2.5"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold">Lestari Akuatik Sulawesi</h3>
+                        <p class="text-sm text-gray-400">BKHIT Sulawesi Utara</p>
+                    </div>
+                </div>
+                <p class="text-gray-400 mb-4">
+                    © 2024 Lestari Bahari. All rights reserved.
+                </p>
+                <p class="text-gray-500 text-sm">
+                    📞 Hotline: 082190899090 | 📧 Email: info@karantina.go.id
+                </p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
+
+

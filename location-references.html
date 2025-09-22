@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daftar Pustaka Lokasi - Lestari Bahari</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .location-reference-card {
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.1), rgba(147, 51, 234, 0.1));
+            border: 1px solid rgba(59, 130, 246, 0.2);
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+        }
+        
+        .location-reference-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(59, 130, 246, 0.15);
+            border-color: rgba(59, 130, 246, 0.4);
+        }
+        
+        .location-badge {
+            background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+            color: white;
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+        
+        .reference-link {
+            background: linear-gradient(135deg, #10b981, #06b6d4);
+            transition: all 0.3s ease;
+        }
+        
+        .reference-link:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(16, 185, 129, 0.3);
+        }
+    </style>
+</head>
+<body class="ocean-background">
+    <!-- Header -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-white/10 backdrop-blur-md border-b border-white/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center space-x-3">
+                    <div class="w-10 h-10 bg-gradient-to-br from-blue-500 to-teal-600 rounded-full flex items-center justify-center">
+                        <i data-lucide="waves" class="w-6 h-6 text-white"></i>
+                    </div>
+                    <div>
+                        <h1 class="text-xl font-bold text-white">Lestari Bahari</h1>
+                        <p class="text-xs text-blue-100">Daftar Pustaka Lokasi</p>
+                    </div>
+                </div>
+                
+                <div class="flex items-center space-x-4">
+                    <button onclick="goBack()" class="px-4 py-2 bg-white/20 hover:bg-white/30 text-white rounded-lg transition-colors flex items-center gap-2">
+                        <i data-lucide="arrow-left" class="w-4 h-4"></i>
+                        Kembali
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="pt-24 pb-16">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Header Section -->
+            <div class="text-center mb-12">
+                <h1 class="text-4xl font-bold text-white mb-4">
+                    📍 Daftar Pustaka Lokasi
+                </h1>
+                <p class="text-xl text-blue-100 max-w-3xl mx-auto">
+                    Referensi ilmiah untuk lokasi penemuan dan habitat satwa dilindungi di perairan Sulawesi Utara
+                </p>
+            </div>
+
+            <!-- Location References -->
+            <div id="location-references-container" class="space-y-8">
+                <!-- Content will be populated by JavaScript -->
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900/50 backdrop-blur-md border-t border-white/10 py-8">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <div class="flex items-center justify-center space-x-3 mb-4">
+                    <div class="w-8 h-8 bg-gradient-to-br from-blue-500 to-teal-600 rounded-full flex items-center justify-center">
+                        <i data-lucide="waves" class="w-4 h-4 text-white"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold text-white">Lestari Bahari</h3>
+                </div>
+                <p class="text-sm text-gray-400 mb-2">BKHIT Sulawesi Utara - Aktualisasi CPNS</p>
+                <p class="text-xs text-gray-500">Konservasi Satwa Akuatik Indonesia</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Location references data
+        const locationReferences = {
+            'Taman Nasional Bunaken': [
+                { text: 'Tomascik, T., Mah, A. J., Nontji, A., & Moosa, M. K. (1997). The Ecology of the Indonesian Seas. Periplus Editions, Singapore.', url: 'https://www.worldcat.org/title/ecology-of-the-indonesian-seas/oclc/38475992', source: 'Periplus Editions' },
+                { text: 'Pet-Soede, L., & Erdmann, M. V. (1998). Blast fishing in Southwest Sulawesi, Indonesia. Naga, the ICLARM Quarterly, 21(1), 4-9.', url: 'https://digitalarchive.worldfishcenter.org/handle/20.500.12348/3089', source: 'ICLARM Quarterly' },
+                { text: 'Bunaken National Park Management. (2020). Bunaken National Park Management Plan 2020-2025. Ministry of Environment and Forestry, Indonesia.', url: 'https://www.menlhk.go.id/', source: 'Ministry of Environment and Forestry' },
+                { text: 'WWF Indonesia. (2019). Marine Protected Areas in North Sulawesi: Biodiversity Assessment Report.', url: 'https://www.wwf.id/', source: 'WWF Indonesia' }
+            ],
+            'Selat Lembeh': [
+                { text: 'Allen, G. R., & Erdmann, M. V. (2012). Reef fishes of the East Indies. University of Hawaii Press, Honolulu.', url: 'https://uhpress.hawaii.edu/title/reef-fishes-of-the-east-indies/', source: 'University of Hawaii Press' },
+                { text: 'Erdmann, M. V. (2004). Lembeh Strait critter capital of the world. Asian Geographic, 3(32), 34-41.', url: 'https://www.asiangeographic.com/', source: 'Asian Geographic' },
+                { text: 'Debelius, H., & Kuiter, R. H. (2007). Nudibranchs of the world. IKAN-Unterwasserarchiv, Frankfurt.', url: 'https://www.ikan.de/', source: 'IKAN-Unterwasserarchiv' },
+                { text: 'North Sulawesi Marine Research Foundation. (2021). Lembeh Strait Marine Biodiversity Survey 2021.', url: 'https://www.lembehstrait.com/', source: 'Marine Research Foundation' }
+            ],
+            'Perairan Sangihe-Talaud': [
+                { text: 'Whitten, T., Mustafa, M., & Henderson, G. S. (2002). The Ecology of Sulawesi. Periplus Editions, Singapore.', url: 'https://www.worldcat.org/title/ecology-of-sulawesi/oclc/50676579', source: 'Periplus Editions' },
+                { text: 'Conservation International. (2018). Rapid Assessment Program: Sangihe-Talaud Marine Biodiversity. CI Indonesia.', url: 'https://www.conservation.org/indonesia', source: 'Conservation International' },
+                { text: 'Burung Indonesia. (2020). Sangihe-Talaud Marine Protected Area Management Plan. BirdLife Indonesia.', url: 'https://www.burung.org/', source: 'BirdLife Indonesia' },
+                { text: 'LIPI. (2019). Marine Biodiversity Survey of Sangihe-Talaud Waters. Indonesian Institute of Sciences.', url: 'https://lipi.go.id/', source: 'Indonesian Institute of Sciences' }
+            ],
+            'Teluk Tomini': [
+                { text: 'Spalding, M. D., Ravilious, C., & Green, E. P. (2001). World Atlas of Coral Reefs. University of California Press, Berkeley.', url: 'https://www.ucpress.edu/', source: 'University of California Press' },
+                { text: 'Veron, J. E. N. (2000). Corals of the World. Australian Institute of Marine Science, Townsville.', url: 'https://www.aims.gov.au/', source: 'Australian Institute of Marine Science' },
+                { text: 'Ministry of Marine Affairs and Fisheries. (2021). Tomini Bay Marine Conservation Area Strategic Plan.', url: 'https://kkp.go.id/', source: 'Ministry of Marine Affairs and Fisheries' },
+                { text: 'Coral Triangle Initiative. (2020). Tomini Bay Coral Triangle Assessment Report.', url: 'https://www.coraltriangleinitiative.org/', source: 'Coral Triangle Initiative' }
+            ],
+            'Laut Sulawesi': [
+                { text: 'Hall, R., & Wilson, M. E. J. (2000). Neogene sutures in eastern Indonesia. Journal of Asian Earth Sciences, 18(6), 781-808.', url: 'https://www.sciencedirect.com/science/article/pii/S1367912000000402', source: 'Journal of Asian Earth Sciences' },
+                { text: 'Hoeksema, B. W. (2007). Delineation of the Indo-Malayan centre of maximum marine biodiversity: The Coral Triangle. In Biogeography, time and place (pp. 117-178). Springer, Dordrecht.', url: 'https://link.springer.com/chapter/10.1007/978-1-4020-6374-9_5', source: 'Springer' },
+                { text: 'UNEP. (2019). Sulawesi Sea Large Marine Ecosystem Assessment. United Nations Environment Programme.', url: 'https://www.unep.org/', source: 'United Nations Environment Programme' },
+                { text: 'SEAFDEC. (2020). Marine Fisheries Resources Survey in Sulawesi Sea. Southeast Asian Fisheries Development Center.', url: 'https://www.seafdec.org/', source: 'SEAFDEC' }
+            ]
+        };
+
+        function renderLocationReferences() {
+            const container = document.getElementById('location-references-container');
+            let html = '';
+
+            Object.keys(locationReferences).forEach(location => {
+                const references = locationReferences[location];
+                html += `
+                    <div class="location-reference-card rounded-xl p-6">
+                        <div class="flex items-start justify-between mb-4">
+                            <div>
+                                <h3 class="text-xl font-bold text-white mb-2 flex items-center gap-2">
+                                    <i data-lucide="map-pin" class="w-5 h-5 text-blue-400"></i>
+                                    ${location}
+                                </h3>
+                                <div class="location-badge">
+                                    ${references.length} Referensi
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="space-y-4">
+                            ${references.map((ref, index) => `
+                                <div class="bg-white/5 rounded-lg p-4 border border-white/10">
+                                    <div class="flex items-start justify-between">
+                                        <div class="flex-1">
+                                            <p class="text-sm text-gray-200 mb-2">${ref.text}</p>
+                                            <div class="text-xs text-blue-300 font-medium">Sumber: ${ref.source}</div>
+                                        </div>
+                                        <a href="${ref.url}" target="_blank" rel="noopener noreferrer" 
+                                           class="reference-link ml-4 px-3 py-1 text-white text-xs font-medium rounded-lg flex items-center gap-1 shrink-0">
+                                            <i data-lucide="external-link" class="w-3 h-3"></i>
+                                            Kunjungi
+                                        </a>
+                                    </div>
+                                </div>
+                            `).join('')}
+                        </div>
+                    </div>
+                `;
+            });
+
+            container.innerHTML = html;
+            
+            // Initialize Lucide icons
+            if (typeof lucide !== 'undefined') {
+                lucide.createIcons();
+            }
+        }
+
+        function goBack() {
+            if (document.referrer && document.referrer.includes(window.location.host)) {
+                window.history.back();
+            } else {
+                window.location.href = 'dashboard.html';
+            }
+        }
+
+        // Initialize page
+        document.addEventListener('DOMContentLoaded', function() {
+            renderLocationReferences();
+        });
+    </script>
+</body>
+</html>
