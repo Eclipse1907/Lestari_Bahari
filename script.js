@@ -261,8 +261,8 @@ const animalImages = {
             images: [
                 'https://www.greeners.co/wp-content/uploads/2018/01/Fauna-Nautilus-Chepalopoda-Bercangkang-yang-Bertahan-dari-Zaman-Purba.jpg',
                 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTaBvz8wQ_2V-vC_QdHUppJS0KGrPcSBoYXeEFxIHY2pLrd2l5BNk54gvWmUkuFg-a1XRs&usqp=CAU',
-                'https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=400&h=300&fit=crop',
-                'https://images.unsplash.com/photo-1583212292454-1fe6229603b7?w=400&h=300&fit=crop'
+                'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Nautilus_diagram-en.svg/500px-Nautilus_diagram-en.svg.png',
+                'https://images.unsplash.com/photo-1601131422475-1051510d48f7?w=400&h=300&fit=crop'
             ]
         },
         {
@@ -355,26 +355,26 @@ const protectedAnimals = {
             localName: 'Ikan Gergaji, Todak Laut',
             latin: 'Pristis spp.', 
             status: 'Dilindungi Penuh', 
-            regulation: 'Permen KP 1/2021',
+            regulation: 'PP No. 7/1999',
             protectionYear: '1999',
             legalRegulations: [
                 {
-                    name: 'Undang-Undang No. 5 Tahun 1990',
-                    title: 'Konservasi Sumber Daya Alam Hayati dan Ekosistemnya',
-                    description: 'Landasan utama perlindungan satwa liar di Indonesia, melarang penangkapan, melukai, membunuh, menyimpan, memiliki, memelihara, mengangkut, dan memperdagangkan satwa yang dilindungi.',
-                    year: '1990'
-                },
-                {
                     name: 'Peraturan Pemerintah No. 7 Tahun 1999',
                     title: 'Pengawetan Jenis Tumbuhan dan Satwa',
-                    description: 'Turunan dari UU No. 5/1990 yang menjelaskan kriteria penetapan satwa sebagai jenis yang dilindungi dan mengatur upaya pengawetan di dalam dan di luar habitatnya.',
+                    description: 'Peraturan yang menetapkan Pristis spp. sebagai ikan yang dilindungi di Indonesia. Merupakan landasan utama perlindungan Pari Gergaji.',
                     year: '1999'
                 },
                 {
-                    name: 'Peraturan Menteri LHK No. P.106/2018',
-                    title: 'Jenis Tumbuhan dan Satwa yang Dilindungi',
-                    description: 'Peraturan terbaru yang berisi daftar detail spesies satwa dan tumbuhan yang dilindungi secara hukum di Indonesia, termasuk Pari Gergaji.',
-                    year: '2018'
+                    name: 'Keputusan Menteri Kelautan dan Perikanan No. 18 Tahun 2013',
+                    title: 'Penetapan Status Perlindungan Penuh Terhadap Jenis Ikan Pari Gergaji',
+                    description: 'Keputusan yang memperkuat perlindungan Pari Gergaji dengan status perlindungan penuh di perairan Indonesia.',
+                    year: '2013'
+                },
+                {
+                    name: 'Keputusan Menteri Kelautan dan Perikanan No. 1 Tahun 2021',
+                    title: 'Jenis Ikan yang Dilindungi',
+                    description: 'Keputusan terbaru yang mengatur perlindungan jenis-jenis ikan, termasuk Pari Gergaji yang memiliki status perlindungan penuh.',
+                    year: '2021'
                 }
             ],
             locations: [
@@ -410,26 +410,20 @@ const protectedAnimals = {
             localName: 'Ikan Pari Raksasa, Manta',
             latin: 'Mobula birostris', 
             status: 'Dilindungi Penuh', 
-            regulation: 'Permen KP 1/2021',
-            protectionYear: '2014',
+            regulation: 'Permen KP No. 4/2014',
+            protectionYear: '2011',
             legalRegulations: [
                 {
-                    name: 'Undang-Undang No. 5 Tahun 1990',
-                    title: 'Konservasi Sumber Daya Alam Hayati dan Ekosistemnya',
-                    description: 'Landasan utama perlindungan satwa liar di Indonesia, melarang penangkapan, melukai, membunuh, menyimpan, memiliki, memelihara, mengangkut, dan memperdagangkan satwa yang dilindungi.',
-                    year: '1990'
+                    name: 'CMS (Konvensi Spesies Migrasi Satwa Liar) Tahun 2011',
+                    title: 'Convention on Migratory Species',
+                    description: 'Konvensi internasional yang melindungi spesies migrasi satwa liar, termasuk Pari Manta (Mobula birostris) yang ditambahkan dalam Appendix I pada tahun 2011.',
+                    year: '2011'
                 },
                 {
-                    name: 'Peraturan Menteri KP No. 1 Tahun 2021',
-                    title: 'Jenis Ikan yang Dilindungi',
-                    description: 'Peraturan khusus untuk perlindungan jenis-jenis ikan, termasuk mamalia laut seperti Pari Manta yang memiliki status perlindungan penuh.',
-                    year: '2021'
-                },
-                {
-                    name: 'Peraturan Menteri LHK No. P.106/2018',
-                    title: 'Jenis Tumbuhan dan Satwa yang Dilindungi',
-                    description: 'Peraturan terbaru yang berisi daftar detail spesies satwa dan tumbuhan yang dilindungi secara hukum di Indonesia, termasuk Pari Manta.',
-                    year: '2018'
+                    name: 'Peraturan Menteri Kelautan dan Perikanan No. 4 Tahun 2014',
+                    title: 'Penetapan Status Perlindungan Penuh Terhadap Jenis Ikan Pari Manta',
+                    description: 'Peraturan yang menetapkan Pari Manta (Mobula birostris) sebagai ikan yang dilindungi penuh di perairan Indonesia, mengikuti ketentuan CMS 2011.',
+                    year: '2014'
                 }
             ],
             locations: [
@@ -465,56 +459,20 @@ const protectedAnimals = {
             localName: 'Hiu Tutul, Hiu Bodoh',
             latin: 'Rhincodon typus', 
             status: 'Dilindungi Penuh', 
-            regulation: 'Permen KP 1/2021',
+            regulation: 'Kepmen KP No. 18/2013',
             protectionYear: '2013',
             legalRegulations: [
                 {
-                    name: 'Undang-Undang No. 5 Tahun 1990',
-                    title: 'Konservasi Sumber Daya Alam Hayati dan Ekosistemnya',
-                    description: 'Landasan utama perlindungan satwa liar di Indonesia, melarang penangkapan, melukai, membunuh, menyimpan, memiliki, memelihara, mengangkut, dan memperdagangkan satwa yang dilindungi.',
-                    year: '1990'
+                    name: 'Keputusan Menteri Kelautan dan Perikanan No. 18 Tahun 2013',
+                    title: 'Penetapan Status Perlindungan Penuh Terhadap Jenis Ikan Hiu Paus',
+                    description: 'Keputusan yang menetapkan Hiu Paus (Rhincodon typus) sebagai ikan yang dilindungi penuh di perairan Indonesia. Merupakan landasan utama perlindungan Hiu Paus.',
+                    year: '2013'
                 },
                 {
-                    name: 'Peraturan Menteri KP No. 1 Tahun 2021',
-                    title: 'Jenis Ikan yang Dilindungi',
-                    description: 'Peraturan khusus untuk perlindungan jenis-jenis ikan, termasuk Hiu Paus yang memiliki status perlindungan penuh.',
-                    year: '2021'
-                },
-                {
-                    name: 'Peraturan Menteri LHK No. P.106/2018',
-                    title: 'Jenis Tumbuhan dan Satwa yang Dilindungi',
-                    description: 'Peraturan terbaru yang berisi daftar detail spesies satwa dan tumbuhan yang dilindungi secara hukum di Indonesia, termasuk Hiu Paus.',
-                    year: '2018'
-                },
-                {
-                    name: 'Peraturan Menteri Kelautan dan Perikanan No. 1 Tahun 2021',
-                    title: 'Jenis Ikan yang Dilindungi',
-                    description: 'Peraturan khusus yang mengatur perlindungan terhadap jenis-jenis ikan, termasuk Hiu Paus yang memiliki status perlindungan penuh.',
-                    year: '2021'
-                },
-                {
-                    name: 'Undang-Undang No. 18 Tahun 2012',
-                    title: 'Pangan dan Keamanan Pangan',
-                    description: 'Mengatur keamanan pangan termasuk produk perikanan, melarang produksi dan peredaran pangan yang tidak aman dan dapat membahayakan kesehatan.',
-                    year: '2012'
-                },
-                {
-                    name: 'Undang-Undang No. 32 Tahun 2009',
-                    title: 'Perlindungan dan Pengelolaan Lingkungan Hidup',
-                    description: 'Mengatur perlindungan lingkungan hidup termasuk ekosistem laut, melarang perbuatan yang dapat mencemari dan merusak lingkungan hidup.',
-                    year: '2009'
-                },
-                {
-                    name: 'Undang-Undang No. 31 Tahun 2004',
-                    title: 'Perikanan',
-                    description: 'Mengatur pengelolaan perikanan yang berkelanjutan, melarang penangkapan ikan dengan cara yang merugikan kelestarian sumber daya ikan.',
-                    year: '2004'
-                },
-                {
-                    name: 'Undang-Undang No. 16 Tahun 1992',
-                    title: 'Karantina Hewan, Ikan, dan Tumbuhan',
-                    description: 'Mengatur karantina untuk mencegah masuk dan tersebarnya hama dan penyakit hewan karantina, termasuk ikan dan satwa laut.',
-                    year: '1992'
+                    name: 'Rencana Aksi Nasional (RAN) Konservasi Hiu Paus 2021-2025',
+                    title: 'Kepmen KP No. 16/2022 tentang RAN Konservasi Hiu Paus',
+                    description: 'Rencana aksi nasional untuk konservasi Hiu Paus periode 2021-2025 yang mencakup strategi perlindungan, monitoring, dan pengelolaan berkelanjutan populasi Hiu Paus di Indonesia.',
+                    year: '2022'
                 }
             ],
             locations: [
@@ -550,26 +508,26 @@ const protectedAnimals = {
             localName: 'Hiu Kepala Palu, Martil Laut',
             latin: 'Sphyrna spp.', 
             status: 'Dilindungi Penuh', 
-            regulation: 'Permen KP 1/2021',
-            protectionYear: '2013',
+            regulation: 'PP No. 7/1999',
+            protectionYear: '1997',
             legalRegulations: [
                 {
-                    name: 'Undang-Undang No. 5 Tahun 1990',
-                    title: 'Konservasi Sumber Daya Alam Hayati dan Ekosistemnya',
-                    description: 'Landasan utama perlindungan satwa liar di Indonesia, melarang penangkapan, melukai, membunuh, menyimpan, memiliki, memelihara, mengangkut, dan memperdagangkan satwa yang dilindungi.',
-                    year: '1990'
+                    name: 'Peraturan Pemerintah No. 7 Tahun 1999',
+                    title: 'Pengawetan Jenis Tumbuhan dan Satwa',
+                    description: 'Peraturan yang menetapkan Sphyrna spp. (Hiu Martil) sebagai ikan yang dilindungi di Indonesia. Merupakan landasan utama perlindungan Hiu Martil.',
+                    year: '1999'
                 },
                 {
-                    name: 'Peraturan Menteri KP No. 1 Tahun 2021',
-                    title: 'Jenis Ikan yang Dilindungi',
-                    description: 'Peraturan khusus untuk perlindungan jenis-jenis ikan, termasuk Hiu Martil yang memiliki status perlindungan penuh.',
-                    year: '2021'
-                },
-                {
-                    name: 'Peraturan Menteri LHK No. P.106/2018',
-                    title: 'Jenis Tumbuhan dan Satwa yang Dilindungi',
-                    description: 'Peraturan terbaru yang berisi daftar detail spesies satwa dan tumbuhan yang dilindungi secara hukum di Indonesia, termasuk Hiu Martil.',
+                    name: 'Peraturan Menteri Kelautan dan Perikanan No. 5 Tahun 2018',
+                    title: 'Penetapan Status Perlindungan Penuh Terhadap Jenis Ikan Hiu Martil',
+                    description: 'Peraturan yang memperkuat perlindungan Hiu Martil (Sphyrna spp.) dengan status perlindungan penuh di perairan Indonesia.',
                     year: '2018'
+                },
+                {
+                    name: 'Keputusan Menteri Kelautan dan Perikanan No. 18 Tahun 2013',
+                    title: 'Penetapan Status Perlindungan Penuh Terhadap Jenis Ikan Hiu Martil',
+                    description: 'Keputusan yang menetapkan Hiu Martil (Sphyrna spp.) sebagai ikan yang dilindungi penuh, melengkapi regulasi sebelumnya.',
+                    year: '2013'
                 }
             ],
             locations: [
@@ -595,56 +553,6 @@ const protectedAnimals = {
                 Order: 'Carcharhiniformes',
                 Family: 'Sphyrnidae'
             },
-            legalRegulations: [
-                {
-                    name: 'Undang-Undang No. 5 Tahun 1990',
-                    title: 'Konservasi Sumber Daya Alam Hayati dan Ekosistemnya',
-                    description: 'Landasan utama perlindungan satwa liar di Indonesia, melarang penangkapan, melukai, membunuh, menyimpan, memiliki, memelihara, mengangkut, dan memperdagangkan satwa yang dilindungi.',
-                    year: '1990'
-                },
-                {
-                    name: 'Peraturan Pemerintah No. 7 Tahun 1999',
-                    title: 'Pengawetan Jenis Tumbuhan dan Satwa',
-                    description: 'Turunan dari UU No. 5/1990 yang menjelaskan kriteria penetapan satwa sebagai jenis yang dilindungi dan mengatur upaya pengawetan di dalam dan di luar habitatnya.',
-                    year: '1999'
-                },
-                {
-                    name: 'Peraturan Menteri LHK No. P.106/2018',
-                    title: 'Jenis Tumbuhan dan Satwa yang Dilindungi',
-                    description: 'Peraturan terbaru yang berisi daftar detail spesies satwa dan tumbuhan yang dilindungi secara hukum di Indonesia, termasuk Hiu Martil.',
-                    year: '2018'
-                },
-                {
-                    name: 'Peraturan Menteri Kelautan dan Perikanan No. 1 Tahun 2021',
-                    title: 'Jenis Ikan yang Dilindungi',
-                    description: 'Peraturan khusus yang mengatur perlindungan terhadap jenis-jenis ikan, termasuk Hiu Martil yang memiliki status perlindungan penuh.',
-                    year: '2021'
-                },
-                {
-                    name: 'Undang-Undang No. 18 Tahun 2012',
-                    title: 'Pangan dan Keamanan Pangan',
-                    description: 'Mengatur keamanan pangan termasuk produk perikanan, melarang produksi dan peredaran pangan yang tidak aman dan dapat membahayakan kesehatan.',
-                    year: '2012'
-                },
-                {
-                    name: 'Undang-Undang No. 32 Tahun 2009',
-                    title: 'Perlindungan dan Pengelolaan Lingkungan Hidup',
-                    description: 'Mengatur perlindungan lingkungan hidup termasuk ekosistem laut, melarang perbuatan yang dapat mencemari dan merusak lingkungan hidup.',
-                    year: '2009'
-                },
-                {
-                    name: 'Undang-Undang No. 31 Tahun 2004',
-                    title: 'Perikanan',
-                    description: 'Mengatur pengelolaan perikanan yang berkelanjutan, melarang penangkapan ikan dengan cara yang merugikan kelestarian sumber daya ikan.',
-                    year: '2004'
-                },
-                {
-                    name: 'Undang-Undang No. 16 Tahun 1992',
-                    title: 'Karantina Hewan, Ikan, dan Tumbuhan',
-                    description: 'Mengatur karantina untuk mencegah masuk dan tersebarnya hama dan penyakit hewan karantina, termasuk ikan dan satwa laut.',
-                    year: '1992'
-                }
-            ],
             references: [
                 { text: 'CITES. (2023). Appendices.', url: 'https://cites.org/eng/app/appendices.php' },
                 { text: 'IUCN. (2023). Sphyrna lewini. The IUCN Red List of Threatened Species.', url: 'https://www.iucnredlist.org/species/39385/2918526' }
@@ -655,8 +563,8 @@ const protectedAnimals = {
             localName: 'Hiu Sirip Putih, Hiu Layang',
             latin: 'Carcharhinus longimanus', 
             status: 'Dilindungi Penuh', 
-            regulation: 'Permen KP 1/2021',
-            protectionYear: '2013',
+            regulation: 'Permen-KP No. 59/2014',
+            protectionYear: '2014',
             locations: [
                 { name: 'Perairan Sangihe-Talaud', coordinates: '4.0667°N, 125.4833°E' },
                 { name: 'Laut Sulawesi', coordinates: '2.0000°N, 123.0000°E' },
@@ -737,7 +645,7 @@ const protectedAnimals = {
             latin: 'Cheilinus undulatus', 
             status: 'Dilindungi Terbatas', 
             regulation: 'Permen KP 1/2021',
-            protectionYear: '2003',
+            protectionYear: '1990',
             locations: [
                 { name: 'Taman Nasional Bunaken', coordinates: '1.6167°N, 124.7583°E' },
                 { name: 'Pulau Siladen', coordinates: '1.6333°N, 124.7833°E' },
@@ -822,7 +730,7 @@ const protectedAnimals = {
             latin: 'Notopterus chitala', 
             status: 'Dilindungi Penuh', 
             regulation: 'Permen KP 1/2021',
-            protectionYear: '2018',
+            protectionYear: '1990',
             locations: [
                 { name: 'Sungai Mahakam', coordinates: '0.5000°S, 117.1500°E' },
                 { name: 'Sungai Kapuas', coordinates: '0.0000°N, 109.3333°E' },
@@ -901,7 +809,7 @@ const protectedAnimals = {
             latin: 'Latimeria menadoensis', 
             status: 'Dilindungi Penuh', 
             regulation: 'Permen KP 1/2021',
-            protectionYear: '1999',
+            protectionYear: '1990',
             locations: [
                 { name: 'Perairan Manado Tua', coordinates: '1.6500°N, 124.7167°E' },
                 { name: 'Perairan Bunaken', coordinates: '1.6167°N, 124.7583°E' },
@@ -980,7 +888,7 @@ const protectedAnimals = {
             latin: 'Lutjanus spp.', 
             status: 'Dilindungi Terbatas', 
             regulation: 'Permen KP 1/2021',
-            protectionYear: '2021',
+            protectionYear: '1990',
             locations: [
                 { name: 'Taman Nasional Bunaken', coordinates: '1.6167°N, 124.7583°E' },
                 { name: 'Perairan Lembeh', coordinates: '1.4500°N, 125.2167°E' },
@@ -1059,7 +967,7 @@ const protectedAnimals = {
             latin: 'Anguilla spp.', 
             status: 'Dilindungi Terbatas', 
             regulation: 'Permen KP 1/2021',
-            protectionYear: '2021',
+            protectionYear: '1990',
             locations: [
                 { name: 'Perairan Manado', coordinates: '1.4748°N, 124.8421°E' },
                 { name: 'Perairan Lembeh', coordinates: '1.4500°N, 125.2167°E' },
@@ -1138,7 +1046,7 @@ const protectedAnimals = {
             latin: 'Cromileptes altivelis', 
             status: 'Dilindungi Terbatas', 
             regulation: 'Permen KP 1/2021',
-            protectionYear: '2021',
+            protectionYear: '1990',
             locations: [
                 { name: 'Taman Nasional Bunaken', coordinates: '1.6167°N, 124.7583°E' },
                 { name: 'Perairan Lembeh', coordinates: '1.4500°N, 125.2167°E' },
@@ -1217,7 +1125,7 @@ const protectedAnimals = {
             latin: 'Hippocampus spp.', 
             status: 'Dilindungi Penuh', 
             regulation: 'Permen KP 1/2021',
-            protectionYear: '2018',
+            protectionYear: '1990',
             locations: [
                 { name: 'Selat Lembeh', coordinates: '1.4500°N, 125.2167°E' },
                 { name: 'Perairan Bunaken', coordinates: '1.6167°N, 124.7583°E' },
@@ -1298,7 +1206,7 @@ const protectedAnimals = {
             latin: 'Chelonia mydas', 
             status: 'Dilindungi Penuh', 
             regulation: 'Permen LHK P.106/2018',
-            protectionYear: '1999',
+            protectionYear: '1990',
             legalRegulations: [
                 {
                     name: 'Undang-Undang No. 5 Tahun 1990',
@@ -1353,7 +1261,7 @@ const protectedAnimals = {
             latin: 'Eretmochelys imbricata', 
             status: 'Dilindungi Penuh', 
             regulation: 'Permen LHK P.106/2018',
-            protectionYear: '1999',
+            protectionYear: '1990',
             legalRegulations: [
                 {
                     name: 'Undang-Undang No. 5 Tahun 1990',
@@ -1408,7 +1316,7 @@ const protectedAnimals = {
             latin: 'Lepidochelys olivacea', 
             status: 'Dilindungi Penuh', 
             regulation: 'Permen LHK P.106/2018',
-            protectionYear: '1999',
+            protectionYear: '1990',
             legalRegulations: [
                 {
                     name: 'Undang-Undang No. 5 Tahun 1990',
@@ -1457,7 +1365,7 @@ const protectedAnimals = {
             latin: 'Caretta caretta', 
             status: 'Dilindungi Penuh', 
             regulation: 'Permen LHK P.106/2018',
-            protectionYear: '1999',
+            protectionYear: '1990',
             legalRegulations: [
                 {
                     name: 'Undang-Undang No. 5 Tahun 1990',
@@ -1508,7 +1416,7 @@ const protectedAnimals = {
             latin: 'Antipatharia', 
             status: 'Dilindungi Penuh', 
             regulation: 'Permen LHK P.106/2018',
-            protectionYear: '2018',
+            protectionYear: '1990',
             legalRegulations: [
                 {
                     name: 'Undang-Undang No. 5 Tahun 1990',
@@ -1562,7 +1470,7 @@ const protectedAnimals = {
             latin: 'Acropora spp.', 
             status: 'Dilindungi Terbatas', 
             regulation: 'Permen LHK P.106/2018',
-            protectionYear: '2018',
+            protectionYear: '1990',
             legalRegulations: [
                 {
                     name: 'Undang-Undang No. 5 Tahun 1990',
@@ -1613,7 +1521,7 @@ const protectedAnimals = {
             latin: 'Tridacna gigas', 
             status: 'Dilindungi Penuh', 
             regulation: 'Permen LHK P.106/2018',
-            protectionYear: '2018',
+            protectionYear: '1990',
             legalRegulations: [
                 {
                     name: 'Undang-Undang No. 5 Tahun 1990',
@@ -1668,7 +1576,7 @@ const protectedAnimals = {
             latin: 'Tridacna crocea',
             status: 'Dilindungi Penuh',
             regulation: 'Permen LHK P.106/2018',
-            protectionYear: '2018',
+            protectionYear: '1990',
             legalRegulations: [
                 {
                     name: 'Undang-Undang No. 5 Tahun 1990',
@@ -1723,7 +1631,7 @@ const protectedAnimals = {
             latin: 'Tridacna squamosa',
             status: 'Dilindungi Penuh',
             regulation: 'Permen LHK P.106/2018',
-            protectionYear: '2018',
+            protectionYear: '1990',
             legalRegulations: [
                 {
                     name: 'Undang-Undang No. 5 Tahun 1990',
@@ -1776,27 +1684,29 @@ const protectedAnimals = {
     'Cephalopoda (Gurita & Cumi)': [
         { 
             name: 'Nautilus', 
-            localName: 'Nautilus, Chambered Nautilus',
+            localName: 'Nautilus, Chambered Nautilus, Siput Laut Berbilik',
             latin: 'Nautilus pompilius', 
             status: 'Dilindungi Penuh', 
-            regulation: 'Permen LHK P.106/2018',
-            protectionYear: '2018',
+            regulation: 'PP No. 7/1999',
+            protectionYear: '1990',
             locations: [
                 { name: 'Taman Nasional Bunaken', coordinates: '1.6167°N, 124.7583°E' },
                 { name: 'Perairan Lembeh', coordinates: '1.4500°N, 125.2167°E' },
-                { name: 'Pulau Siladen', coordinates: '1.6333°N, 124.7833°E' }
+                { name: 'Pulau Siladen', coordinates: '1.6333°N, 124.7833°E' },
+                { name: 'Perairan Raja Ampat', coordinates: '0.5000°S, 130.0000°E' },
+                { name: 'Perairan Maluku', coordinates: '3.0000°S, 128.0000°E' }
             ],
             image: 'https://www.greeners.co/wp-content/uploads/2018/01/Fauna-Nautilus-Chepalopoda-Bercangkang-yang-Bertahan-dari-Zaman-Purba.jpg',
             images: [
                 'https://www.greeners.co/wp-content/uploads/2018/01/Fauna-Nautilus-Chepalopoda-Bercangkang-yang-Bertahan-dari-Zaman-Purba.jpg',
                 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTaBvz8wQ_2V-vC_QdHUppJS0KGrPcSBoYXeEFxIHY2pLrd2l5BNk54gvWmUkuFg-a1XRs&usqp=CAU',
-                'https://images.unsplash.com/photo-1601131422475-1051510d48f7?w=400&h=300&fit=crop',
-                'https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=400&h=300&fit=crop'
+                'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Nautilus_diagram-en.svg/500px-Nautilus_diagram-en.svg.png',
+                'https://images.unsplash.com/photo-1601131422475-1051510d48f7?w=400&h=300&fit=crop'
             ], 
-            description: 'Dianggap sebagai "fosil hidup" karena wujudnya tidak banyak berubah selama jutaan tahun. Memiliki cangkang luar berbilik yang berfungsi sebagai alat bantu apung.',
+            description: 'Nautilus adalah moluska cephalopoda primitif yang dianggap sebagai "fosil hidup" karena bentuknya tidak banyak berubah selama 500 juta tahun. Berbeda dengan ikan, nautilus adalah hewan invertebrata yang memiliki cangkang luar berbilik (chambered shell) yang berfungsi sebagai alat bantu apung. Hewan ini hidup di perairan dalam (200-600 meter) dan merupakan predator yang memakan krustasea dan ikan kecil.',
             appendix: 'CITES Appendix II',
-            conservationStatus: 'Least Concern (LC)',
-            morphology: 'Cephalopoda primitif dengan external chambered shell (cangkang berbilik) berdiameter maksimal 25 cm. Shell berbentuk spiral planispiral dengan 4-5 whorls, berwarna putih cream dengan distinctive flame-like stripes berwarna oranye hingga coklat. Chambers dipisahkan septa dengan siphuncle central untuk kontrol buoyancy. Body lunak menempati body chamber terbesar. Memiliki 60-90 retractile tentacles tanpa suckers, hanya adhesive ridges. Mata primitif tanpa lens. Bergerak dengan jet propulsion menggunakan hyponome. Tidak memiliki ink sac atau chromatophores.',
+            conservationStatus: 'Vulnerable (VU)',
+            morphology: 'Cephalopoda primitif dengan cangkang luar berbilik (external chambered shell) berdiameter maksimal 25 cm. Cangkang berbentuk spiral planispiral dengan 4-5 putaran sempurna, berwarna putih krem dengan garis-garis api (flame-like stripes) berwarna oranye hingga coklat kemerahan. Ruang-ruang dipisahkan oleh sekat (septa) dengan siphuncle di tengah untuk mengontrol daya apung. Tubuh lunak menempati ruang terbesar (living chamber). Memiliki 60-90 tentakel yang dapat ditarik tanpa pengisap, hanya memiliki tonjolan perekat (adhesive ridges). Mata primitif tanpa lensa, hanya mampu membedakan terang dan gelap. Bergerak dengan jet propulsion menggunakan hyponome (corong). Tidak memiliki kantung tinta atau kromatofor seperti cephalopoda modern.',
             taxonomy: {
                 Kingdom: 'Animalia',
                 Phylum: 'Mollusca',
@@ -1806,15 +1716,9 @@ const protectedAnimals = {
             },
             legalRegulations: [
                 {
-                    name: 'Undang-Undang No. 5 Tahun 1990',
-                    title: 'Konservasi Sumber Daya Alam Hayati dan Ekosistemnya',
-                    description: 'Landasan utama perlindungan satwa liar di Indonesia, melarang penangkapan, melukai, membunuh, menyimpan, memiliki, memelihara, mengangkut, dan memperdagangkan satwa yang dilindungi.',
-                    year: '1990'
-                },
-                {
                     name: 'Peraturan Pemerintah No. 7 Tahun 1999',
                     title: 'Pengawetan Jenis Tumbuhan dan Satwa',
-                    description: 'Turunan dari UU No. 5/1990 yang menjelaskan kriteria penetapan satwa sebagai jenis yang dilindungi dan mengatur upaya pengawetan di dalam dan di luar habitatnya.',
+                    description: 'Peraturan yang menjelaskan kriteria penetapan satwa sebagai jenis yang dilindungi dan mengatur upaya pengawetan di dalam dan di luar habitatnya.',
                     year: '1999'
                 },
                 {
@@ -1856,7 +1760,9 @@ const protectedAnimals = {
             ],
             references: [
                 { text: 'CITES. (2023). Appendices.', url: 'https://cites.org/eng/app/appendices.php' },
-                { text: 'IUCN. (2023). Nautilus pompilius. The IUCN Red List of Threatened Species.', url: 'https://www.iucnredlist.org/species/160386/5371058' }
+                { text: 'IUCN. (2023). Nautilus pompilius. The IUCN Red List of Threatened Species.', url: 'https://www.iucnredlist.org/species/14252/21413338' },
+                { text: 'Ward, P.D. (1987). The Natural History of Nautilus. Allen & Unwin, London.', url: '' },
+                { text: 'Saunders, W.B. & Landman, N.H. (2010). Nautilus: The Biology and Paleobiology of a Living Fossil. Springer, Dordrecht.', url: '' }
             ]
         },
         { 
@@ -1865,7 +1771,7 @@ const protectedAnimals = {
             latin: 'Octopus cyanea', 
             status: 'Dilindungi Terbatas', 
             regulation: 'Permen KP 1/2021',
-            protectionYear: '2021',
+            protectionYear: '1990',
             locations: [
                 { name: 'Taman Nasional Bunaken', coordinates: '1.6167°N, 124.7583°E' },
                 { name: 'Perairan Lembeh', coordinates: '1.4500°N, 125.2167°E' },
@@ -1952,7 +1858,7 @@ const protectedAnimals = {
             latin: 'Globicephala macrorhynchus', 
             status: 'Dilindungi Penuh', 
             regulation: 'Permen LHK P.106/2018',
-            protectionYear: '2018',
+            protectionYear: '1990',
             legalRegulations: [
                 {
                     name: 'Undang-Undang No. 5 Tahun 1990',
@@ -2061,7 +1967,7 @@ const protectedAnimals = {
             latin: 'Stenella longirostris', 
             status: 'Dilindungi Penuh', 
             regulation: 'Permen LHK P.106/2018',
-            protectionYear: '2018',
+            protectionYear: '1990',
             locations: [
                 { name: 'Laut Sulawesi', coordinates: '2.0000°N, 123.0000°E' },
                 { name: 'Perairan Sangihe-Talaud', coordinates: '4.0667°N, 125.4833°E' },
@@ -2146,7 +2052,7 @@ const protectedAnimals = {
             latin: 'Lagenodelphis hosei', 
             status: 'Dilindungi Penuh', 
             regulation: 'Permen LHK P.106/2018',
-            protectionYear: '2018',
+            protectionYear: '1990',
             locations: [
                 { name: 'Laut Sulawesi', coordinates: '2.0000°N, 123.0000°E' },
                 { name: 'Perairan Sangihe-Talaud', coordinates: '4.0667°N, 125.4833°E' },
@@ -2231,7 +2137,7 @@ const protectedAnimals = {
             latin: 'Tursiops truncatus', 
             status: 'Dilindungi Penuh', 
             regulation: 'Permen LHK P.106/2018',
-            protectionYear: '2018',
+            protectionYear: '1990',
             locations: [
                 { name: 'Laut Sulawesi', coordinates: '2.0000°N, 123.0000°E' },
                 { name: 'Perairan Sangihe-Talaud', coordinates: '4.0667°N, 125.4833°E' },
@@ -2316,7 +2222,7 @@ const protectedAnimals = {
             latin: 'Balaenoptera edeni', 
             status: 'Dilindungi Penuh', 
             regulation: 'Permen LHK P.106/2018',
-            protectionYear: '2018',
+            protectionYear: '1990',
             locations: [
                 { name: 'Laut Sulawesi', coordinates: '2.0000°N, 123.0000°E' },
                 { name: 'Perairan Sangihe-Talaud', coordinates: '4.0667°N, 125.4833°E' },

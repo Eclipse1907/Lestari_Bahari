@@ -52,7 +52,6 @@ Proyek ini dilisensikan di bawah MIT License - lihat file [LICENSE](LICENSE) unt
 **BKHIT Sulawesi Utara**
 - 📞 082190899090
 - 📍 Manado, Sulawesi Utara
-- 🕒 Layanan 24/7
 
 ---
 
