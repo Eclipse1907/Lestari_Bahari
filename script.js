@@ -563,8 +563,16 @@ const protectedAnimals = {
             localName: 'Hiu Sirip Putih, Hiu Layang',
             latin: 'Carcharhinus longimanus', 
             status: 'Dilindungi Penuh', 
-            regulation: 'Permen-KP No. 59/2014',
-            protectionYear: '2014',
+            regulation: 'Permen KKP No. 5/2018',
+            protectionYear: '2018',
+            legalRegulations: [
+                {
+                    name: 'Peraturan Menteri Kelautan dan Perikanan No. 5 Tahun 2018',
+                    title: 'Penetapan Status Perlindungan Penuh Terhadap Jenis Ikan Hiu Koboi',
+                    description: 'Peraturan yang menetapkan Carcharhinus longimanus (Hiu Koboi) sebagai ikan yang dilindungi penuh di perairan Indonesia. Merupakan landasan utama perlindungan Hiu Koboi.',
+                    year: '2018'
+                }
+            ],
             locations: [
                 { name: 'Perairan Sangihe-Talaud', coordinates: '4.0667°N, 125.4833°E' },
                 { name: 'Laut Sulawesi', coordinates: '2.0000°N, 123.0000°E' },
@@ -582,56 +590,6 @@ const protectedAnimals = {
                 Order: 'Carcharhiniformes',
                 Family: 'Carcharhinidae'
             },
-            legalRegulations: [
-                {
-                    name: 'Undang-Undang No. 5 Tahun 1990',
-                    title: 'Konservasi Sumber Daya Alam Hayati dan Ekosistemnya',
-                    description: 'Landasan utama perlindungan satwa liar di Indonesia, melarang penangkapan, melukai, membunuh, menyimpan, memiliki, memelihara, mengangkut, dan memperdagangkan satwa yang dilindungi.',
-                    year: '1990'
-                },
-                {
-                    name: 'Peraturan Pemerintah No. 7 Tahun 1999',
-                    title: 'Pengawetan Jenis Tumbuhan dan Satwa',
-                    description: 'Turunan dari UU No. 5/1990 yang menjelaskan kriteria penetapan satwa sebagai jenis yang dilindungi dan mengatur upaya pengawetan di dalam dan di luar habitatnya.',
-                    year: '1999'
-                },
-                {
-                    name: 'Peraturan Menteri LHK No. P.106/2018',
-                    title: 'Jenis Tumbuhan dan Satwa yang Dilindungi',
-                    description: 'Peraturan terbaru yang berisi daftar detail spesies satwa dan tumbuhan yang dilindungi secara hukum di Indonesia, termasuk Hiu Koboi.',
-                    year: '2018'
-                },
-                {
-                    name: 'Peraturan Menteri Kelautan dan Perikanan No. 1 Tahun 2021',
-                    title: 'Jenis Ikan yang Dilindungi',
-                    description: 'Peraturan khusus yang mengatur perlindungan terhadap jenis-jenis ikan, termasuk Hiu Koboi yang memiliki status perlindungan penuh.',
-                    year: '2021'
-                },
-                {
-                    name: 'Undang-Undang No. 18 Tahun 2012',
-                    title: 'Pangan dan Keamanan Pangan',
-                    description: 'Mengatur keamanan pangan termasuk produk perikanan, melarang produksi dan peredaran pangan yang tidak aman dan dapat membahayakan kesehatan.',
-                    year: '2012'
-                },
-                {
-                    name: 'Undang-Undang No. 32 Tahun 2009',
-                    title: 'Perlindungan dan Pengelolaan Lingkungan Hidup',
-                    description: 'Mengatur perlindungan lingkungan hidup termasuk ekosistem laut, melarang perbuatan yang dapat mencemari dan merusak lingkungan hidup.',
-                    year: '2009'
-                },
-                {
-                    name: 'Undang-Undang No. 31 Tahun 2004',
-                    title: 'Perikanan',
-                    description: 'Mengatur pengelolaan perikanan yang berkelanjutan, melarang penangkapan ikan dengan cara yang merugikan kelestarian sumber daya ikan.',
-                    year: '2004'
-                },
-                {
-                    name: 'Undang-Undang No. 16 Tahun 1992',
-                    title: 'Karantina Hewan, Ikan, dan Tumbuhan',
-                    description: 'Mengatur karantina untuk mencegah masuk dan tersebarnya hama dan penyakit hewan karantina, termasuk ikan dan satwa laut.',
-                    year: '1992'
-                }
-            ],
             references: [
                 { text: 'CITES. (2023). Appendices.', url: 'https://cites.org/eng/app/appendices.php' },
                 { text: 'IUCN. (2023). Carcharhinus longimanus. The IUCN Red List of Threatened Species.', url: 'https://www.iucnredlist.org/species/39374/2915850' }
@@ -644,8 +602,28 @@ const protectedAnimals = {
             localName: 'Ikan Maming, Napoleon Wrasse',
             latin: 'Cheilinus undulatus', 
             status: 'Dilindungi Terbatas', 
-            regulation: 'Permen KP 1/2021',
-            protectionYear: '1990',
+            regulation: 'Permen Pertanian No. 375/1995',
+            protectionYear: '1995',
+            legalRegulations: [
+                {
+                    name: 'Peraturan Menteri Pertanian Nomor 375/Kpts/IK.250/5/95',
+                    title: 'Penetapan Jenis Ikan yang Dilindungi',
+                    description: 'Peraturan yang menetapkan Cheilinus undulatus (Ikan Napoleon) sebagai ikan yang dilindungi di Indonesia. Merupakan landasan utama perlindungan Ikan Napoleon.',
+                    year: '1995'
+                },
+                {
+                    name: 'Keputusan Menteri Kelautan dan Perikanan Nomor 37/KEPMEN-KP/2013',
+                    title: 'Penetapan Status Perlindungan Terbatas Terhadap Jenis Ikan Napoleon',
+                    description: 'Keputusan yang memperkuat perlindungan Ikan Napoleon (Cheilinus undulatus) dengan status perlindungan terbatas di perairan Indonesia.',
+                    year: '2013'
+                },
+                {
+                    name: 'CITES Appendix II Tahun 2004',
+                    title: 'Convention on International Trade in Endangered Species',
+                    description: 'Ikan Napoleon (Cheilinus undulatus) dimasukkan dalam Appendix II CITES pada tahun 2004, mengatur perdagangan internasional spesies ini.',
+                    year: '2004'
+                }
+            ],
             locations: [
                 { name: 'Taman Nasional Bunaken', coordinates: '1.6167°N, 124.7583°E' },
                 { name: 'Pulau Siladen', coordinates: '1.6333°N, 124.7833°E' },
@@ -669,56 +647,6 @@ const protectedAnimals = {
                 Order: 'Labriformes',
                 Family: 'Labridae'
             },
-            legalRegulations: [
-                {
-                    name: 'Undang-Undang No. 5 Tahun 1990',
-                    title: 'Konservasi Sumber Daya Alam Hayati dan Ekosistemnya',
-                    description: 'Landasan utama perlindungan satwa liar di Indonesia, melarang penangkapan, melukai, membunuh, menyimpan, memiliki, memelihara, mengangkut, dan memperdagangkan satwa yang dilindungi.',
-                    year: '1990'
-                },
-                {
-                    name: 'Peraturan Pemerintah No. 7 Tahun 1999',
-                    title: 'Pengawetan Jenis Tumbuhan dan Satwa',
-                    description: 'Turunan dari UU No. 5/1990 yang menjelaskan kriteria penetapan satwa sebagai jenis yang dilindungi dan mengatur upaya pengawetan di dalam dan di luar habitatnya.',
-                    year: '1999'
-                },
-                {
-                    name: 'Peraturan Menteri LHK No. P.106/2018',
-                    title: 'Jenis Tumbuhan dan Satwa yang Dilindungi',
-                    description: 'Peraturan terbaru yang berisi daftar detail spesies satwa dan tumbuhan yang dilindungi secara hukum di Indonesia, termasuk Ikan Napoleon.',
-                    year: '2018'
-                },
-                {
-                    name: 'Peraturan Menteri Kelautan dan Perikanan No. 1 Tahun 2021',
-                    title: 'Jenis Ikan yang Dilindungi',
-                    description: 'Peraturan khusus yang mengatur perlindungan terhadap jenis-jenis ikan, termasuk Ikan Napoleon yang memiliki status perlindungan terbatas.',
-                    year: '2021'
-                },
-                {
-                    name: 'Undang-Undang No. 18 Tahun 2012',
-                    title: 'Pangan dan Keamanan Pangan',
-                    description: 'Mengatur keamanan pangan termasuk produk perikanan, melarang produksi dan peredaran pangan yang tidak aman dan dapat membahayakan kesehatan.',
-                    year: '2012'
-                },
-                {
-                    name: 'Undang-Undang No. 32 Tahun 2009',
-                    title: 'Perlindungan dan Pengelolaan Lingkungan Hidup',
-                    description: 'Mengatur perlindungan lingkungan hidup termasuk ekosistem laut, melarang perbuatan yang dapat mencemari dan merusak lingkungan hidup.',
-                    year: '2009'
-                },
-                {
-                    name: 'Undang-Undang No. 31 Tahun 2004',
-                    title: 'Perikanan',
-                    description: 'Mengatur pengelolaan perikanan yang berkelanjutan, melarang penangkapan ikan dengan cara yang merugikan kelestarian sumber daya ikan.',
-                    year: '2004'
-                },
-                {
-                    name: 'Undang-Undang No. 16 Tahun 1992',
-                    title: 'Karantina Hewan, Ikan, dan Tumbuhan',
-                    description: 'Mengatur karantina untuk mencegah masuk dan tersebarnya hama dan penyakit hewan karantina, termasuk ikan dan satwa laut.',
-                    year: '1992'
-                }
-            ],
             references: [
                 { text: 'CITES. (2023). Appendices.', url: 'https://cites.org/eng/app/appendices.php' },
                 { text: 'IUCN. (2023). Cheilinus undulatus. The IUCN Red List of Threatened Species.', url: 'https://www.iucnredlist.org/species/187752/1820623' }
@@ -729,8 +657,28 @@ const protectedAnimals = {
             localName: 'Ikan Belida, Giant Featherback, Notopterus chitala',
             latin: 'Notopterus chitala', 
             status: 'Dilindungi Penuh', 
-            regulation: 'Permen KP 1/2021',
-            protectionYear: '1990',
+            regulation: 'Permen LHK P.106/2018',
+            protectionYear: '2018',
+            legalRegulations: [
+                {
+                    name: 'Peraturan Menteri Lingkungan Hidup dan Kehutanan Nomor P.106 Tahun 2018',
+                    title: 'Jenis Tumbuhan dan Satwa yang Dilindungi',
+                    description: 'Peraturan yang menetapkan Notopterus chitala (Ikan Belida) sebagai satwa yang dilindungi di Indonesia. Merupakan landasan utama perlindungan Ikan Belida.',
+                    year: '2018'
+                },
+                {
+                    name: 'Peraturan Presiden Nomor 34 Tahun 2022',
+                    title: 'Rencana Aksi Nasional Konservasi Ikan Belida',
+                    description: 'Peraturan presiden yang mengatur strategi konservasi dan perlindungan Ikan Belida (Notopterus chitala) di Indonesia melalui rencana aksi nasional.',
+                    year: '2022'
+                },
+                {
+                    name: 'Keputusan Menteri Kelautan dan Perikanan Nomor 1 Tahun 2021',
+                    title: 'Jenis Ikan yang Dilindungi',
+                    description: 'Keputusan yang memperkuat perlindungan Ikan Belida (Notopterus chitala) dengan status perlindungan penuh di perairan Indonesia.',
+                    year: '2021'
+                }
+            ],
             locations: [
                 { name: 'Sungai Mahakam', coordinates: '0.5000°S, 117.1500°E' },
                 { name: 'Sungai Kapuas', coordinates: '0.0000°N, 109.3333°E' },
@@ -748,56 +696,6 @@ const protectedAnimals = {
                 Order: 'Osteoglossiformes',
                 Family: 'Notopteridae'
             },
-            legalRegulations: [
-                {
-                    name: 'Undang-Undang No. 5 Tahun 1990',
-                    title: 'Konservasi Sumber Daya Alam Hayati dan Ekosistemnya',
-                    description: 'Landasan utama perlindungan satwa liar di Indonesia, melarang penangkapan, melukai, membunuh, menyimpan, memiliki, memelihara, mengangkut, dan memperdagangkan satwa yang dilindungi.',
-                    year: '1990'
-                },
-                {
-                    name: 'Peraturan Pemerintah No. 7 Tahun 1999',
-                    title: 'Pengawetan Jenis Tumbuhan dan Satwa',
-                    description: 'Turunan dari UU No. 5/1990 yang menjelaskan kriteria penetapan satwa sebagai jenis yang dilindungi dan mengatur upaya pengawetan di dalam dan di luar habitatnya.',
-                    year: '1999'
-                },
-                {
-                    name: 'Peraturan Menteri LHK No. P.106/2018',
-                    title: 'Jenis Tumbuhan dan Satwa yang Dilindungi',
-                    description: 'Peraturan terbaru yang berisi daftar detail spesies satwa dan tumbuhan yang dilindungi secara hukum di Indonesia, termasuk Ikan Belida.',
-                    year: '2018'
-                },
-                {
-                    name: 'Peraturan Menteri Kelautan dan Perikanan No. 1 Tahun 2021',
-                    title: 'Jenis Ikan yang Dilindungi',
-                    description: 'Peraturan khusus yang mengatur perlindungan terhadap jenis-jenis ikan, termasuk Ikan Belida yang memiliki status perlindungan penuh.',
-                    year: '2021'
-                },
-                {
-                    name: 'Undang-Undang No. 18 Tahun 2012',
-                    title: 'Pangan dan Keamanan Pangan',
-                    description: 'Mengatur keamanan pangan termasuk produk perikanan, melarang produksi dan peredaran pangan yang tidak aman dan dapat membahayakan kesehatan.',
-                    year: '2012'
-                },
-                {
-                    name: 'Undang-Undang No. 32 Tahun 2009',
-                    title: 'Perlindungan dan Pengelolaan Lingkungan Hidup',
-                    description: 'Mengatur perlindungan lingkungan hidup termasuk ekosistem laut, melarang perbuatan yang dapat mencemari dan merusak lingkungan hidup.',
-                    year: '2009'
-                },
-                {
-                    name: 'Undang-Undang No. 31 Tahun 2004',
-                    title: 'Perikanan',
-                    description: 'Mengatur pengelolaan perikanan yang berkelanjutan, melarang penangkapan ikan dengan cara yang merugikan kelestarian sumber daya ikan.',
-                    year: '2004'
-                },
-                {
-                    name: 'Undang-Undang No. 16 Tahun 1992',
-                    title: 'Karantina Hewan, Ikan, dan Tumbuhan',
-                    description: 'Mengatur karantina untuk mencegah masuk dan tersebarnya hama dan penyakit hewan karantina, termasuk ikan dan satwa laut.',
-                    year: '1992'
-                }
-            ],
             references: [
                 { text: 'CITES. (2023). Appendices.', url: 'https://cites.org/eng/app/appendices.php' },
                 { text: 'IUCN. (2023). Notopterus chitala. The IUCN Red List of Threatened Species.', url: 'https://www.iucnredlist.org/species/166444/1104950' }
@@ -808,8 +706,22 @@ const protectedAnimals = {
             localName: 'Ikan Raja Laut, Coelacanth Sulawesi',
             latin: 'Latimeria menadoensis', 
             status: 'Dilindungi Penuh', 
-            regulation: 'Permen KP 1/2021',
-            protectionYear: '1990',
+            regulation: 'Permen Kehutanan No. 7/1999',
+            protectionYear: '1999',
+            legalRegulations: [
+                {
+                    name: 'Peraturan Menteri Kehutanan Nomor 7 Tahun 1999',
+                    title: 'Penetapan Jenis Satwa yang Dilindungi',
+                    description: 'Peraturan yang menetapkan Latimeria menadoensis (Ikan Coelacanth) sebagai satwa yang dilindungi di Indonesia. Merupakan landasan utama perlindungan Ikan Coelacanth.',
+                    year: '1999'
+                },
+                {
+                    name: 'Appendix I CITES (Convention on International Trade in Endangered Species)',
+                    title: 'Convention on International Trade in Endangered Species of Wild Fauna and Flora',
+                    description: 'Latimeria menadoensis (Ikan Coelacanth) dimasukkan dalam Appendix I CITES, memberikan perlindungan tertinggi terhadap perdagangan internasional spesies ini.',
+                    year: '1999'
+                }
+            ],
             locations: [
                 { name: 'Perairan Manado Tua', coordinates: '1.6500°N, 124.7167°E' },
                 { name: 'Perairan Bunaken', coordinates: '1.6167°N, 124.7583°E' },
@@ -827,56 +739,6 @@ const protectedAnimals = {
                 Order: 'Coelacanthiformes',
                 Family: 'Latimeriidae'
             },
-            legalRegulations: [
-                {
-                    name: 'Undang-Undang No. 5 Tahun 1990',
-                    title: 'Konservasi Sumber Daya Alam Hayati dan Ekosistemnya',
-                    description: 'Landasan utama perlindungan satwa liar di Indonesia, melarang penangkapan, melukai, membunuh, menyimpan, memiliki, memelihara, mengangkut, dan memperdagangkan satwa yang dilindungi.',
-                    year: '1990'
-                },
-                {
-                    name: 'Peraturan Pemerintah No. 7 Tahun 1999',
-                    title: 'Pengawetan Jenis Tumbuhan dan Satwa',
-                    description: 'Turunan dari UU No. 5/1990 yang menjelaskan kriteria penetapan satwa sebagai jenis yang dilindungi dan mengatur upaya pengawetan di dalam dan di luar habitatnya.',
-                    year: '1999'
-                },
-                {
-                    name: 'Peraturan Menteri LHK No. P.106/2018',
-                    title: 'Jenis Tumbuhan dan Satwa yang Dilindungi',
-                    description: 'Peraturan terbaru yang berisi daftar detail spesies satwa dan tumbuhan yang dilindungi secara hukum di Indonesia, termasuk Ikan Coelacanth.',
-                    year: '2018'
-                },
-                {
-                    name: 'Peraturan Menteri Kelautan dan Perikanan No. 1 Tahun 2021',
-                    title: 'Jenis Ikan yang Dilindungi',
-                    description: 'Peraturan khusus yang mengatur perlindungan terhadap jenis-jenis ikan, termasuk Ikan Coelacanth yang memiliki status perlindungan penuh.',
-                    year: '2021'
-                },
-                {
-                    name: 'Undang-Undang No. 18 Tahun 2012',
-                    title: 'Pangan dan Keamanan Pangan',
-                    description: 'Mengatur keamanan pangan termasuk produk perikanan, melarang produksi dan peredaran pangan yang tidak aman dan dapat membahayakan kesehatan.',
-                    year: '2012'
-                },
-                {
-                    name: 'Undang-Undang No. 32 Tahun 2009',
-                    title: 'Perlindungan dan Pengelolaan Lingkungan Hidup',
-                    description: 'Mengatur perlindungan lingkungan hidup termasuk ekosistem laut, melarang perbuatan yang dapat mencemari dan merusak lingkungan hidup.',
-                    year: '2009'
-                },
-                {
-                    name: 'Undang-Undang No. 31 Tahun 2004',
-                    title: 'Perikanan',
-                    description: 'Mengatur pengelolaan perikanan yang berkelanjutan, melarang penangkapan ikan dengan cara yang merugikan kelestarian sumber daya ikan.',
-                    year: '2004'
-                },
-                {
-                    name: 'Undang-Undang No. 16 Tahun 1992',
-                    title: 'Karantina Hewan, Ikan, dan Tumbuhan',
-                    description: 'Mengatur karantina untuk mencegah masuk dan tersebarnya hama dan penyakit hewan karantina, termasuk ikan dan satwa laut.',
-                    year: '1992'
-                }
-            ],
             references: [
                 { text: 'CITES. (2023). Appendices.', url: 'https://cites.org/eng/app/appendices.php' },
                 { text: 'IUCN. (2023). Latimeria menadoensis. The IUCN Red List of Threatened Species.', url: 'https://www.iucnredlist.org/species/11375/3275427' }
@@ -887,8 +749,22 @@ const protectedAnimals = {
             localName: 'Kakap Merah, Red Snapper',
             latin: 'Lutjanus spp.', 
             status: 'Dilindungi Terbatas', 
-            regulation: 'Permen KP 1/2021',
-            protectionYear: '1990',
+            regulation: 'Kepmen KP No. 79/2016',
+            protectionYear: '2016',
+            legalRegulations: [
+                {
+                    name: 'Keputusan Menteri Kelautan dan Perikanan Nomor 79/KEPMEN-KP/2016',
+                    title: 'Penetapan Status Perlindungan Terbatas Terhadap Jenis Ikan Kakap',
+                    description: 'Keputusan yang menetapkan Lutjanus spp. (Ikan Kakap Merah) sebagai ikan yang dilindungi terbatas di perairan Indonesia. Merupakan landasan utama perlindungan Ikan Kakap Merah.',
+                    year: '2016'
+                },
+                {
+                    name: 'Keputusan Menteri Kelautan dan Perikanan Nomor 123 Tahun 2021',
+                    title: 'Rencana Pengelolaan Perikanan Kakap dan Kerapu',
+                    description: 'Keputusan yang mengatur strategi pengelolaan perikanan kakap dan kerapu, termasuk Lutjanus spp. (Ikan Kakap Merah) untuk memastikan kelestarian dan pemanfaatan berkelanjutan.',
+                    year: '2021'
+                }
+            ],
             locations: [
                 { name: 'Taman Nasional Bunaken', coordinates: '1.6167°N, 124.7583°E' },
                 { name: 'Perairan Lembeh', coordinates: '1.4500°N, 125.2167°E' },
@@ -906,56 +782,6 @@ const protectedAnimals = {
                 Order: 'Perciformes',
                 Family: 'Lutjanidae'
             },
-            legalRegulations: [
-                {
-                    name: 'Undang-Undang No. 5 Tahun 1990',
-                    title: 'Konservasi Sumber Daya Alam Hayati dan Ekosistemnya',
-                    description: 'Landasan utama perlindungan satwa liar di Indonesia, melarang penangkapan, melukai, membunuh, menyimpan, memiliki, memelihara, mengangkut, dan memperdagangkan satwa yang dilindungi.',
-                    year: '1990'
-                },
-                {
-                    name: 'Peraturan Pemerintah No. 7 Tahun 1999',
-                    title: 'Pengawetan Jenis Tumbuhan dan Satwa',
-                    description: 'Turunan dari UU No. 5/1990 yang menjelaskan kriteria penetapan satwa sebagai jenis yang dilindungi dan mengatur upaya pengawetan di dalam dan di luar habitatnya.',
-                    year: '1999'
-                },
-                {
-                    name: 'Peraturan Menteri LHK No. P.106/2018',
-                    title: 'Jenis Tumbuhan dan Satwa yang Dilindungi',
-                    description: 'Peraturan terbaru yang berisi daftar detail spesies satwa dan tumbuhan yang dilindungi secara hukum di Indonesia, termasuk Ikan Kakap Merah.',
-                    year: '2018'
-                },
-                {
-                    name: 'Peraturan Menteri Kelautan dan Perikanan No. 1 Tahun 2021',
-                    title: 'Jenis Ikan yang Dilindungi',
-                    description: 'Peraturan khusus yang mengatur perlindungan terhadap jenis-jenis ikan, termasuk Ikan Kakap Merah yang memiliki status perlindungan terbatas.',
-                    year: '2021'
-                },
-                {
-                    name: 'Undang-Undang No. 18 Tahun 2012',
-                    title: 'Pangan dan Keamanan Pangan',
-                    description: 'Mengatur keamanan pangan termasuk produk perikanan, melarang produksi dan peredaran pangan yang tidak aman dan dapat membahayakan kesehatan.',
-                    year: '2012'
-                },
-                {
-                    name: 'Undang-Undang No. 32 Tahun 2009',
-                    title: 'Perlindungan dan Pengelolaan Lingkungan Hidup',
-                    description: 'Mengatur perlindungan lingkungan hidup termasuk ekosistem laut, melarang perbuatan yang dapat mencemari dan merusak lingkungan hidup.',
-                    year: '2009'
-                },
-                {
-                    name: 'Undang-Undang No. 31 Tahun 2004',
-                    title: 'Perikanan',
-                    description: 'Mengatur pengelolaan perikanan yang berkelanjutan, melarang penangkapan ikan dengan cara yang merugikan kelestarian sumber daya ikan.',
-                    year: '2004'
-                },
-                {
-                    name: 'Undang-Undang No. 16 Tahun 1992',
-                    title: 'Karantina Hewan, Ikan, dan Tumbuhan',
-                    description: 'Mengatur karantina untuk mencegah masuk dan tersebarnya hama dan penyakit hewan karantina, termasuk ikan dan satwa laut.',
-                    year: '1992'
-                }
-            ],
             references: [
                 { text: 'FishBase. (2023). Lutjanus spp.', url: 'https://www.fishbase.org/' },
                 { text: 'IUCN. (2023). Lutjanus species. The IUCN Red List of Threatened Species.', url: 'https://www.iucnredlist.org/' }
@@ -966,8 +792,34 @@ const protectedAnimals = {
             localName: 'Sidat, Belut Laut',
             latin: 'Anguilla spp.', 
             status: 'Dilindungi Terbatas', 
-            regulation: 'Permen KP 1/2021',
-            protectionYear: '1990',
+            regulation: 'Permen KP PER.18/2009',
+            protectionYear: '2009',
+            legalRegulations: [
+                {
+                    name: 'Peraturan Menteri Kelautan dan Perikanan Nomor PER.18/MEN/2009',
+                    title: 'Penetapan Status Perlindungan Terbatas Terhadap Jenis Ikan Sidat',
+                    description: 'Peraturan yang menetapkan Anguilla spp. (Ikan Sidat) sebagai ikan yang dilindungi terbatas di perairan Indonesia. Merupakan landasan utama perlindungan Ikan Sidat.',
+                    year: '2009'
+                },
+                {
+                    name: 'Peraturan Menteri Kelautan dan Perikanan Nomor PER.19/MEN/2012',
+                    title: 'Pengelolaan Perikanan Sidat',
+                    description: 'Peraturan yang mengatur pengelolaan perikanan sidat untuk memastikan kelestarian dan pemanfaatan berkelanjutan Anguilla spp. di perairan Indonesia.',
+                    year: '2012'
+                },
+                {
+                    name: 'Keputusan Menteri Kelautan dan Perikanan Nomor 118 Tahun 2021',
+                    title: 'Rencana Pengelolaan Perikanan Sidat',
+                    description: 'Keputusan yang mengatur strategi pengelolaan perikanan sidat, termasuk Anguilla spp. untuk memastikan kelestarian dan pemanfaatan berkelanjutan.',
+                    year: '2021'
+                },
+                {
+                    name: 'CITES Appendix II Tahun 2007 (Berlaku Maret 2009)',
+                    title: 'Convention on International Trade in Endangered Species',
+                    description: 'Anguilla anguilla (sidat Eropa) telah dimasukkan dalam Appendix II CITES sejak tahun 2007 dan berlaku sejak Maret 2009, mengatur perdagangan internasional spesies sidat.',
+                    year: '2009'
+                }
+            ],
             locations: [
                 { name: 'Perairan Manado', coordinates: '1.4748°N, 124.8421°E' },
                 { name: 'Perairan Lembeh', coordinates: '1.4500°N, 125.2167°E' },
@@ -985,56 +837,6 @@ const protectedAnimals = {
                 Order: 'Anguilliformes',
                 Family: 'Anguillidae'
             },
-            legalRegulations: [
-                {
-                    name: 'Undang-Undang No. 5 Tahun 1990',
-                    title: 'Konservasi Sumber Daya Alam Hayati dan Ekosistemnya',
-                    description: 'Landasan utama perlindungan satwa liar di Indonesia, melarang penangkapan, melukai, membunuh, menyimpan, memiliki, memelihara, mengangkut, dan memperdagangkan satwa yang dilindungi.',
-                    year: '1990'
-                },
-                {
-                    name: 'Peraturan Pemerintah No. 7 Tahun 1999',
-                    title: 'Pengawetan Jenis Tumbuhan dan Satwa',
-                    description: 'Turunan dari UU No. 5/1990 yang menjelaskan kriteria penetapan satwa sebagai jenis yang dilindungi dan mengatur upaya pengawetan di dalam dan di luar habitatnya.',
-                    year: '1999'
-                },
-                {
-                    name: 'Peraturan Menteri LHK No. P.106/2018',
-                    title: 'Jenis Tumbuhan dan Satwa yang Dilindungi',
-                    description: 'Peraturan terbaru yang berisi daftar detail spesies satwa dan tumbuhan yang dilindungi secara hukum di Indonesia, termasuk Ikan Sidat.',
-                    year: '2018'
-                },
-                {
-                    name: 'Peraturan Menteri Kelautan dan Perikanan No. 1 Tahun 2021',
-                    title: 'Jenis Ikan yang Dilindungi',
-                    description: 'Peraturan khusus yang mengatur perlindungan terhadap jenis-jenis ikan, termasuk Ikan Sidat yang memiliki status perlindungan terbatas.',
-                    year: '2021'
-                },
-                {
-                    name: 'Undang-Undang No. 18 Tahun 2012',
-                    title: 'Pangan dan Keamanan Pangan',
-                    description: 'Mengatur keamanan pangan termasuk produk perikanan, melarang produksi dan peredaran pangan yang tidak aman dan dapat membahayakan kesehatan.',
-                    year: '2012'
-                },
-                {
-                    name: 'Undang-Undang No. 32 Tahun 2009',
-                    title: 'Perlindungan dan Pengelolaan Lingkungan Hidup',
-                    description: 'Mengatur perlindungan lingkungan hidup termasuk ekosistem laut, melarang perbuatan yang dapat mencemari dan merusak lingkungan hidup.',
-                    year: '2009'
-                },
-                {
-                    name: 'Undang-Undang No. 31 Tahun 2004',
-                    title: 'Perikanan',
-                    description: 'Mengatur pengelolaan perikanan yang berkelanjutan, melarang penangkapan ikan dengan cara yang merugikan kelestarian sumber daya ikan.',
-                    year: '2004'
-                },
-                {
-                    name: 'Undang-Undang No. 16 Tahun 1992',
-                    title: 'Karantina Hewan, Ikan, dan Tumbuhan',
-                    description: 'Mengatur karantina untuk mencegah masuk dan tersebarnya hama dan penyakit hewan karantina, termasuk ikan dan satwa laut.',
-                    year: '1992'
-                }
-            ],
             references: [
                 { text: 'CITES. (2023). Appendices.', url: 'https://cites.org/eng/app/appendices.php' },
                 { text: 'IUCN. (2023). Anguilla species. The IUCN Red List of Threatened Species.', url: 'https://www.iucnredlist.org/' }
@@ -1045,8 +847,28 @@ const protectedAnimals = {
             localName: 'Kerapu Tikus, Humpback Grouper',
             latin: 'Cromileptes altivelis', 
             status: 'Dilindungi Terbatas', 
-            regulation: 'Permen KP 1/2021',
-            protectionYear: '1990',
+            regulation: 'UU No. 7/2016',
+            protectionYear: '2016',
+            legalRegulations: [
+                {
+                    name: 'Peraturan Pemerintah Nomor 60 Tahun 2007',
+                    title: 'Konservasi Sumber Daya Ikan',
+                    description: 'Peraturan yang mengatur konservasi sumber daya ikan, termasuk Cromileptes altivelis (Kerapu Tikus) sebagai ikan yang dilindungi di perairan Indonesia.',
+                    year: '2007'
+                },
+                {
+                    name: 'Peraturan Menteri Kelautan dan Perikanan Nomor 61/PERMEN-KP/2018',
+                    title: 'Penetapan Status Perlindungan Terbatas Terhadap Jenis Ikan Kerapu',
+                    description: 'Peraturan yang menetapkan Cromileptes altivelis (Kerapu Tikus) sebagai ikan yang dilindungi terbatas di perairan Indonesia.',
+                    year: '2018'
+                },
+                {
+                    name: 'Undang-Undang Nomor 7 Tahun 2016',
+                    title: 'Perlindungan dan Pemberdayaan Nelayan, Pembudi Daya Ikan, dan Petambak Garam',
+                    description: 'Undang-undang yang mengatur perlindungan dan pemberdayaan nelayan serta pembudi daya ikan, termasuk perlindungan terhadap jenis ikan seperti Kerapu Tikus.',
+                    year: '2016'
+                }
+            ],
             locations: [
                 { name: 'Taman Nasional Bunaken', coordinates: '1.6167°N, 124.7583°E' },
                 { name: 'Perairan Lembeh', coordinates: '1.4500°N, 125.2167°E' },
@@ -1064,56 +886,6 @@ const protectedAnimals = {
                 Order: 'Perciformes',
                 Family: 'Serranidae'
             },
-            legalRegulations: [
-                {
-                    name: 'Undang-Undang No. 5 Tahun 1990',
-                    title: 'Konservasi Sumber Daya Alam Hayati dan Ekosistemnya',
-                    description: 'Landasan utama perlindungan satwa liar di Indonesia, melarang penangkapan, melukai, membunuh, menyimpan, memiliki, memelihara, mengangkut, dan memperdagangkan satwa yang dilindungi.',
-                    year: '1990'
-                },
-                {
-                    name: 'Peraturan Pemerintah No. 7 Tahun 1999',
-                    title: 'Pengawetan Jenis Tumbuhan dan Satwa',
-                    description: 'Turunan dari UU No. 5/1990 yang menjelaskan kriteria penetapan satwa sebagai jenis yang dilindungi dan mengatur upaya pengawetan di dalam dan di luar habitatnya.',
-                    year: '1999'
-                },
-                {
-                    name: 'Peraturan Menteri LHK No. P.106/2018',
-                    title: 'Jenis Tumbuhan dan Satwa yang Dilindungi',
-                    description: 'Peraturan terbaru yang berisi daftar detail spesies satwa dan tumbuhan yang dilindungi secara hukum di Indonesia, termasuk Kerapu Tikus.',
-                    year: '2018'
-                },
-                {
-                    name: 'Peraturan Menteri Kelautan dan Perikanan No. 1 Tahun 2021',
-                    title: 'Jenis Ikan yang Dilindungi',
-                    description: 'Peraturan khusus yang mengatur perlindungan terhadap jenis-jenis ikan, termasuk Kerapu Tikus yang memiliki status perlindungan terbatas.',
-                    year: '2021'
-                },
-                {
-                    name: 'Undang-Undang No. 18 Tahun 2012',
-                    title: 'Pangan dan Keamanan Pangan',
-                    description: 'Mengatur keamanan pangan termasuk produk perikanan, melarang produksi dan peredaran pangan yang tidak aman dan dapat membahayakan kesehatan.',
-                    year: '2012'
-                },
-                {
-                    name: 'Undang-Undang No. 32 Tahun 2009',
-                    title: 'Perlindungan dan Pengelolaan Lingkungan Hidup',
-                    description: 'Mengatur perlindungan lingkungan hidup termasuk ekosistem laut, melarang perbuatan yang dapat mencemari dan merusak lingkungan hidup.',
-                    year: '2009'
-                },
-                {
-                    name: 'Undang-Undang No. 31 Tahun 2004',
-                    title: 'Perikanan',
-                    description: 'Mengatur pengelolaan perikanan yang berkelanjutan, melarang penangkapan ikan dengan cara yang merugikan kelestarian sumber daya ikan.',
-                    year: '2004'
-                },
-                {
-                    name: 'Undang-Undang No. 16 Tahun 1992',
-                    title: 'Karantina Hewan, Ikan, dan Tumbuhan',
-                    description: 'Mengatur karantina untuk mencegah masuk dan tersebarnya hama dan penyakit hewan karantina, termasuk ikan dan satwa laut.',
-                    year: '1992'
-                }
-            ],
             references: [
                 { text: 'FishBase. (2023). Cromileptes altivelis.', url: 'https://www.fishbase.org/' },
                 { text: 'IUCN. (2023). Cromileptes altivelis. The IUCN Red List of Threatened Species.', url: 'https://www.iucnredlist.org/' }
@@ -1124,8 +896,28 @@ const protectedAnimals = {
             localName: 'Jareng Laut, Kuda-kuda Laut',
             latin: 'Hippocampus spp.', 
             status: 'Dilindungi Penuh', 
-            regulation: 'Permen KP 1/2021',
-            protectionYear: '1990',
+            regulation: 'CITES Appendix II 2002',
+            protectionYear: '2002',
+            legalRegulations: [
+                {
+                    name: 'CITES Appendix II Tahun 2002',
+                    title: 'Convention on International Trade in Endangered Species',
+                    description: 'Hippocampus spp. (Kuda Laut) dimasukkan dalam Appendix II CITES pada tahun 2002, mengatur perdagangan internasional spesies kuda laut untuk memastikan kelestariannya.',
+                    year: '2002'
+                },
+                {
+                    name: 'Peraturan Menteri Kelautan dan Perikanan Nomor 35 Tahun 2013',
+                    title: 'Penetapan Status Perlindungan Penuh Terhadap Jenis Ikan Kuda Laut',
+                    description: 'Peraturan yang menetapkan Hippocampus spp. (Kuda Laut) sebagai ikan yang dilindungi penuh di perairan Indonesia, mengikuti ketentuan CITES Appendix II.',
+                    year: '2013'
+                },
+                {
+                    name: 'Peraturan Menteri Perdagangan No. 50/M-DAG/PER/9/2013',
+                    title: 'Perdagangan Kuda Laut',
+                    description: 'Peraturan yang mengatur perdagangan kuda laut (Hippocampus spp.) sesuai dengan ketentuan CITES Appendix II untuk memastikan perdagangan yang berkelanjutan.',
+                    year: '2013'
+                }
+            ],
             locations: [
                 { name: 'Selat Lembeh', coordinates: '1.4500°N, 125.2167°E' },
                 { name: 'Perairan Bunaken', coordinates: '1.6167°N, 124.7583°E' },
@@ -1143,56 +935,6 @@ const protectedAnimals = {
                 Order: 'Syngnathiformes',
                 Family: 'Syngnathidae'
             },
-            legalRegulations: [
-                {
-                    name: 'Undang-Undang No. 5 Tahun 1990',
-                    title: 'Konservasi Sumber Daya Alam Hayati dan Ekosistemnya',
-                    description: 'Landasan utama perlindungan satwa liar di Indonesia, melarang penangkapan, melukai, membunuh, menyimpan, memiliki, memelihara, mengangkut, dan memperdagangkan satwa yang dilindungi.',
-                    year: '1990'
-                },
-                {
-                    name: 'Peraturan Pemerintah No. 7 Tahun 1999',
-                    title: 'Pengawetan Jenis Tumbuhan dan Satwa',
-                    description: 'Turunan dari UU No. 5/1990 yang menjelaskan kriteria penetapan satwa sebagai jenis yang dilindungi dan mengatur upaya pengawetan di dalam dan di luar habitatnya.',
-                    year: '1999'
-                },
-                {
-                    name: 'Peraturan Menteri LHK No. P.106/2018',
-                    title: 'Jenis Tumbuhan dan Satwa yang Dilindungi',
-                    description: 'Peraturan terbaru yang berisi daftar detail spesies satwa dan tumbuhan yang dilindungi secara hukum di Indonesia, termasuk Kuda Laut.',
-                    year: '2018'
-                },
-                {
-                    name: 'Peraturan Menteri Kelautan dan Perikanan No. 1 Tahun 2021',
-                    title: 'Jenis Ikan yang Dilindungi',
-                    description: 'Peraturan khusus yang mengatur perlindungan terhadap jenis-jenis ikan, termasuk Kuda Laut yang memiliki status perlindungan penuh.',
-                    year: '2021'
-                },
-                {
-                    name: 'Undang-Undang No. 18 Tahun 2012',
-                    title: 'Pangan dan Keamanan Pangan',
-                    description: 'Mengatur keamanan pangan termasuk produk perikanan, melarang produksi dan peredaran pangan yang tidak aman dan dapat membahayakan kesehatan.',
-                    year: '2012'
-                },
-                {
-                    name: 'Undang-Undang No. 32 Tahun 2009',
-                    title: 'Perlindungan dan Pengelolaan Lingkungan Hidup',
-                    description: 'Mengatur perlindungan lingkungan hidup termasuk ekosistem laut, melarang perbuatan yang dapat mencemari dan merusak lingkungan hidup.',
-                    year: '2009'
-                },
-                {
-                    name: 'Undang-Undang No. 31 Tahun 2004',
-                    title: 'Perikanan',
-                    description: 'Mengatur pengelolaan perikanan yang berkelanjutan, melarang penangkapan ikan dengan cara yang merugikan kelestarian sumber daya ikan.',
-                    year: '2004'
-                },
-                {
-                    name: 'Undang-Undang No. 16 Tahun 1992',
-                    title: 'Karantina Hewan, Ikan, dan Tumbuhan',
-                    description: 'Mengatur karantina untuk mencegah masuk dan tersebarnya hama dan penyakit hewan karantina, termasuk ikan dan satwa laut.',
-                    year: '1992'
-                }
-            ],
             references: [
                 { text: 'CITES. (2023). Appendices.', url: 'https://cites.org/eng/app/appendices.php' },
                 { text: 'IUCN. (2023). Hippocampus species. The IUCN Red List of Threatened Species.', url: 'https://www.iucnredlist.org/' }
@@ -1205,26 +947,20 @@ const protectedAnimals = {
             localName: 'Penyu Agar, Penyu Sup',
             latin: 'Chelonia mydas', 
             status: 'Dilindungi Penuh', 
-            regulation: 'Permen LHK P.106/2018',
+            regulation: 'UU No. 5/1990',
             protectionYear: '1990',
             legalRegulations: [
                 {
                     name: 'Undang-Undang No. 5 Tahun 1990',
                     title: 'Konservasi Sumber Daya Alam Hayati dan Ekosistemnya',
-                    description: 'Landasan utama perlindungan satwa liar di Indonesia, melarang penangkapan, melukai, membunuh, menyimpan, memiliki, memelihara, mengangkut, dan memperdagangkan satwa yang dilindungi.',
+                    description: 'Landasan utama perlindungan satwa liar di Indonesia, melarang penangkapan, melukai, membunuh, menyimpan, memiliki, memelihara, mengangkut, dan memperdagangkan satwa yang dilindungi. Merupakan regulasi utama perlindungan Penyu Hijau.',
                     year: '1990'
                 },
                 {
                     name: 'Peraturan Pemerintah No. 7 Tahun 1999',
                     title: 'Pengawetan Jenis Tumbuhan dan Satwa',
-                    description: 'Turunan dari UU No. 5/1990 yang menjelaskan kriteria penetapan satwa sebagai jenis yang dilindungi dan mengatur upaya pengawetan di dalam dan di luar habitatnya.',
+                    description: 'Turunan dari UU No. 5/1990 yang menjelaskan kriteria penetapan satwa sebagai jenis yang dilindungi dan mengatur upaya pengawetan di dalam dan di luar habitatnya. Memperkuat perlindungan Penyu Hijau.',
                     year: '1999'
-                },
-                {
-                    name: 'Peraturan Menteri LHK No. P.106/2018',
-                    title: 'Jenis Tumbuhan dan Satwa yang Dilindungi',
-                    description: 'Peraturan terbaru yang berisi daftar detail spesies satwa dan tumbuhan yang dilindungi secara hukum di Indonesia, termasuk Penyu Hijau.',
-                    year: '2018'
                 }
             ],
             locations: [
@@ -1260,26 +996,32 @@ const protectedAnimals = {
             localName: 'Penyu Carey, Penyu Tempurung',
             latin: 'Eretmochelys imbricata', 
             status: 'Dilindungi Penuh', 
-            regulation: 'Permen LHK P.106/2018',
+            regulation: 'UU No. 5/1990',
             protectionYear: '1990',
             legalRegulations: [
                 {
-                    name: 'Undang-Undang No. 5 Tahun 1990',
+                    name: 'Undang-Undang Nomor 5 Tahun 1990',
                     title: 'Konservasi Sumber Daya Alam Hayati dan Ekosistemnya',
-                    description: 'Landasan utama perlindungan satwa liar di Indonesia, melarang penangkapan, melukai, membunuh, menyimpan, memiliki, memelihara, mengangkut, dan memperdagangkan satwa yang dilindungi.',
+                    description: 'Landasan utama perlindungan satwa liar di Indonesia, melarang penangkapan, melukai, membunuh, menyimpan, memiliki, memelihara, mengangkut, dan memperdagangkan satwa yang dilindungi. Merupakan regulasi utama perlindungan Penyu Sisik.',
                     year: '1990'
                 },
                 {
-                    name: 'Peraturan Pemerintah No. 7 Tahun 1999',
+                    name: 'Peraturan Pemerintah Nomor 7 Tahun 1999',
                     title: 'Pengawetan Jenis Tumbuhan dan Satwa',
-                    description: 'Turunan dari UU No. 5/1990 yang menjelaskan kriteria penetapan satwa sebagai jenis yang dilindungi dan mengatur upaya pengawetan di dalam dan di luar habitatnya.',
+                    description: 'Turunan dari UU No. 5/1990 yang menjelaskan kriteria penetapan satwa sebagai jenis yang dilindungi dan mengatur upaya pengawetan di dalam dan di luar habitatnya. Memperkuat perlindungan Penyu Sisik.',
                     year: '1999'
                 },
                 {
-                    name: 'Peraturan Menteri LHK No. P.106/2018',
-                    title: 'Jenis Tumbuhan dan Satwa yang Dilindungi',
-                    description: 'Peraturan terbaru yang berisi daftar detail spesies satwa dan tumbuhan yang dilindungi secara hukum di Indonesia, termasuk Penyu Sisik.',
-                    year: '2018'
+                    name: 'Surat Edaran Menteri Kelautan dan Perikanan RI Nomor 526/MEN-KP/VIII/2015',
+                    title: 'Perlindungan Penyu Laut',
+                    description: 'Surat edaran yang mengatur perlindungan penyu laut termasuk Penyu Sisik (Eretmochelys imbricata) di perairan Indonesia, melengkapi regulasi sebelumnya.',
+                    year: '2015'
+                },
+                {
+                    name: 'CITES (Convention on International Trade in Endangered Species) Tahun 1978',
+                    title: 'Convention on International Trade in Endangered Species of Wild Flora and Fauna',
+                    description: 'Eretmochelys imbricata (Penyu Sisik) telah dimasukkan dalam CITES sejak tahun 1978, mengatur perdagangan internasional spesies penyu untuk memastikan kelestariannya.',
+                    year: '1978'
                 }
             ],
             locations: [
@@ -1315,26 +1057,44 @@ const protectedAnimals = {
             localName: 'Penyu Lekang, Olive Ridley Turtle',
             latin: 'Lepidochelys olivacea', 
             status: 'Dilindungi Penuh', 
-            regulation: 'Permen LHK P.106/2018',
+            regulation: 'UU No. 5/1990',
             protectionYear: '1990',
             legalRegulations: [
                 {
-                    name: 'Undang-Undang No. 5 Tahun 1990',
+                    name: 'Undang-Undang Nomor 5 Tahun 1990',
                     title: 'Konservasi Sumber Daya Alam Hayati dan Ekosistemnya',
-                    description: 'Landasan utama perlindungan satwa liar di Indonesia, melarang penangkapan, melukai, membunuh, menyimpan, memiliki, memelihara, mengangkut, dan memperdagangkan satwa yang dilindungi.',
+                    description: 'Landasan utama perlindungan satwa liar di Indonesia, melarang penangkapan, melukai, membunuh, menyimpan, memiliki, memelihara, mengangkut, dan memperdagangkan satwa yang dilindungi. Merupakan regulasi utama perlindungan Penyu Lekang.',
                     year: '1990'
                 },
                 {
-                    name: 'Peraturan Pemerintah No. 7 Tahun 1999',
+                    name: 'Peraturan Pemerintah Nomor 7 Tahun 1999',
                     title: 'Pengawetan Jenis Tumbuhan dan Satwa',
-                    description: 'Turunan dari UU No. 5/1990 yang menjelaskan kriteria penetapan satwa sebagai jenis yang dilindungi dan mengatur upaya pengawetan di dalam dan di luar habitatnya.',
+                    description: 'Turunan dari UU No. 5/1990 yang menjelaskan kriteria penetapan satwa sebagai jenis yang dilindungi dan mengatur upaya pengawetan di dalam dan di luar habitatnya. Memperkuat perlindungan Penyu Lekang.',
                     year: '1999'
                 },
                 {
-                    name: 'Peraturan Menteri LHK No. P.106/2018',
-                    title: 'Jenis Tumbuhan dan Satwa yang Dilindungi',
-                    description: 'Peraturan terbaru yang berisi daftar detail spesies satwa dan tumbuhan yang dilindungi secara hukum di Indonesia, termasuk Penyu Lekang.',
-                    year: '2018'
+                    name: 'Undang-Undang Nomor 31 Tahun 2004',
+                    title: 'Perikanan',
+                    description: 'Undang-undang yang mengatur pengelolaan perikanan di Indonesia, termasuk perlindungan terhadap spesies laut yang dilindungi seperti Penyu Lekang dalam konteks perikanan berkelanjutan.',
+                    year: '2004'
+                },
+                {
+                    name: 'Undang-Undang Nomor 45 Tahun 2009',
+                    title: 'Perikanan',
+                    description: 'Revisi UU Perikanan yang memperkuat perlindungan sumber daya perikanan dan ekosistem laut, termasuk spesies penyu yang dilindungi seperti Penyu Lekang.',
+                    year: '2009'
+                },
+                {
+                    name: 'Surat Edaran Menteri Kelautan dan Perikanan Nomor 526/MEN-KP/VIII/2015',
+                    title: 'Perlindungan Penyu Laut',
+                    description: 'Surat edaran yang mengatur perlindungan penyu laut termasuk Penyu Lekang (Lepidochelys olivacea) di perairan Indonesia, melengkapi regulasi sebelumnya.',
+                    year: '2015'
+                },
+                {
+                    name: 'CITES (Convention on International Trade in Endangered Species) Tahun 1973',
+                    title: 'Convention on International Trade in Endangered Species of Wild Fauna and Flora',
+                    description: 'Lepidochelys olivacea (Penyu Lekang) telah dimasukkan dalam CITES sejak tahun 1973, mengatur perdagangan internasional spesies penyu untuk memastikan kelestariannya.',
+                    year: '1973'
                 }
             ],
             locations: [
@@ -1364,26 +1124,32 @@ const protectedAnimals = {
             localName: 'Penyu Merah, Loggerhead',
             latin: 'Caretta caretta', 
             status: 'Dilindungi Penuh', 
-            regulation: 'Permen LHK P.106/2018',
+            regulation: 'UU No. 5/1990',
             protectionYear: '1990',
             legalRegulations: [
                 {
-                    name: 'Undang-Undang No. 5 Tahun 1990',
+                    name: 'Undang-Undang Nomor 5 Tahun 1990',
                     title: 'Konservasi Sumber Daya Alam Hayati dan Ekosistemnya',
-                    description: 'Landasan utama perlindungan satwa liar di Indonesia, melarang penangkapan, melukai, membunuh, menyimpan, memiliki, memelihara, mengangkut, dan memperdagangkan satwa yang dilindungi.',
+                    description: 'Landasan utama perlindungan satwa liar di Indonesia, melarang penangkapan, melukai, membunuh, menyimpan, memiliki, memelihara, mengangkut, dan memperdagangkan satwa yang dilindungi. Merupakan regulasi utama perlindungan Penyu Tempayan.',
                     year: '1990'
                 },
                 {
-                    name: 'Peraturan Pemerintah No. 7 Tahun 1999',
+                    name: 'Peraturan Pemerintah Nomor 7 Tahun 1999',
                     title: 'Pengawetan Jenis Tumbuhan dan Satwa',
-                    description: 'Turunan dari UU No. 5/1990 yang menjelaskan kriteria penetapan satwa sebagai jenis yang dilindungi dan mengatur upaya pengawetan di dalam dan di luar habitatnya.',
+                    description: 'Turunan dari UU No. 5/1990 yang menjelaskan kriteria penetapan satwa sebagai jenis yang dilindungi dan mengatur upaya pengawetan di dalam dan di luar habitatnya. Memperkuat perlindungan Penyu Tempayan.',
                     year: '1999'
                 },
                 {
-                    name: 'Peraturan Menteri LHK No. P.106/2018',
-                    title: 'Jenis Tumbuhan dan Satwa yang Dilindungi',
-                    description: 'Peraturan terbaru yang berisi daftar detail spesies satwa dan tumbuhan yang dilindungi secara hukum di Indonesia, termasuk Penyu Tempayan.',
-                    year: '2018'
+                    name: 'Peraturan Pemerintah Nomor 8 Tahun 1999',
+                    title: 'Pemanfaatan Jenis Tumbuhan dan Satwa Liar',
+                    description: 'Peraturan yang mengatur pemanfaatan jenis tumbuhan dan satwa liar secara lestari, termasuk perlindungan terhadap Penyu Tempayan dalam konteks pemanfaatan berkelanjutan.',
+                    year: '1999'
+                },
+                {
+                    name: 'Surat Edaran Menteri Kelautan dan Perikanan RI Nomor 526/MEN-KP/VIII/2015',
+                    title: 'Perlindungan Penyu Laut',
+                    description: 'Surat edaran yang mengatur perlindungan penyu laut termasuk Penyu Tempayan (Caretta caretta) di perairan Indonesia, melengkapi regulasi sebelumnya.',
+                    year: '2015'
                 }
             ],
             locations: [
@@ -1415,26 +1181,44 @@ const protectedAnimals = {
             localName: 'Karang Akar, Black Coral',
             latin: 'Antipatharia', 
             status: 'Dilindungi Penuh', 
-            regulation: 'Permen LHK P.106/2018',
+            regulation: 'UU No. 5/1990',
             protectionYear: '1990',
             legalRegulations: [
                 {
-                    name: 'Undang-Undang No. 5 Tahun 1990',
+                    name: 'Undang-Undang Nomor 5 Tahun 1990',
                     title: 'Konservasi Sumber Daya Alam Hayati dan Ekosistemnya',
-                    description: 'Landasan utama perlindungan satwa liar di Indonesia, melarang penangkapan, melukai, membunuh, menyimpan, memiliki, memelihara, mengangkut, dan memperdagangkan satwa yang dilindungi.',
+                    description: 'Landasan utama perlindungan satwa liar di Indonesia, melarang penangkapan, melukai, membunuh, menyimpan, memiliki, memelihara, mengangkut, dan memperdagangkan satwa yang dilindungi. Merupakan regulasi utama perlindungan Karang Hitam.',
                     year: '1990'
                 },
                 {
-                    name: 'Peraturan Pemerintah No. 7 Tahun 1999',
-                    title: 'Pengawetan Jenis Tumbuhan dan Satwa',
-                    description: 'Turunan dari UU No. 5/1990 yang menjelaskan kriteria penetapan satwa sebagai jenis yang dilindungi dan mengatur upaya pengawetan di dalam dan di luar habitatnya.',
-                    year: '1999'
+                    name: 'Undang-Undang Nomor 32 Tahun 2009',
+                    title: 'Perlindungan dan Pengelolaan Lingkungan Hidup',
+                    description: 'Undang-undang yang mengatur perlindungan dan pengelolaan lingkungan hidup, termasuk perlindungan ekosistem laut dan terumbu karang seperti Karang Hitam.',
+                    year: '2009'
                 },
                 {
-                    name: 'Peraturan Menteri LHK No. P.106/2018',
-                    title: 'Jenis Tumbuhan dan Satwa yang Dilindungi',
-                    description: 'Peraturan terbaru yang berisi daftar detail spesies satwa dan tumbuhan yang dilindungi secara hukum di Indonesia, termasuk Karang Hitam.',
-                    year: '2018'
+                    name: 'Undang-Undang Nomor 31 Tahun 2004',
+                    title: 'Perikanan',
+                    description: 'Undang-undang yang mengatur pengelolaan perikanan di Indonesia, termasuk perlindungan terhadap ekosistem laut dan terumbu karang seperti Karang Hitam dalam konteks perikanan berkelanjutan.',
+                    year: '2004'
+                },
+                {
+                    name: 'Undang-Undang Nomor 45 Tahun 2009',
+                    title: 'Perikanan',
+                    description: 'Revisi UU Perikanan yang memperkuat perlindungan sumber daya perikanan dan ekosistem laut, termasuk perlindungan terumbu karang seperti Karang Hitam.',
+                    year: '2009'
+                },
+                {
+                    name: 'Undang-Undang Nomor 11 Tahun 2019',
+                    title: 'Sistem Nasional Ilmu Pengetahuan dan Teknologi',
+                    description: 'Undang-undang yang mengatur sistem nasional ilmu pengetahuan dan teknologi, termasuk penelitian dan konservasi keanekaragaman hayati laut seperti Karang Hitam.',
+                    year: '2019'
+                },
+                {
+                    name: 'Peraturan Pemerintah Nomor 60 Tahun 2007',
+                    title: 'Konservasi Sumber Daya Ikan',
+                    description: 'Peraturan pemerintah yang mengatur konservasi sumber daya ikan dan ekosistem perairan, termasuk perlindungan terumbu karang seperti Karang Hitam sebagai habitat penting bagi ikan.',
+                    year: '2007'
                 }
             ],
             locations: [
@@ -1469,26 +1253,38 @@ const protectedAnimals = {
             localName: 'Karang Bercabang, Staghorn Coral',
             latin: 'Acropora spp.', 
             status: 'Dilindungi Terbatas', 
-            regulation: 'Permen LHK P.106/2018',
-            protectionYear: '1990',
+            regulation: 'Kepmen KP No. 37/2013',
+            protectionYear: '2004',
             legalRegulations: [
                 {
-                    name: 'Undang-Undang No. 5 Tahun 1990',
-                    title: 'Konservasi Sumber Daya Alam Hayati dan Ekosistemnya',
-                    description: 'Landasan utama perlindungan satwa liar di Indonesia, melarang penangkapan, melukai, membunuh, menyimpan, memiliki, memelihara, mengangkut, dan memperdagangkan satwa yang dilindungi.',
-                    year: '1990'
+                    name: 'Keputusan Menteri Kelautan dan Perikanan Nomor 37/KEPMEN-KP/2013',
+                    title: 'Penetapan Status Perlindungan Ikan',
+                    description: 'Keputusan menteri yang menetapkan status perlindungan ikan dan biota laut lainnya, termasuk perlindungan terumbu karang seperti Acropora spp. (Karang Meja) sebagai habitat penting bagi ikan.',
+                    year: '2013'
                 },
                 {
-                    name: 'Peraturan Pemerintah No. 7 Tahun 1999',
-                    title: 'Pengawetan Jenis Tumbuhan dan Satwa',
-                    description: 'Turunan dari UU No. 5/1990 yang menjelaskan kriteria penetapan satwa sebagai jenis yang dilindungi dan mengatur upaya pengawetan di dalam dan di luar habitatnya.',
-                    year: '1999'
+                    name: 'Peraturan Pemerintah Nomor 60 Tahun 2007',
+                    title: 'Konservasi Sumber Daya Ikan',
+                    description: 'Peraturan pemerintah yang mengatur konservasi sumber daya ikan dan ekosistem perairan, termasuk perlindungan terumbu karang seperti Karang Meja sebagai habitat penting bagi ikan.',
+                    year: '2007'
                 },
                 {
-                    name: 'Peraturan Menteri LHK No. P.106/2018',
-                    title: 'Jenis Tumbuhan dan Satwa yang Dilindungi',
-                    description: 'Peraturan terbaru yang berisi daftar detail spesies satwa dan tumbuhan yang dilindungi secara hukum di Indonesia, termasuk Karang Meja.',
-                    year: '2018'
+                    name: 'Undang-Undang Nomor 31 Tahun 2004',
+                    title: 'Perikanan',
+                    description: 'Undang-undang yang mengatur pengelolaan perikanan di Indonesia, termasuk perlindungan terhadap ekosistem laut dan terumbu karang seperti Karang Meja dalam konteks perikanan berkelanjutan.',
+                    year: '2004'
+                },
+                {
+                    name: 'Undang-Undang Nomor 32 Tahun 2009',
+                    title: 'Perlindungan dan Pengelolaan Lingkungan Hidup',
+                    description: 'Undang-undang yang mengatur perlindungan dan pengelolaan lingkungan hidup, termasuk perlindungan ekosistem laut dan terumbu karang seperti Karang Meja.',
+                    year: '2009'
+                },
+                {
+                    name: 'Undang-Undang Nomor 27 Tahun 2007',
+                    title: 'Pengelolaan Wilayah Pesisir dan Pulau-Pulau Kecil',
+                    description: 'Undang-undang yang mengatur pengelolaan wilayah pesisir dan pulau-pulau kecil, termasuk perlindungan ekosistem terumbu karang seperti Karang Meja di wilayah pesisir.',
+                    year: '2007'
                 }
             ],
             locations: [
@@ -1520,26 +1316,32 @@ const protectedAnimals = {
             localName: 'Kima Raksasa, Giant Clam',
             latin: 'Tridacna gigas', 
             status: 'Dilindungi Penuh', 
-            regulation: 'Permen LHK P.106/2018',
-            protectionYear: '1990',
+            regulation: 'SK Menhut No. 12/1987',
+            protectionYear: '1987',
             legalRegulations: [
+                {
+                    name: 'Surat Keputusan Menteri Kehutanan No. 12/KPTS-II/1987',
+                    title: 'Penetapan Jenis Satwa yang Dilindungi',
+                    description: 'Keputusan menteri yang menetapkan jenis satwa yang dilindungi, termasuk Tridacna gigas (Kima Raksasa) sebagai salah satu spesies yang perlu dilindungi sejak tahun 1987.',
+                    year: '1987'
+                },
                 {
                     name: 'Undang-Undang No. 5 Tahun 1990',
                     title: 'Konservasi Sumber Daya Alam Hayati dan Ekosistemnya',
-                    description: 'Landasan utama perlindungan satwa liar di Indonesia, melarang penangkapan, melukai, membunuh, menyimpan, memiliki, memelihara, mengangkut, dan memperdagangkan satwa yang dilindungi.',
+                    description: 'Landasan utama perlindungan satwa liar di Indonesia, melarang penangkapan, melukai, membunuh, menyimpan, memiliki, memelihara, mengangkut, dan memperdagangkan satwa yang dilindungi. Memperkuat perlindungan Kima Raksasa.',
                     year: '1990'
                 },
                 {
                     name: 'Peraturan Pemerintah No. 7 Tahun 1999',
                     title: 'Pengawetan Jenis Tumbuhan dan Satwa',
-                    description: 'Turunan dari UU No. 5/1990 yang menjelaskan kriteria penetapan satwa sebagai jenis yang dilindungi dan mengatur upaya pengawetan di dalam dan di luar habitatnya.',
+                    description: 'Turunan dari UU No. 5/1990 yang menjelaskan kriteria penetapan satwa sebagai jenis yang dilindungi dan mengatur upaya pengawetan di dalam dan di luar habitatnya. Memperkuat perlindungan Kima Raksasa.',
                     year: '1999'
                 },
                 {
-                    name: 'Peraturan Menteri LHK No. P.106/2018',
-                    title: 'Jenis Tumbuhan dan Satwa yang Dilindungi',
-                    description: 'Peraturan terbaru yang berisi daftar detail spesies satwa dan tumbuhan yang dilindungi secara hukum di Indonesia, termasuk Kima Raksasa.',
-                    year: '2018'
+                    name: 'CITES (Convention on International Trade in Endangered Species)',
+                    title: 'Convention on International Trade in Endangered Species of Wild Fauna and Flora',
+                    description: 'Tridacna gigas (Kima Raksasa) telah dimasukkan dalam CITES, mengatur perdagangan internasional spesies kerang untuk memastikan kelestariannya.',
+                    year: '1975'
                 }
             ],
             locations: [
@@ -1575,26 +1377,26 @@ const protectedAnimals = {
             localName: 'Kima Kecil, Small Giant Clam',
             latin: 'Tridacna crocea',
             status: 'Dilindungi Penuh',
-            regulation: 'Permen LHK P.106/2018',
-            protectionYear: '1990',
+            regulation: 'SK Menhut No. 12/1987',
+            protectionYear: '1987',
             legalRegulations: [
                 {
-                    name: 'Undang-Undang No. 5 Tahun 1990',
+                    name: 'Surat Keputusan Menteri Kehutanan No. 12/KPTS/II/1987',
+                    title: 'Penetapan Jenis Satwa yang Dilindungi',
+                    description: 'Keputusan menteri yang menetapkan jenis satwa yang dilindungi, termasuk Tridacna crocea (Kima Kecil) sebagai salah satu spesies yang perlu dilindungi sejak tahun 1987.',
+                    year: '1987'
+                },
+                {
+                    name: 'Undang-Undang Nomor 5 Tahun 1990',
                     title: 'Konservasi Sumber Daya Alam Hayati dan Ekosistemnya',
-                    description: 'Landasan utama perlindungan satwa liar di Indonesia, melarang penangkapan, melukai, membunuh, menyimpan, memiliki, memelihara, mengangkut, dan memperdagangkan satwa yang dilindungi.',
+                    description: 'Landasan utama perlindungan satwa liar di Indonesia, melarang penangkapan, melukai, membunuh, menyimpan, memiliki, memelihara, mengangkut, dan memperdagangkan satwa yang dilindungi. Memperkuat perlindungan Kima Kecil.',
                     year: '1990'
                 },
                 {
-                    name: 'Peraturan Pemerintah No. 7 Tahun 1999',
+                    name: 'Peraturan Pemerintah Nomor 7 Tahun 1999',
                     title: 'Pengawetan Jenis Tumbuhan dan Satwa',
-                    description: 'Turunan dari UU No. 5/1990 yang menjelaskan kriteria penetapan satwa sebagai jenis yang dilindungi dan mengatur upaya pengawetan di dalam dan di luar habitatnya.',
+                    description: 'Turunan dari UU No. 5/1990 yang menjelaskan kriteria penetapan satwa sebagai jenis yang dilindungi dan mengatur upaya pengawetan di dalam dan di luar habitatnya. Memperkuat perlindungan Kima Kecil.',
                     year: '1999'
-                },
-                {
-                    name: 'Peraturan Menteri LHK No. P.106/2018',
-                    title: 'Jenis Tumbuhan dan Satwa yang Dilindungi',
-                    description: 'Peraturan terbaru yang berisi daftar detail spesies satwa dan tumbuhan yang dilindungi secara hukum di Indonesia, termasuk Kima Kecil.',
-                    year: '2018'
                 }
             ],
             locations: [
@@ -1630,26 +1432,26 @@ const protectedAnimals = {
             localName: 'Kima Gigi, Fluted Giant Clam',
             latin: 'Tridacna squamosa',
             status: 'Dilindungi Penuh',
-            regulation: 'Permen LHK P.106/2018',
-            protectionYear: '1990',
+            regulation: 'SK Menhut No. 12/1987',
+            protectionYear: '1987',
             legalRegulations: [
                 {
-                    name: 'Undang-Undang No. 5 Tahun 1990',
-                    title: 'Konservasi Sumber Daya Alam Hayati dan Ekosistemnya',
-                    description: 'Landasan utama perlindungan satwa liar di Indonesia, melarang penangkapan, melukai, membunuh, menyimpan, memiliki, memelihara, mengangkut, dan memperdagangkan satwa yang dilindungi.',
-                    year: '1990'
+                    name: 'Surat Keputusan Menteri Kehutanan No. 12/Kpts/II/1987',
+                    title: 'Penetapan Jenis Satwa yang Dilindungi',
+                    description: 'Keputusan menteri yang menetapkan jenis satwa yang dilindungi, termasuk Tridacna squamosa (Kima Gigi) sebagai salah satu spesies yang perlu dilindungi sejak tahun 1987.',
+                    year: '1987'
                 },
                 {
                     name: 'Peraturan Pemerintah No. 7 Tahun 1999',
                     title: 'Pengawetan Jenis Tumbuhan dan Satwa',
-                    description: 'Turunan dari UU No. 5/1990 yang menjelaskan kriteria penetapan satwa sebagai jenis yang dilindungi dan mengatur upaya pengawetan di dalam dan di luar habitatnya.',
+                    description: 'Turunan dari UU No. 5/1990 yang menjelaskan kriteria penetapan satwa sebagai jenis yang dilindungi dan mengatur upaya pengawetan di dalam dan di luar habitatnya. Memperkuat perlindungan Kima Gigi.',
                     year: '1999'
                 },
                 {
-                    name: 'Peraturan Menteri LHK No. P.106/2018',
-                    title: 'Jenis Tumbuhan dan Satwa yang Dilindungi',
-                    description: 'Peraturan terbaru yang berisi daftar detail spesies satwa dan tumbuhan yang dilindungi secara hukum di Indonesia, termasuk Kima Gigi.',
-                    year: '2018'
+                    name: 'Undang-Undang No. 5 Tahun 1990',
+                    title: 'Konservasi Sumber Daya Alam Hayati dan Ekosistemnya',
+                    description: 'Landasan utama perlindungan satwa liar di Indonesia, melarang penangkapan, melukai, membunuh, menyimpan, memiliki, memelihara, mengangkut, dan memperdagangkan satwa yang dilindungi. Memperkuat perlindungan Kima Gigi.',
+                    year: '1990'
                 }
             ],
             locations: [
@@ -1687,7 +1489,7 @@ const protectedAnimals = {
             localName: 'Nautilus, Chambered Nautilus, Siput Laut Berbilik',
             latin: 'Nautilus pompilius', 
             status: 'Dilindungi Penuh', 
-            regulation: 'PP No. 7/1999',
+            regulation: 'UU No. 5/1990',
             protectionYear: '1990',
             locations: [
                 { name: 'Taman Nasional Bunaken', coordinates: '1.6167°N, 124.7583°E' },
@@ -1716,46 +1518,22 @@ const protectedAnimals = {
             },
             legalRegulations: [
                 {
-                    name: 'Peraturan Pemerintah No. 7 Tahun 1999',
-                    title: 'Pengawetan Jenis Tumbuhan dan Satwa',
-                    description: 'Peraturan yang menjelaskan kriteria penetapan satwa sebagai jenis yang dilindungi dan mengatur upaya pengawetan di dalam dan di luar habitatnya.',
-                    year: '1999'
+                    name: 'Undang-Undang Nomor 5 Tahun 1990',
+                    title: 'Konservasi Sumber Daya Alam Hayati dan Ekosistemnya',
+                    description: 'Landasan utama perlindungan satwa liar di Indonesia, melarang penangkapan, melukai, membunuh, menyimpan, memiliki, memelihara, mengangkut, dan memperdagangkan satwa yang dilindungi. Merupakan regulasi utama perlindungan Nautilus.',
+                    year: '1990'
                 },
                 {
-                    name: 'Peraturan Menteri LHK No. P.106/2018',
+                    name: 'Peraturan Menteri Lingkungan Hidup dan Kehutanan Nomor P.106/MENLHK/SETJEN/KUM.1/12/2018',
                     title: 'Jenis Tumbuhan dan Satwa yang Dilindungi',
-                    description: 'Peraturan terbaru yang berisi daftar detail spesies satwa dan tumbuhan yang dilindungi secara hukum di Indonesia, termasuk Nautilus.',
+                    description: 'Peraturan menteri yang berisi daftar detail spesies satwa dan tumbuhan yang dilindungi secara hukum di Indonesia, termasuk Nautilus pompilius sebagai spesies yang dilindungi penuh.',
                     year: '2018'
                 },
                 {
-                    name: 'Peraturan Menteri Kelautan dan Perikanan No. 1 Tahun 2021',
-                    title: 'Jenis Ikan yang Dilindungi',
-                    description: 'Peraturan khusus yang mengatur perlindungan terhadap jenis-jenis ikan, termasuk Nautilus yang memiliki status perlindungan penuh.',
-                    year: '2021'
-                },
-                {
-                    name: 'Undang-Undang No. 18 Tahun 2012',
-                    title: 'Pangan dan Keamanan Pangan',
-                    description: 'Mengatur keamanan pangan termasuk produk perikanan, melarang produksi dan peredaran pangan yang tidak aman dan dapat membahayakan kesehatan.',
-                    year: '2012'
-                },
-                {
-                    name: 'Undang-Undang No. 32 Tahun 2009',
-                    title: 'Perlindungan dan Pengelolaan Lingkungan Hidup',
-                    description: 'Mengatur perlindungan lingkungan hidup termasuk ekosistem laut, melarang perbuatan yang dapat mencemari dan merusak lingkungan hidup.',
-                    year: '2009'
-                },
-                {
-                    name: 'Undang-Undang No. 31 Tahun 2004',
-                    title: 'Perikanan',
-                    description: 'Mengatur pengelolaan perikanan yang berkelanjutan, melarang penangkapan ikan dengan cara yang merugikan kelestarian sumber daya ikan.',
-                    year: '2004'
-                },
-                {
-                    name: 'Undang-Undang No. 16 Tahun 1992',
-                    title: 'Karantina Hewan, Ikan, dan Tumbuhan',
-                    description: 'Mengatur karantina untuk mencegah masuk dan tersebarnya hama dan penyakit hewan karantina, termasuk ikan dan satwa laut.',
-                    year: '1992'
+                    name: 'Peraturan Pemerintah Nomor 8 Tahun 1999',
+                    title: 'Pemanfaatan Jenis Tumbuhan dan Satwa Liar',
+                    description: 'Peraturan yang mengatur pemanfaatan jenis tumbuhan dan satwa liar secara lestari, termasuk perlindungan terhadap Nautilus dalam konteks pemanfaatan berkelanjutan.',
+                    year: '1999'
                 }
             ],
             references: [
@@ -1770,8 +1548,8 @@ const protectedAnimals = {
             localName: 'Gurita Pasir, Big Blue Octopus',
             latin: 'Octopus cyanea', 
             status: 'Dilindungi Terbatas', 
-            regulation: 'Permen KP 1/2021',
-            protectionYear: '1990',
+            regulation: 'UU No. 31/2004',
+            protectionYear: '2004',
             locations: [
                 { name: 'Taman Nasional Bunaken', coordinates: '1.6167°N, 124.7583°E' },
                 { name: 'Perairan Lembeh', coordinates: '1.4500°N, 125.2167°E' },
@@ -1797,52 +1575,22 @@ const protectedAnimals = {
             },
             legalRegulations: [
                 {
-                    name: 'Undang-Undang No. 5 Tahun 1990',
-                    title: 'Konservasi Sumber Daya Alam Hayati dan Ekosistemnya',
-                    description: 'Landasan utama perlindungan satwa liar di Indonesia, melarang penangkapan, melukai, membunuh, menyimpan, memiliki, memelihara, mengangkut, dan memperdagangkan satwa yang dilindungi.',
-                    year: '1990'
-                },
-                {
-                    name: 'Peraturan Pemerintah No. 7 Tahun 1999',
-                    title: 'Pengawetan Jenis Tumbuhan dan Satwa',
-                    description: 'Turunan dari UU No. 5/1990 yang menjelaskan kriteria penetapan satwa sebagai jenis yang dilindungi dan mengatur upaya pengawetan di dalam dan di luar habitatnya.',
-                    year: '1999'
-                },
-                {
-                    name: 'Peraturan Menteri LHK No. P.106/2018',
-                    title: 'Jenis Tumbuhan dan Satwa yang Dilindungi',
-                    description: 'Peraturan terbaru yang berisi daftar detail spesies satwa dan tumbuhan yang dilindungi secara hukum di Indonesia, termasuk Gurita Pasir.',
-                    year: '2018'
-                },
-                {
-                    name: 'Peraturan Menteri Kelautan dan Perikanan No. 1 Tahun 2021',
-                    title: 'Jenis Ikan yang Dilindungi',
-                    description: 'Peraturan khusus yang mengatur perlindungan terhadap jenis-jenis ikan, termasuk Gurita Pasir yang memiliki status perlindungan terbatas.',
-                    year: '2021'
-                },
-                {
-                    name: 'Undang-Undang No. 18 Tahun 2012',
-                    title: 'Pangan dan Keamanan Pangan',
-                    description: 'Mengatur keamanan pangan termasuk produk perikanan, melarang produksi dan peredaran pangan yang tidak aman dan dapat membahayakan kesehatan.',
-                    year: '2012'
-                },
-                {
-                    name: 'Undang-Undang No. 32 Tahun 2009',
-                    title: 'Perlindungan dan Pengelolaan Lingkungan Hidup',
-                    description: 'Mengatur perlindungan lingkungan hidup termasuk ekosistem laut, melarang perbuatan yang dapat mencemari dan merusak lingkungan hidup.',
-                    year: '2009'
-                },
-                {
                     name: 'Undang-Undang No. 31 Tahun 2004',
                     title: 'Perikanan',
-                    description: 'Mengatur pengelolaan perikanan yang berkelanjutan, melarang penangkapan ikan dengan cara yang merugikan kelestarian sumber daya ikan.',
+                    description: 'Undang-undang yang mengatur pengelolaan perikanan yang berkelanjutan, melarang penangkapan ikan dengan cara yang merugikan kelestarian sumber daya ikan. Merupakan regulasi utama perlindungan Gurita Pasir.',
                     year: '2004'
                 },
                 {
-                    name: 'Undang-Undang No. 16 Tahun 1992',
-                    title: 'Karantina Hewan, Ikan, dan Tumbuhan',
-                    description: 'Mengatur karantina untuk mencegah masuk dan tersebarnya hama dan penyakit hewan karantina, termasuk ikan dan satwa laut.',
-                    year: '1992'
+                    name: 'Peraturan Menteri Kelautan dan Perikanan No. 35/PERMEN-KP/2013',
+                    title: 'Penetapan Status Perlindungan Ikan',
+                    description: 'Peraturan menteri yang menetapkan status perlindungan ikan dan biota laut lainnya, termasuk perlindungan terhadap Gurita Pasir (Octopus cyanea) sebagai spesies yang dilindungi terbatas.',
+                    year: '2013'
+                },
+                {
+                    name: 'Peraturan Menteri Kelautan dan Perikanan No. 61/PERMEN-KP/2018',
+                    title: 'Jenis Ikan yang Dilindungi',
+                    description: 'Peraturan menteri yang mengatur perlindungan terhadap jenis-jenis ikan dan biota laut, termasuk Gurita Pasir yang memiliki status perlindungan terbatas.',
+                    year: '2018'
                 }
             ],
             references: [
@@ -1857,56 +1605,20 @@ const protectedAnimals = {
             localName: 'Paus Pilot, Lumba-lumba Pilot',
             latin: 'Globicephala macrorhynchus', 
             status: 'Dilindungi Penuh', 
-            regulation: 'Permen LHK P.106/2018',
-            protectionYear: '1990',
+            regulation: 'PP No. 7/1999',
+            protectionYear: '1999',
             legalRegulations: [
                 {
-                    name: 'Undang-Undang No. 5 Tahun 1990',
-                    title: 'Konservasi Sumber Daya Alam Hayati dan Ekosistemnya',
-                    description: 'Landasan utama perlindungan satwa liar di Indonesia, melarang penangkapan, melukai, membunuh, menyimpan, memiliki, memelihara, mengangkut, dan memperdagangkan satwa yang dilindungi.',
-                    year: '1990'
+                    name: 'Peraturan Pemerintah Nomor 7 Tahun 1999',
+                    title: 'Pengawetan Jenis Tumbuhan dan Satwa',
+                    description: 'Peraturan yang menjelaskan kriteria penetapan satwa sebagai jenis yang dilindungi dan mengatur upaya pengawetan di dalam dan di luar habitatnya. Merupakan regulasi utama perlindungan Paus Pilot Sirip Pendek.',
+                    year: '1999'
                 },
                 {
-                    name: 'Peraturan Menteri KP No. 1 Tahun 2021',
-                    title: 'Jenis Ikan yang Dilindungi',
-                    description: 'Peraturan khusus untuk perlindungan jenis-jenis ikan, termasuk mamalia laut seperti Paus Pilot yang memiliki status perlindungan penuh.',
-                    year: '2021'
-                },
-                {
-                    name: 'Peraturan Menteri LHK No. P.106/2018',
-                    title: 'Jenis Tumbuhan dan Satwa yang Dilindungi',
-                    description: 'Peraturan terbaru yang berisi daftar detail spesies satwa dan tumbuhan yang dilindungi secara hukum di Indonesia, termasuk mamalia laut.',
-                    year: '2018'
-                },
-                {
-                    name: 'Peraturan Menteri Kelautan dan Perikanan No. 1 Tahun 2021',
-                    title: 'Jenis Ikan yang Dilindungi',
-                    description: 'Peraturan khusus yang mengatur perlindungan terhadap jenis-jenis ikan, termasuk mamalia laut seperti Pari Manta yang memiliki status perlindungan penuh.',
-                    year: '2021'
-                },
-                {
-                    name: 'Undang-Undang No. 18 Tahun 2012',
-                    title: 'Pangan dan Keamanan Pangan',
-                    description: 'Mengatur keamanan pangan termasuk produk perikanan, melarang produksi dan peredaran pangan yang tidak aman dan dapat membahayakan kesehatan.',
-                    year: '2012'
-                },
-                {
-                    name: 'Undang-Undang No. 32 Tahun 2009',
-                    title: 'Perlindungan dan Pengelolaan Lingkungan Hidup',
-                    description: 'Mengatur perlindungan lingkungan hidup termasuk ekosistem laut, melarang perbuatan yang dapat mencemari dan merusak lingkungan hidup.',
-                    year: '2009'
-                },
-                {
-                    name: 'Undang-Undang No. 31 Tahun 2004',
-                    title: 'Perikanan',
-                    description: 'Mengatur pengelolaan perikanan yang berkelanjutan, melarang penangkapan ikan dengan cara yang merugikan kelestarian sumber daya ikan.',
-                    year: '2004'
-                },
-                {
-                    name: 'Undang-Undang No. 16 Tahun 1992',
-                    title: 'Karantina Hewan, Ikan, dan Tumbuhan',
-                    description: 'Mengatur karantina untuk mencegah masuk dan tersebarnya hama dan penyakit hewan karantina, termasuk ikan dan satwa laut.',
-                    year: '1992'
+                    name: 'Rencana Aksi Nasional (RAN) Konservasi Cetacea',
+                    title: 'Rencana Aksi Nasional Konservasi Cetacea',
+                    description: 'Rencana aksi nasional yang mengatur strategi konservasi cetacea (paus dan lumba-lumba) di Indonesia, termasuk Paus Pilot Sirip Pendek (Globicephala macrorhynchus) sebagai spesies yang dilindungi penuh.',
+                    year: '2019'
                 },
                 {
                     name: 'Peraturan Menteri Kelautan dan Perikanan No. 1 Tahun 2021',
@@ -1966,8 +1678,8 @@ const protectedAnimals = {
             localName: 'Lumba-lumba Spinner, Spinner Dolphin',
             latin: 'Stenella longirostris', 
             status: 'Dilindungi Penuh', 
-            regulation: 'Permen LHK P.106/2018',
-            protectionYear: '1990',
+            regulation: 'Permen LHK P.20/2018',
+            protectionYear: '2018',
             locations: [
                 { name: 'Laut Sulawesi', coordinates: '2.0000°N, 123.0000°E' },
                 { name: 'Perairan Sangihe-Talaud', coordinates: '4.0667°N, 125.4833°E' },
@@ -1993,52 +1705,10 @@ const protectedAnimals = {
             },
             legalRegulations: [
                 {
-                    name: 'Undang-Undang No. 5 Tahun 1990',
-                    title: 'Konservasi Sumber Daya Alam Hayati dan Ekosistemnya',
-                    description: 'Landasan utama perlindungan satwa liar di Indonesia, melarang penangkapan, melukai, membunuh, menyimpan, memiliki, memelihara, mengangkut, dan memperdagangkan satwa yang dilindungi.',
-                    year: '1990'
-                },
-                {
-                    name: 'Peraturan Pemerintah No. 7 Tahun 1999',
-                    title: 'Pengawetan Jenis Tumbuhan dan Satwa',
-                    description: 'Turunan dari UU No. 5/1990 yang menjelaskan kriteria penetapan satwa sebagai jenis yang dilindungi dan mengatur upaya pengawetan di dalam dan di luar habitatnya.',
-                    year: '1999'
-                },
-                {
-                    name: 'Peraturan Menteri LHK No. P.106/2018',
+                    name: 'Peraturan Menteri LHK No. P.20 Tahun 2018',
                     title: 'Jenis Tumbuhan dan Satwa yang Dilindungi',
-                    description: 'Peraturan terbaru yang berisi daftar detail spesies satwa dan tumbuhan yang dilindungi secara hukum di Indonesia, termasuk Lumba-lumba Spinner.',
+                    description: 'Peraturan menteri yang menetapkan jenis tumbuhan dan satwa yang dilindungi di Indonesia, termasuk Lumba-lumba Spinner (Stenella longirostris) sebagai spesies yang dilindungi penuh. Merupakan regulasi utama perlindungan Lumba-lumba Spinner.',
                     year: '2018'
-                },
-                {
-                    name: 'Peraturan Menteri Kelautan dan Perikanan No. 1 Tahun 2021',
-                    title: 'Jenis Ikan yang Dilindungi',
-                    description: 'Peraturan khusus yang mengatur perlindungan terhadap jenis-jenis ikan, termasuk mamalia laut seperti Lumba-lumba Spinner yang memiliki status perlindungan penuh.',
-                    year: '2021'
-                },
-                {
-                    name: 'Undang-Undang No. 18 Tahun 2012',
-                    title: 'Pangan dan Keamanan Pangan',
-                    description: 'Mengatur keamanan pangan termasuk produk perikanan, melarang produksi dan peredaran pangan yang tidak aman dan dapat membahayakan kesehatan.',
-                    year: '2012'
-                },
-                {
-                    name: 'Undang-Undang No. 32 Tahun 2009',
-                    title: 'Perlindungan dan Pengelolaan Lingkungan Hidup',
-                    description: 'Mengatur perlindungan lingkungan hidup termasuk ekosistem laut, melarang perbuatan yang dapat mencemari dan merusak lingkungan hidup.',
-                    year: '2009'
-                },
-                {
-                    name: 'Undang-Undang No. 31 Tahun 2004',
-                    title: 'Perikanan',
-                    description: 'Mengatur pengelolaan perikanan yang berkelanjutan, melarang penangkapan ikan dengan cara yang merugikan kelestarian sumber daya ikan.',
-                    year: '2004'
-                },
-                {
-                    name: 'Undang-Undang No. 16 Tahun 1992',
-                    title: 'Karantina Hewan, Ikan, dan Tumbuhan',
-                    description: 'Mengatur karantina untuk mencegah masuk dan tersebarnya hama dan penyakit hewan karantina, termasuk ikan dan satwa laut.',
-                    year: '1992'
                 }
             ],
             references: [
@@ -2051,8 +1721,8 @@ const protectedAnimals = {
             localName: 'Lumba-lumba Fraser, Fraser\'s Dolphin',
             latin: 'Lagenodelphis hosei', 
             status: 'Dilindungi Penuh', 
-            regulation: 'Permen LHK P.106/2018',
-            protectionYear: '1990',
+            regulation: 'Permen LHK P.20/2018',
+            protectionYear: '2018',
             locations: [
                 { name: 'Laut Sulawesi', coordinates: '2.0000°N, 123.0000°E' },
                 { name: 'Perairan Sangihe-Talaud', coordinates: '4.0667°N, 125.4833°E' },
@@ -2078,52 +1748,10 @@ const protectedAnimals = {
             },
             legalRegulations: [
                 {
-                    name: 'Undang-Undang No. 5 Tahun 1990',
-                    title: 'Konservasi Sumber Daya Alam Hayati dan Ekosistemnya',
-                    description: 'Landasan utama perlindungan satwa liar di Indonesia, melarang penangkapan, melukai, membunuh, menyimpan, memiliki, memelihara, mengangkut, dan memperdagangkan satwa yang dilindungi.',
-                    year: '1990'
-                },
-                {
-                    name: 'Peraturan Pemerintah No. 7 Tahun 1999',
-                    title: 'Pengawetan Jenis Tumbuhan dan Satwa',
-                    description: 'Turunan dari UU No. 5/1990 yang menjelaskan kriteria penetapan satwa sebagai jenis yang dilindungi dan mengatur upaya pengawetan di dalam dan di luar habitatnya.',
-                    year: '1999'
-                },
-                {
-                    name: 'Peraturan Menteri LHK No. P.106/2018',
+                    name: 'Peraturan Menteri Lingkungan Hidup dan Kehutanan No. P.20 Tahun 2018',
                     title: 'Jenis Tumbuhan dan Satwa yang Dilindungi',
-                    description: 'Peraturan terbaru yang berisi daftar detail spesies satwa dan tumbuhan yang dilindungi secara hukum di Indonesia, termasuk Lumba-lumba Fraser.',
+                    description: 'Peraturan menteri yang menetapkan jenis tumbuhan dan satwa yang dilindungi di Indonesia, termasuk Lumba-lumba Fraser (Lagenodelphis hosei) sebagai spesies yang dilindungi penuh. Merupakan regulasi utama perlindungan Lumba-lumba Fraser.',
                     year: '2018'
-                },
-                {
-                    name: 'Peraturan Menteri Kelautan dan Perikanan No. 1 Tahun 2021',
-                    title: 'Jenis Ikan yang Dilindungi',
-                    description: 'Peraturan khusus yang mengatur perlindungan terhadap jenis-jenis ikan, termasuk mamalia laut seperti Lumba-lumba Fraser yang memiliki status perlindungan penuh.',
-                    year: '2021'
-                },
-                {
-                    name: 'Undang-Undang No. 18 Tahun 2012',
-                    title: 'Pangan dan Keamanan Pangan',
-                    description: 'Mengatur keamanan pangan termasuk produk perikanan, melarang produksi dan peredaran pangan yang tidak aman dan dapat membahayakan kesehatan.',
-                    year: '2012'
-                },
-                {
-                    name: 'Undang-Undang No. 32 Tahun 2009',
-                    title: 'Perlindungan dan Pengelolaan Lingkungan Hidup',
-                    description: 'Mengatur perlindungan lingkungan hidup termasuk ekosistem laut, melarang perbuatan yang dapat mencemari dan merusak lingkungan hidup.',
-                    year: '2009'
-                },
-                {
-                    name: 'Undang-Undang No. 31 Tahun 2004',
-                    title: 'Perikanan',
-                    description: 'Mengatur pengelolaan perikanan yang berkelanjutan, melarang penangkapan ikan dengan cara yang merugikan kelestarian sumber daya ikan.',
-                    year: '2004'
-                },
-                {
-                    name: 'Undang-Undang No. 16 Tahun 1992',
-                    title: 'Karantina Hewan, Ikan, dan Tumbuhan',
-                    description: 'Mengatur karantina untuk mencegah masuk dan tersebarnya hama dan penyakit hewan karantina, termasuk ikan dan satwa laut.',
-                    year: '1992'
                 }
             ],
             references: [
@@ -2136,7 +1764,7 @@ const protectedAnimals = {
             localName: 'Lumba-lumba Hidung Botol, Bottlenose Dolphin',
             latin: 'Tursiops truncatus', 
             status: 'Dilindungi Penuh', 
-            regulation: 'Permen LHK P.106/2018',
+            regulation: 'UU No. 5/1990',
             protectionYear: '1990',
             locations: [
                 { name: 'Laut Sulawesi', coordinates: '2.0000°N, 123.0000°E' },
@@ -2163,52 +1791,22 @@ const protectedAnimals = {
             },
             legalRegulations: [
                 {
-                    name: 'Undang-Undang No. 5 Tahun 1990',
+                    name: 'Undang-Undang Nomor 5 Tahun 1990',
                     title: 'Konservasi Sumber Daya Alam Hayati dan Ekosistemnya',
-                    description: 'Landasan utama perlindungan satwa liar di Indonesia, melarang penangkapan, melukai, membunuh, menyimpan, memiliki, memelihara, mengangkut, dan memperdagangkan satwa yang dilindungi.',
+                    description: 'Landasan utama perlindungan satwa liar di Indonesia, melarang penangkapan, melukai, membunuh, menyimpan, memiliki, memelihara, mengangkut, dan memperdagangkan satwa yang dilindungi. Merupakan regulasi utama perlindungan Lumba-lumba Hidung Botol.',
                     year: '1990'
                 },
                 {
-                    name: 'Peraturan Pemerintah No. 7 Tahun 1999',
+                    name: 'Peraturan Pemerintah Nomor 7 Tahun 1999',
                     title: 'Pengawetan Jenis Tumbuhan dan Satwa',
-                    description: 'Turunan dari UU No. 5/1990 yang menjelaskan kriteria penetapan satwa sebagai jenis yang dilindungi dan mengatur upaya pengawetan di dalam dan di luar habitatnya.',
+                    description: 'Turunan dari UU No. 5/1990 yang menjelaskan kriteria penetapan satwa sebagai jenis yang dilindungi dan mengatur upaya pengawetan di dalam dan di luar habitatnya. Memperkuat perlindungan Lumba-lumba Hidung Botol.',
                     year: '1999'
                 },
                 {
-                    name: 'Peraturan Menteri LHK No. P.106/2018',
+                    name: 'Peraturan Menteri Lingkungan Hidup dan Kehutanan Nomor P.106/MENLHK/SETJEN/KUM.1/12/2018',
                     title: 'Jenis Tumbuhan dan Satwa yang Dilindungi',
-                    description: 'Peraturan terbaru yang berisi daftar detail spesies satwa dan tumbuhan yang dilindungi secara hukum di Indonesia, termasuk Lumba-lumba Hidung Botol.',
+                    description: 'Peraturan menteri yang menetapkan jenis tumbuhan dan satwa yang dilindungi di Indonesia, termasuk Lumba-lumba Hidung Botol (Tursiops truncatus) sebagai spesies yang dilindungi penuh.',
                     year: '2018'
-                },
-                {
-                    name: 'Peraturan Menteri Kelautan dan Perikanan No. 1 Tahun 2021',
-                    title: 'Jenis Ikan yang Dilindungi',
-                    description: 'Peraturan khusus yang mengatur perlindungan terhadap jenis-jenis ikan, termasuk mamalia laut seperti Lumba-lumba Hidung Botol yang memiliki status perlindungan penuh.',
-                    year: '2021'
-                },
-                {
-                    name: 'Undang-Undang No. 18 Tahun 2012',
-                    title: 'Pangan dan Keamanan Pangan',
-                    description: 'Mengatur keamanan pangan termasuk produk perikanan, melarang produksi dan peredaran pangan yang tidak aman dan dapat membahayakan kesehatan.',
-                    year: '2012'
-                },
-                {
-                    name: 'Undang-Undang No. 32 Tahun 2009',
-                    title: 'Perlindungan dan Pengelolaan Lingkungan Hidup',
-                    description: 'Mengatur perlindungan lingkungan hidup termasuk ekosistem laut, melarang perbuatan yang dapat mencemari dan merusak lingkungan hidup.',
-                    year: '2009'
-                },
-                {
-                    name: 'Undang-Undang No. 31 Tahun 2004',
-                    title: 'Perikanan',
-                    description: 'Mengatur pengelolaan perikanan yang berkelanjutan, melarang penangkapan ikan dengan cara yang merugikan kelestarian sumber daya ikan.',
-                    year: '2004'
-                },
-                {
-                    name: 'Undang-Undang No. 16 Tahun 1992',
-                    title: 'Karantina Hewan, Ikan, dan Tumbuhan',
-                    description: 'Mengatur karantina untuk mencegah masuk dan tersebarnya hama dan penyakit hewan karantina, termasuk ikan dan satwa laut.',
-                    year: '1992'
                 }
             ],
             references: [
@@ -2221,7 +1819,7 @@ const protectedAnimals = {
             localName: 'Paus Bryde, Bryde\'s Whale',
             latin: 'Balaenoptera edeni', 
             status: 'Dilindungi Penuh', 
-            regulation: 'Permen LHK P.106/2018',
+            regulation: 'UU No. 5/1990',
             protectionYear: '1990',
             locations: [
                 { name: 'Laut Sulawesi', coordinates: '2.0000°N, 123.0000°E' },
@@ -2242,52 +1840,28 @@ const protectedAnimals = {
             },
             legalRegulations: [
                 {
-                    name: 'Undang-Undang No. 5 Tahun 1990',
+                    name: 'Undang-Undang Nomor 5 Tahun 1990',
                     title: 'Konservasi Sumber Daya Alam Hayati dan Ekosistemnya',
-                    description: 'Landasan utama perlindungan satwa liar di Indonesia, melarang penangkapan, melukai, membunuh, menyimpan, memiliki, memelihara, mengangkut, dan memperdagangkan satwa yang dilindungi.',
+                    description: 'Landasan utama perlindungan satwa liar di Indonesia, melarang penangkapan, melukai, membunuh, menyimpan, memiliki, memelihara, mengangkut, dan memperdagangkan satwa yang dilindungi. Merupakan regulasi utama perlindungan Paus Bryde.',
                     year: '1990'
                 },
                 {
-                    name: 'Peraturan Pemerintah No. 7 Tahun 1999',
+                    name: 'Peraturan Pemerintah Nomor 7 Tahun 1999',
                     title: 'Pengawetan Jenis Tumbuhan dan Satwa',
-                    description: 'Turunan dari UU No. 5/1990 yang menjelaskan kriteria penetapan satwa sebagai jenis yang dilindungi dan mengatur upaya pengawetan di dalam dan di luar habitatnya.',
+                    description: 'Turunan dari UU No. 5/1990 yang menjelaskan kriteria penetapan satwa sebagai jenis yang dilindungi dan mengatur upaya pengawetan di dalam dan di luar habitatnya. Memperkuat perlindungan Paus Bryde.',
                     year: '1999'
                 },
                 {
-                    name: 'Peraturan Menteri LHK No. P.106/2018',
+                    name: 'Peraturan Menteri Lingkungan Hidup dan Kehutanan Nomor P.20/MENLHK/SETJEN/KUM.1/6/2018',
                     title: 'Jenis Tumbuhan dan Satwa yang Dilindungi',
-                    description: 'Peraturan terbaru yang berisi daftar detail spesies satwa dan tumbuhan yang dilindungi secara hukum di Indonesia, termasuk Paus Bryde.',
+                    description: 'Peraturan menteri yang menetapkan jenis tumbuhan dan satwa yang dilindungi di Indonesia, termasuk Paus Bryde (Balaenoptera edeni) sebagai spesies yang dilindungi penuh.',
                     year: '2018'
                 },
                 {
-                    name: 'Peraturan Menteri Kelautan dan Perikanan No. 1 Tahun 2021',
-                    title: 'Jenis Ikan yang Dilindungi',
-                    description: 'Peraturan khusus yang mengatur perlindungan terhadap jenis-jenis ikan, termasuk mamalia laut seperti Paus Bryde yang memiliki status perlindungan penuh.',
-                    year: '2021'
-                },
-                {
-                    name: 'Undang-Undang No. 18 Tahun 2012',
-                    title: 'Pangan dan Keamanan Pangan',
-                    description: 'Mengatur keamanan pangan termasuk produk perikanan, melarang produksi dan peredaran pangan yang tidak aman dan dapat membahayakan kesehatan.',
-                    year: '2012'
-                },
-                {
-                    name: 'Undang-Undang No. 32 Tahun 2009',
-                    title: 'Perlindungan dan Pengelolaan Lingkungan Hidup',
-                    description: 'Mengatur perlindungan lingkungan hidup termasuk ekosistem laut, melarang perbuatan yang dapat mencemari dan merusak lingkungan hidup.',
-                    year: '2009'
-                },
-                {
-                    name: 'Undang-Undang No. 31 Tahun 2004',
-                    title: 'Perikanan',
-                    description: 'Mengatur pengelolaan perikanan yang berkelanjutan, melarang penangkapan ikan dengan cara yang merugikan kelestarian sumber daya ikan.',
-                    year: '2004'
-                },
-                {
-                    name: 'Undang-Undang No. 16 Tahun 1992',
-                    title: 'Karantina Hewan, Ikan, dan Tumbuhan',
-                    description: 'Mengatur karantina untuk mencegah masuk dan tersebarnya hama dan penyakit hewan karantina, termasuk ikan dan satwa laut.',
-                    year: '1992'
+                    name: 'Keputusan Menteri Kelautan dan Perikanan Nomor 79 Tahun 2018',
+                    title: 'Rencana Aksi Nasional (RAN) Konservasi Mamalia Laut',
+                    description: 'Keputusan menteri yang mengatur rencana aksi nasional untuk konservasi mamalia laut di Indonesia, termasuk Paus Bryde sebagai spesies yang dilindungi penuh.',
+                    year: '2018'
                 }
             ],
             references: [
