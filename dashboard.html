@@ -240,14 +240,24 @@
             
             <div class="border-t border-gray-800 mt-6 pt-6 text-center relative">
                 <!-- Visitor Counter -->
-                <div class="absolute bottom-2 right-2 text-xs text-gray-500">
-                    <span id="visitor-count">0</span> pengunjung
+                <div class="flex items-center justify-center space-x-2 mb-4">
+                    <div class="flex items-center space-x-2 bg-gray-800 rounded-lg px-4 py-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-blue-400">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                            <circle cx="9" cy="7" r="4"/>
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                        </svg>
+                        <span class="text-gray-300 text-sm">Total Pengunjung:</span>
+                        <span id="visitor-count" class="text-blue-400 font-bold text-lg">0</span>
+                    </div>
                 </div>
             </div>
         </div>
     </footer>
 
     <script src="script.js"></script>
+    <script src="visitor-counter.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             lucide.createIcons();
