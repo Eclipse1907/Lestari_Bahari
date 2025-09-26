@@ -2334,6 +2334,7 @@ function initializeApp() {
     
     initializeEventListeners();
     handleHeaderStyle();
+    initializeVisitorCounter(); // Initialize visitor counter
     
     // Check for dashboard page
     const dashboardContent = document.getElementById('dashboard-content');
@@ -2350,6 +2351,36 @@ function initializeApp() {
 // Jalankan aplikasi setelah DOM siap
 document.addEventListener('DOMContentLoaded', initializeApp);
 
+// Visitor Counter Function
+function updateVisitorCounter() {
+    // Get current visitor count from localStorage
+    let visitorCount = localStorage.getItem('visitorCount');
+    
+    // If no count exists, initialize to 0
+    if (visitorCount === null) {
+        visitorCount = 0;
+    } else {
+        visitorCount = parseInt(visitorCount);
+    }
+    
+    // Increment visitor count
+    visitorCount++;
+    
+    // Save updated count to localStorage
+    localStorage.setItem('visitorCount', visitorCount.toString());
+    
+    // Update the display
+    const visitorElement = document.getElementById('visitor-count');
+    if (visitorElement) {
+        visitorElement.textContent = visitorCount.toLocaleString('id-ID');
+    }
+}
+
+// Initialize visitor counter when page loads
+function initializeVisitorCounter() {
+    updateVisitorCounter();
+}
+
 // Export data and functions for global access
 window.protectedAnimals = protectedAnimals;
 window.showAnimalsFor = showAnimalsFor;
@@ -2360,3 +2391,4 @@ window.toggleMobileMenu = toggleMobileMenu;
 window.filterAnimals = filterAnimals;
 window.openImageModal = openImageModal;
 window.loadSimilarSpecies = loadSimilarSpecies;
+window.initializeVisitorCounter = initializeVisitorCounter;
