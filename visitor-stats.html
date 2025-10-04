@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Statistik Pengunjung - Lestari Akuatik</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .chart-bar {
+            transition: height 0.3s ease-in-out;
+        }
+        .fade-in {
+            animation: fadeIn 0.5s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white min-h-screen">
+    <!-- Header -->
+    <div id="header-placeholder"></div>
+
+    <!-- Main Content -->
+    <div class="container mx-auto px-4 py-8">
+        <div class="max-w-6xl mx-auto">
+            <!-- Page Header -->
+            <div class="text-center mb-8 fade-in">
+                <h1 class="text-4xl font-bold text-white mb-4">Statistik Pengunjung</h1>
+                <p class="text-gray-300 text-lg">Data kunjungan dan analisis pengunjung website Lestari Akuatik</p>
+            </div>
+
+            <!-- Loading State -->
+            <div id="loading-state" class="text-center py-12">
+                <div class="inline-block animate-spin rounded-full h-12 w-12 border-b-2 border-blue-500"></div>
+                <p class="mt-4 text-gray-300">Memuat data statistik...</p>
+            </div>
+
+            <!-- Stats Content -->
+            <div id="stats-content" class="hidden">
+                <!-- Current Session Info -->
+                <div class="bg-gradient-to-r from-blue-600 to-blue-700 rounded-lg p-6 mb-8 fade-in">
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <h2 class="text-2xl font-bold text-white mb-2">Sesi Saat Ini</h2>
+                            <p class="text-blue-100" id="current-session-duration">Menghitung durasi...</p>
+                        </div>
+                        <div class="text-right">
+                            <div class="text-3xl font-bold text-white" id="current-visitor-count">0</div>
+                            <div class="text-blue-100">Total Kunjungan</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Daily Stats Cards -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                    <div class="bg-green-600 rounded-lg p-6 fade-in">
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <h3 class="text-lg font-semibold text-white mb-1">Hari Ini</h3>
+                                <p class="text-green-100 text-sm">Kunjungan</p>
+                            </div>
+                            <div class="text-3xl font-bold text-white" id="today-visits">0</div>
+                        </div>
+                        <div class="mt-4">
+                            <p class="text-green-100 text-sm">Pengunjung Unik: <span id="today-unique" class="font-semibold">0</span></p>
+                            <p class="text-green-100 text-sm">Durasi Rata-rata: <span id="today-duration" class="font-semibold">0 detik</span></p>
+                        </div>
+                    </div>
+
+                    <div class="bg-blue-600 rounded-lg p-6 fade-in">
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <h3 class="text-lg font-semibold text-white mb-1">Kemarin</h3>
+                                <p class="text-blue-100 text-sm">Kunjungan</p>
+                            </div>
+                            <div class="text-3xl font-bold text-white" id="yesterday-visits">0</div>
+                        </div>
+                        <div class="mt-4">
+                            <p class="text-blue-100 text-sm">Pengunjung Unik: <span id="yesterday-unique" class="font-semibold">0</span></p>
+                            <p class="text-blue-100 text-sm">Durasi Rata-rata: <span id="yesterday-duration" class="font-semibold">0 detik</span></p>
+                        </div>
+                    </div>
+
+                    <div class="bg-purple-600 rounded-lg p-6 fade-in">
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <h3 class="text-lg font-semibold text-white mb-1">Total</h3>
+                                <p class="text-purple-100 text-sm">Kunjungan</p>
+                            </div>
+                            <div class="text-3xl font-bold text-white" id="total-visits">0</div>
+                        </div>
+                        <div class="mt-4">
+                            <p class="text-purple-100 text-sm">Pengunjung Unik: <span id="total-unique" class="font-semibold">0</span></p>
+                            <p class="text-purple-100 text-sm">Rata-rata Durasi: <span id="total-duration" class="font-semibold">0 detik</span></p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 7 Days Chart -->
+                <div class="bg-gray-800 rounded-lg p-6 mb-8 fade-in">
+                    <h3 class="text-xl font-bold text-white mb-6">7 Hari Terakhir</h3>
+                    <div class="grid grid-cols-7 gap-2">
+                        <div id="chart-container" class="col-span-7">
+                            <!-- Chart will be generated here -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Detailed Statistics -->
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
+                    <!-- All Time Stats -->
+                    <div class="bg-gray-800 rounded-lg p-6 fade-in">
+                        <h3 class="text-xl font-bold text-white mb-4">Statistik Keseluruhan</h3>
+                        <div class="space-y-4">
+                            <div class="flex justify-between items-center py-2 border-b border-gray-700">
+                                <span class="text-gray-300">Total Kunjungan</span>
+                                <span class="text-white font-semibold text-lg" id="all-time-visits">0</span>
+                            </div>
+                            <div class="flex justify-between items-center py-2 border-b border-gray-700">
+                                <span class="text-gray-300">Pengunjung Unik</span>
+                                <span class="text-white font-semibold text-lg" id="all-time-unique">0</span>
+                            </div>
+                            <div class="flex justify-between items-center py-2 border-b border-gray-700">
+                                <span class="text-gray-300">Total Sesi</span>
+                                <span class="text-white font-semibold text-lg" id="all-time-sessions">0</span>
+                            </div>
+                            <div class="flex justify-between items-center py-2">
+                                <span class="text-gray-300">Rata-rata Durasi</span>
+                                <span class="text-white font-semibold text-lg" id="all-time-avg-duration">0 detik</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Session Info -->
+                    <div class="bg-gray-800 rounded-lg p-6 fade-in">
+                        <h3 class="text-xl font-bold text-white mb-4">Informasi Sesi</h3>
+                        <div class="space-y-4">
+                            <div class="flex justify-between items-center py-2 border-b border-gray-700">
+                                <span class="text-gray-300">Kunjungan Terakhir</span>
+                                <span class="text-white font-semibold text-sm" id="last-visit">Tidak ada</span>
+                            </div>
+                            <div class="flex justify-between items-center py-2 border-b border-gray-700">
+                                <span class="text-gray-300">Pengunjung Unik Hari Ini</span>
+                                <span class="text-white font-semibold text-lg" id="today-unique-count">0</span>
+                            </div>
+                            <div class="flex justify-between items-center py-2 border-b border-gray-700">
+                                <span class="text-gray-300">Status Sesi</span>
+                                <span class="text-green-400 font-semibold" id="session-status">Aktif</span>
+                            </div>
+                            <div class="flex justify-between items-center py-2">
+                                <span class="text-gray-300">Durasi Sesi Saat Ini</span>
+                                <span class="text-white font-semibold text-lg" id="current-session-time">0 detik</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Action Buttons -->
+                <div class="text-center fade-in">
+                    <button onclick="refreshStats()" class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg mr-4 transition-colors">
+                        🔄 Perbarui Data
+                    </button>
+                    <button onclick="goBack()" class="bg-gray-600 hover:bg-gray-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors">
+                        ← Kembali
+                    </button>
+                </div>
+            </div>
+
+            <!-- Error State -->
+            <div id="error-state" class="hidden text-center py-12">
+                <div class="text-red-400 text-6xl mb-4">⚠️</div>
+                <h2 class="text-2xl font-bold text-white mb-2">Gagal Memuat Data</h2>
+                <p class="text-gray-300 mb-6">Terjadi kesalahan saat memuat statistik pengunjung.</p>
+                <button onclick="refreshStats()" class="bg-red-600 hover:bg-red-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors">
+                    Coba Lagi
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Scripts -->
+    <script src="visitor-counter.js"></script>
+    <script>
+        // Load header and footer
+        function loadHeaderFooter() {
+            fetch('_header.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('header-placeholder').innerHTML = data;
+                })
+                .catch(error => console.error('Error loading header:', error));
+
+            fetch('_footer.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('footer-placeholder').innerHTML = data;
+                })
+                .catch(error => console.error('Error loading footer:', error));
+        }
+
+        // Format duration function
+        function formatDuration(seconds) {
+            if (seconds < 60) {
+                return `${seconds} detik`;
+            } else if (seconds < 3600) {
+                const minutes = Math.floor(seconds / 60);
+                const remainingSeconds = seconds % 60;
+                return `${minutes}m ${remainingSeconds}s`;
+            } else {
+                const hours = Math.floor(seconds / 3600);
+                const minutes = Math.floor((seconds % 3600) / 60);
+                return `${hours}j ${minutes}m`;
+            }
+        }
+
+        // Update current session duration
+        function updateCurrentSession() {
+            if (window.visitorCounter) {
+                const duration = Math.round(window.visitorCounter.getSessionDuration() / 1000);
+                document.getElementById('current-session-duration').textContent = `Durasi: ${formatDuration(duration)}`;
+                document.getElementById('current-session-time').textContent = formatDuration(duration);
+            }
+        }
+
+        // Load and display statistics
+        function loadStats() {
+            try {
+                if (!window.visitorCounter) {
+                    throw new Error('Visitor counter not available');
+                }
+
+                const stats = window.visitorCounter.getStats();
+                const dailyStats = stats.dailyStats;
+
+                // Update current session info
+                document.getElementById('current-visitor-count').textContent = stats.totalVisits.toLocaleString('id-ID');
+                updateCurrentSession();
+
+                // Update daily stats
+                document.getElementById('today-visits').textContent = dailyStats.today.visits || 0;
+                document.getElementById('today-unique').textContent = dailyStats.today.uniqueVisitors || 0;
+                document.getElementById('today-duration').textContent = formatDuration(dailyStats.today.avgDuration || 0);
+
+                document.getElementById('yesterday-visits').textContent = dailyStats.yesterday.visits || 0;
+                document.getElementById('yesterday-unique').textContent = dailyStats.yesterday.uniqueVisitors || 0;
+                document.getElementById('yesterday-duration').textContent = formatDuration(dailyStats.yesterday.avgDuration || 0);
+
+                document.getElementById('total-visits').textContent = stats.totalVisits.toLocaleString('id-ID');
+                document.getElementById('total-unique').textContent = stats.uniqueVisitors.toLocaleString('id-ID');
+                document.getElementById('total-duration').textContent = formatDuration(dailyStats.allTime.avgDuration || 0);
+
+                // Update all time stats
+                document.getElementById('all-time-visits').textContent = dailyStats.allTime.totalVisits.toLocaleString('id-ID');
+                document.getElementById('all-time-unique').textContent = dailyStats.allTime.totalUniqueVisitors.toLocaleString('id-ID');
+                document.getElementById('all-time-sessions').textContent = dailyStats.allTime.totalSessions.toLocaleString('id-ID');
+                document.getElementById('all-time-avg-duration').textContent = formatDuration(dailyStats.allTime.avgDuration || 0);
+
+                // Update session info
+                document.getElementById('last-visit').textContent = stats.lastVisit ? 
+                    new Date(stats.lastVisit).toLocaleString('id-ID') : 'Tidak ada';
+                document.getElementById('today-unique-count').textContent = dailyStats.today.uniqueVisitors || 0;
+                document.getElementById('session-status').textContent = 'Aktif';
+
+                // Generate 7 days chart
+                generateChart(dailyStats.last7Days);
+
+                // Hide loading, show content
+                document.getElementById('loading-state').classList.add('hidden');
+                document.getElementById('stats-content').classList.remove('hidden');
+
+            } catch (error) {
+                console.error('Error loading stats:', error);
+                document.getElementById('loading-state').classList.add('hidden');
+                document.getElementById('error-state').classList.remove('hidden');
+            }
+        }
+
+        // Generate 7 days chart
+        function generateChart(last7Days) {
+            const container = document.getElementById('chart-container');
+            const maxVisits = Math.max(...last7Days.map(day => day.visits), 1);
+            
+            const chartHTML = last7Days.map(day => {
+                const height = Math.max(20, (day.visits / maxVisits) * 120);
+                const date = new Date(day.date);
+                const dayName = date.toLocaleDateString('id-ID', { weekday: 'short' });
+                const dayNumber = date.getDate();
+                
+                return `
+                    <div class="text-center">
+                        <div class="text-xs text-gray-400 mb-2">${dayName}</div>
+                        <div class="text-xs text-gray-500 mb-1">${dayNumber}</div>
+                        <div class="bg-blue-500 chart-bar rounded-t flex items-end justify-center relative group" 
+                             style="height: ${height}px; min-height: 20px;">
+                            <span class="text-xs font-semibold text-white absolute -top-6 opacity-0 group-hover:opacity-100 transition-opacity">
+                                ${day.visits}
+                            </span>
+                        </div>
+                        <div class="text-xs text-gray-400 mt-2">${formatDuration(day.avgDuration)}</div>
+                    </div>
+                `;
+            }).join('');
+            
+            container.innerHTML = chartHTML;
+        }
+
+        // Refresh stats
+        function refreshStats() {
+            document.getElementById('loading-state').classList.remove('hidden');
+            document.getElementById('stats-content').classList.add('hidden');
+            document.getElementById('error-state').classList.add('hidden');
+            
+            setTimeout(() => {
+                loadStats();
+            }, 500);
+        }
+
+        // Go back function
+        function goBack() {
+            if (window.history.length > 1) {
+                window.history.back();
+            } else {
+                window.location.href = 'index.html';
+            }
+        }
+
+        // Initialize page
+        document.addEventListener('DOMContentLoaded', function() {
+            loadHeaderFooter();
+            
+            // Wait for visitor counter to be ready
+            const checkCounter = setInterval(() => {
+                if (window.visitorCounter) {
+                    clearInterval(checkCounter);
+                    loadStats();
+                }
+            }, 100);
+
+            // Update current session every second
+            setInterval(updateCurrentSession, 1000);
+
+            // Timeout after 5 seconds
+            setTimeout(() => {
+                if (document.getElementById('loading-state').classList.contains('hidden') === false) {
+                    clearInterval(checkCounter);
+                    document.getElementById('loading-state').classList.add('hidden');
+                    document.getElementById('error-state').classList.remove('hidden');
+                }
+            }, 5000);
+        });
+    </script>
+</body>
+</html>
