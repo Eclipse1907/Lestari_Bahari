@@ -5,11 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Statistik Pengunjung - Lestari Akuatik</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="styles.css">
     <style>
-        .chart-bar {
-            transition: height 0.3s ease-in-out;
-        }
         .fade-in {
             animation: fadeIn 0.5s ease-in-out;
         }
@@ -17,11 +13,35 @@
             from { opacity: 0; transform: translateY(20px); }
             to { opacity: 1; transform: translateY(0); }
         }
+        .chart-bar {
+            transition: height 0.3s ease-in-out;
+        }
     </style>
 </head>
 <body class="bg-gray-900 text-white min-h-screen">
     <!-- Header -->
-    <div id="header-placeholder"></div>
+    <header class="bg-blue-900 text-white py-4">
+        <div class="container mx-auto px-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-3">
+                    <div class="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-white">
+                            <path d="M2 6c.6.2 1.4.5 2.5 1.4C6.5 9 8.6 10.5 10 10.5c1.4 0 2.5-.5 4-1.5 1.5-.9 3.2-1.5 5.5-1.5s4.2 1.5 5.5 2.5"/>
+                            <path d="M2 12c.6.2 1.4.5 2.5 1.4C6.5 15 8.6 16.5 10 16.5c1.4 0 2.5-.5 4-1.5 1.5-.9 3.2-1.5 5.5-1.5s4.2 1.5 5.5 2.5"/>
+                            <path d="M2 18c.6.2 1.4.5 2.5 1.4C6.5 21 8.6 22.5 10 22.5c1.4 0 2.5-.5 4-1.5 1.5-.9 3.2-1.5 5.5-1.5s4.2 1.5 5.5 2.5"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <h1 class="text-xl font-bold">Lestari Akuatik</h1>
+                        <p class="text-sm text-blue-200">Statistik Pengunjung</p>
+                    </div>
+                </div>
+                <a href="index.html" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg transition-colors">
+                    ← Kembali
+                </a>
+            </div>
+        </div>
+    </header>
 
     <!-- Main Content -->
     <div class="container mx-auto px-4 py-8">
@@ -182,74 +202,15 @@
     </div>
 
     <!-- Footer -->
-    <div id="footer-placeholder"></div>
+    <footer class="bg-gray-900 text-white py-6 mt-8">
+        <div class="container mx-auto px-4 text-center">
+            <p>&copy; 2024 Lestari Akuatik - BKHIT Sulawesi Utara</p>
+        </div>
+    </footer>
 
     <!-- Scripts -->
     <script src="visitor-counter.js"></script>
     <script>
-        // Load header and footer
-        function loadHeaderFooter() {
-            try {
-                // Load header
-                fetch('_header.html')
-                    .then(response => {
-                        if (!response.ok) {
-                            throw new Error('Header not found');
-                        }
-                        return response.text();
-                    })
-                    .then(data => {
-                        const headerPlaceholder = document.getElementById('header-placeholder');
-                        if (headerPlaceholder) {
-                            headerPlaceholder.innerHTML = data;
-                        }
-                    })
-                    .catch(error => {
-                        console.error('Error loading header:', error);
-                        const headerPlaceholder = document.getElementById('header-placeholder');
-                        if (headerPlaceholder) {
-                            headerPlaceholder.innerHTML = `
-                                <header class="bg-blue-900 text-white py-4">
-                                    <div class="container mx-auto px-4">
-                                        <h1 class="text-xl font-bold">Lestari Akuatik - Statistik Pengunjung</h1>
-                                    </div>
-                                </header>
-                            `;
-                        }
-                    });
-
-                // Load footer
-                fetch('_footer.html')
-                    .then(response => {
-                        if (!response.ok) {
-                            throw new Error('Footer not found');
-                        }
-                        return response.text();
-                    })
-                    .then(data => {
-                        const footerPlaceholder = document.getElementById('footer-placeholder');
-                        if (footerPlaceholder) {
-                            footerPlaceholder.innerHTML = data;
-                        }
-                    })
-                    .catch(error => {
-                        console.error('Error loading footer:', error);
-                        const footerPlaceholder = document.getElementById('footer-placeholder');
-                        if (footerPlaceholder) {
-                            footerPlaceholder.innerHTML = `
-                                <footer class="bg-gray-900 text-white py-6 mt-8">
-                                    <div class="container mx-auto px-4 text-center">
-                                        <p>&copy; 2024 Lestari Akuatik - BKHIT Sulawesi Utara</p>
-                                    </div>
-                                </footer>
-                            `;
-                        }
-                    });
-            } catch (error) {
-                console.error('Error in loadHeaderFooter:', error);
-            }
-        }
-
         // Format duration function
         function formatDuration(seconds) {
             if (seconds < 60) {
@@ -485,8 +446,6 @@
         // Initialize page
         document.addEventListener('DOMContentLoaded', function() {
             try {
-                loadHeaderFooter();
-                
                 let checkCounter;
                 let sessionUpdateInterval;
                 
