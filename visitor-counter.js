@@ -173,43 +173,64 @@ class VisitorCounter {
 
     // Method to update daily stats
     updateDailyStats() {
-        const today = new Date().toDateString();
-        const dailyStats = this.getDailyStats();
-        
-        if (!dailyStats[today]) {
-            dailyStats[today] = {
-                visits: 0,
-                uniqueVisitors: new Set(),
-                durations: [],
-                timestamp: new Date().toISOString()
-            };
-        }
-        
-        // Increment visits
-        dailyStats[today].visits++;
-        
-        // Add unique visitor
-        const visitorId = this.generateVisitorId();
-        if (!dailyStats[today].uniqueVisitors) {
-            dailyStats[today].uniqueVisitors = new Set();
-        }
-        dailyStats[today].uniqueVisitors.add(visitorId);
-        
-        // Track session duration
-        const sessionStart = this.getSessionStart();
-        if (sessionStart) {
-            const duration = Date.now() - sessionStart;
-            if (!dailyStats[today].durations) {
-                dailyStats[today].durations = [];
+        try {
+            const today = new Date().toDateString();
+            const dailyStats = this.getDailyStats();
+
+            if (!dailyStats[today]) {
+                dailyStats[today] = {
+                    visits: 0,
+                    uniqueVisitors: [],
+                    durations: [],
+                    timestamp: new Date().toISOString()
+                };
             }
-            dailyStats[today].durations.push(duration);
+
+            // Ensure uniqueVisitors is a Set in-memory for safe .add()
+            const existingUnique = dailyStats[today].uniqueVisitors;
+            let uniqueSet;
+            if (existingUnique instanceof Set) {
+                uniqueSet = existingUnique;
+            } else if (Array.isArray(existingUnique)) {
+                uniqueSet = new Set(existingUnique);
+            } else if (existingUnique && typeof existingUnique === 'object' && typeof existingUnique.add === 'function') {
+                // Any set-like object
+                uniqueSet = existingUnique;
+            } else if (existingUnique && typeof existingUnique === 'object') {
+                // In case of accidental object storage
+                uniqueSet = new Set(Object.values(existingUnique));
+            } else {
+                uniqueSet = new Set();
+            }
+
+            // Increment visits
+            dailyStats[today].visits = (dailyStats[today].visits || 0) + 1;
+
+            // Add unique visitor
+            const visitorId = this.generateVisitorId();
+            uniqueSet.add(visitorId);
+
+            // Track session duration
+            const sessionStart = this.getSessionStart();
+            if (sessionStart) {
+                const duration = Date.now() - sessionStart;
+                if (!Array.isArray(dailyStats[today].durations)) {
+                    dailyStats[today].durations = [];
+                }
+                dailyStats[today].durations.push(duration);
+            }
+
+            // Save back with Array (storage-friendly)
+            const statsToStore = { ...dailyStats };
+            statsToStore[today] = {
+                ...statsToStore[today],
+                uniqueVisitors: Array.from(uniqueSet)
+            };
+
+            localStorage.setItem('lestari_bahari_daily_visitor_stats', JSON.stringify(statsToStore));
+        } catch (error) {
+            console.error('Error updating daily stats:', error);
         }
-        
-        // Convert Set to Array for storage
-        const statsToStore = { ...dailyStats };
-        statsToStore[today].uniqueVisitors = Array.from(dailyStats[today].uniqueVisitors);
-        
-        localStorage.setItem('lestari_bahari_daily_visitor_stats', JSON.stringify(statsToStore));
     }
 
     // Method to get session start time
